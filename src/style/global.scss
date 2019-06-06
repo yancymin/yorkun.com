@@ -1,0 +1,22 @@
+$black: #141516;
+$gray: #383C41;
+$white: #F5F6F8;
+$blue: #3973FF;
+$font-color-white-1: #ffffff;
+$font-color-white-2: rgba(255, 255, 255, 0.8);
+$font-color-white-3: rgba(255, 255, 255, 0.6);
+$font-color-black-1: #000000;
+
+@mixin font($size, $color, $weight) {
+    font-family: Source Han Sans CN, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+}
+
+@mixin flex-all-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @content;
+}

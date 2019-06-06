@@ -70,8 +70,7 @@ export default {
 .home {
   width: 100%;
   background-color: $gray;
-    @include flex-column;
-
+  @include flex-column;
 
   .head {
     width: 100%;
@@ -82,6 +81,7 @@ export default {
     @include font(14px, $font-color-white-3, 500);
 
     .nav-1 {
+      max-width: 1200px;
       width: 90%;
       padding-top: 24px;
       @include flex-all-center {
@@ -104,16 +104,17 @@ export default {
       .motion {
         &_logo {
           position: relative;
-        margin-top: 60px;
-          }
+          margin-top: 60px;
+        }
       }
     }
   }
 
-    .container {
-      width: 90%;
-      @include flex-column;
-    }
+  .container {
+    width: 90%;
+    padding-top: 10px;
+    @include flex-column;
+  }
 }
 </style>
 

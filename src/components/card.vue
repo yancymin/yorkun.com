@@ -3,9 +3,11 @@
     <div class="tag">{{tag}}</div>
     <div class="card_wrap">
       <div class="des">
-        <h1>{{h1}}</h1>
-        <span>{{des}}</span>
-        <defaultButton buttonText="查看详情"/>
+        <h1 v-if="isH1">{{h1}}</h1>
+        <span v-if="isDes">{{des}}</span>
+        <defaultButton buttonText="查看详情" v-if="isButton"/>
+        <slot>
+        </slot>
       </div>
       <div class="img-area">
         <img src="../assets/index/geetestweb.png" alt>
@@ -20,7 +22,7 @@ import ghostButton from "../components/ghostButton.vue";
 
 export default {
   name: "card",
-  props: ["h1", "des", "cardColor", "tag"],
+  props: ["h1", "des", "cardColor", "tag", "isButton", "isH1", "isDes"],
   components: {
     defaultButton,
     ghostButton

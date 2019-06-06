@@ -31,8 +31,21 @@
       </div>
     </div>
     <div class="container">
-      <card h1="我是个设计师" tag="网页设计" des="今天天气真好阿"/>
-      <card h1="我是个设计师" tag="网页设计" des="2018 年网站改版，配合极验的品牌形象，采用了全新的视觉风格。"/>
+      <card :isButton="false">
+        <h1>你好, 我叫 YorKun, 是一名设计师</h1>
+        <p class="mb-40">在互联网公司担任设计负责人一职，喜欢尝试不同的设计：UI、网页、图形、动效……</p>
+        <h1>欢迎来到我的个人站点</h1>
+        <p>你可以通过我参与的项目以及设计作品来了解我。</p>
+      </card>
+      <card h1="我是个设计师" tag="网页设计" des="今天天气真好阿" :isH1="true" :isDes="true" :isButton="true"/>
+      <card
+        h1="我是个设计师"
+        tag="网页设计"
+        des="2018 年网站改版，配合极验的品牌形象，采用了全新的视觉风格。"
+        :isH1="true"
+        :isDes="true"
+        :isButton="true"
+      />
     </div>
   </div>
 </template>
@@ -114,6 +127,10 @@ export default {
     width: 90%;
     padding-top: 10px;
     @include flex-column;
+
+.mb-40 {
+    margin-bottom: 40px;
+}
   }
 }
 </style>

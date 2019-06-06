@@ -31,7 +31,7 @@
       </div>
     </div>
     <div class="container">
-      <card :isButton="false">
+      <card :isButton="false" cardColor="#141516" :isBlack=true >
         <h1>你好, 我叫 YorKun, 是一名设计师</h1>
         <p class="mb-40">在互联网公司担任设计负责人一职，喜欢尝试不同的设计：UI、网页、图形、动效……</p>
         <h1>欢迎来到我的个人站点</h1>

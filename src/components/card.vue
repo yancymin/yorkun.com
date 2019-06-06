@@ -1,13 +1,12 @@
 <template>
-  <div class="card" :style="'background-color:' + cardColor">
+  <div class="card" :style="'background-color:' + cardColor" :class="{fontBlack: isBlack}">
     <div class="tag">{{tag}}</div>
     <div class="card_wrap">
       <div class="des">
         <h1 v-if="isH1">{{h1}}</h1>
         <span v-if="isDes">{{des}}</span>
         <defaultButton buttonText="查看详情" v-if="isButton"/>
-        <slot>
-        </slot>
+        <slot></slot>
       </div>
       <div class="img-area">
         <img src="../assets/index/geetestweb.png" alt>
@@ -22,7 +21,7 @@ import ghostButton from "../components/ghostButton.vue";
 
 export default {
   name: "card",
-  props: ["h1", "des", "cardColor", "tag", "isButton", "isH1", "isDes"],
+  props: ["h1", "des", "cardColor", "tag", "isButton", "isH1", "isDes" ,"isBlack"],
   components: {
     defaultButton,
     ghostButton
@@ -32,6 +31,15 @@ export default {
 
 <style lang="scss" scoped>
 @import "../style/global.scss";
+
+.fontBlack {
+  h1 {
+     color: $font-color-white-1 !important;
+  }
+  span,p {
+      color: $font-color-white-3 !important;
+  }
+}
 
 .card {
   position: relative;

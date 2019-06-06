@@ -112,6 +112,7 @@ export default {
 
     .container {
       width: 90%;
+      @include flex-column;
     }
 }
 </style>

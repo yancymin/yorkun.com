@@ -1,6 +1,6 @@
 <template>
   <div class="card" :style="'background-color:' + cardColor">
-      <div class="tag">{{tag}}</div>
+    <div class="tag">{{tag}}</div>
     <div class="card_wrap">
       <div class="des">
         <h1>{{h1}}</h1>
@@ -32,7 +32,8 @@ export default {
 @import "../style/global.scss";
 
 .card {
-    position: relative;
+  position: relative;
+  max-width: 1200px;
   width: 100%;
   height: 420px;
   margin: 10px 0;
@@ -41,16 +42,16 @@ export default {
   overflow: hidden;
   @include flex-all-center;
 
-.tag {
+  .tag {
     z-index: 100;
     position: absolute;
     top: 10px;
     right: 10px;
     padding: 8px 16px;
-    background-color: #D9DBDF;
-    border-radius:50px;
-    @include font(12px,$font-color-black-2, 400)
-    }
+    background-color: #d9dbdf;
+    border-radius: 50px;
+    @include font(12px, $font-color-black-2, 400);
+  }
 
   &_wrap {
     position: relative;
@@ -59,31 +60,31 @@ export default {
       justify-content: space-between;
     }
     .des {
-        z-index: 1;
-        position: absolute;
-        left: 120px;
+      z-index: 1;
+      position: absolute;
+      left: 120px;
       h1 {
         word-break: keep-all;
         margin-bottom: 10px;
-        @include font(40px, $font-color-black-1, 600){
-            line-height: 56px;
-        };
+        @include font(40px, $font-color-black-1, 600) {
+          line-height: 56px;
+        }
       }
-      span{
-          display: inline-block;
-          min-width: 600px;
-          margin-bottom: 50px;
-          @include font(14px, $font-color-black-2, 400) {
-              line-height: 20px;
-          }
+      span {
+        display: inline-block;
+        min-width: 600px;
+        margin-bottom: 50px;
+        @include font(14px, $font-color-black-2, 400) {
+          line-height: 20px;
+        }
       }
     }
   }
 
   .img-area {
-      z-index: 0;
-      position: absolute;
-      right: 0;
+    z-index: 0;
+    position: absolute;
+    right: 0;
     img {
       height: 420px;
     }

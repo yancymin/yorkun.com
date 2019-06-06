@@ -1,15 +1,19 @@
 <template>
-  <div class="card" :style="'background-color:' + cardColor" :class="{fontBlack: isBlack}">
-    <div class="tag">{{tag}}</div>
+  <div
+    class="card"
+    :style="'background-color:' + cardColor"
+    :class="{fontBlack: isBlack, whiteBotton: isWhiteBotton}"
+  >
+    <div class="tag" v-if="isTag">{{tag}}</div>
     <div class="card_wrap">
       <div class="des">
-        <h1 v-if="isH1">{{h1}}</h1>
+        <h1 v-if="isTitle">{{title}}</h1>
         <span v-if="isDes">{{des}}</span>
         <defaultButton buttonText="查看详情" v-if="isButton"/>
         <slot></slot>
       </div>
       <div class="img-area">
-        <img src="../assets/index/geetestweb.png" alt>
+        <img :src="bgImg" alt>
       </div>
     </div>
   </div>
@@ -21,7 +25,20 @@ import ghostButton from "../components/ghostButton.vue";
 
 export default {
   name: "card",
-  props: ["h1", "des", "cardColor", "tag", "isButton", "isH1", "isDes" ,"isBlack"],
+  //   props: ["title", "des", "cardColor", "tag", "isButton", "isTitle", "isDes" ,"isBlack", "isTag"],
+  props: {
+    title: String,
+    des: String,
+    cardColor: String,
+    tag: String,
+    isButton: Boolean,
+    isTitle: Boolean,
+    isDes: Boolean,
+    isBlack: Boolean,
+    isWhiteBotton: Boolean,
+    isTag: Boolean,
+    bgImg: String
+  },
   components: {
     defaultButton,
     ghostButton
@@ -34,10 +51,18 @@ export default {
 
 .fontBlack {
   h1 {
-     color: $font-color-white-1 !important;
+    color: $font-color-white-1 !important;
   }
-  span,p {
-      color: $font-color-white-3 !important;
+  span,
+  p {
+    color: $font-color-white-3 !important;
+  }
+}
+
+.whiteBotton {
+  .defaultButton {
+    background-color: $white !important;
+    color: $font-color-black-1 !important;
   }
 }
 

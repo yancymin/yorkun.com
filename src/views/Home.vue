@@ -31,7 +31,7 @@
       </div>
     </div>
     <div class="container">
-      <card :isButton="false" cardColor="#141516" :isBlack=true >
+      <!-- <card :isButton="false" cardColor="#141516" :isBlack="true" :isTag="false">
         <h1>你好, 我叫 YorKun, 是一名设计师</h1>
         <p class="mb-40">在互联网公司担任设计负责人一职，喜欢尝试不同的设计：UI、网页、图形、动效……</p>
         <h1>欢迎来到我的个人站点</h1>
@@ -45,6 +45,22 @@
         :isH1="true"
         :isDes="true"
         :isButton="true"
+      />-->
+
+      <card
+        v-for="(item, i) in cards"
+        :key="i"
+        :title="cards[i].title"
+        :des="cards[i].des"
+        :cardColor="cards[i].cardColor"
+        :tag="cards[i].tag"
+        :isTitle="cards[i].isTitle"
+        :isButton="cards[i].isButton"
+        :isDes="cards[i].isDes"
+        :isBlack="cards[i].isBlack"
+        :isWhiteBotton="cards[i].isWhiteBotton"
+        :isTag="cards[i].isTag"
+        :bgImg="cards[i].bgImg"
       />
     </div>
   </div>
@@ -55,6 +71,10 @@ import defaultButton from "../components/defaultButton.vue";
 import ghostButton from "../components/ghostButton.vue";
 import card from "../components/card.vue";
 import link from "../assets/index/button-icon/link_icon.svg";
+import me_photo from "../assets/index/me_photo.png";
+import geetestweb from "../assets/index/geetestweb.png";
+import ui_captcha from "../assets/index/ui_captcha.png";
+import app_onelogin from "../assets/index/app_onelogin.png";
 
 export default {
   name: "home",
@@ -66,6 +86,74 @@ export default {
   },
   data() {
     return {
+      cards: [
+        {
+          title: "xxddd",
+          des: "des",
+          cardColor: "#141516",
+          tag: "tag",
+          isButton: false,
+          isTitle: false,
+          isDes: false,
+          isBlack: true,
+          isWhiteBotton: false,
+          isTag: false,
+          bgImg: me_photo
+        },
+        {
+          title: "GEETEST 网站",
+          des: "2018 年网站改版，配合极验的品牌形象，采用了全新的视觉风格。",
+          cardColor: " ",
+          tag: "网页设计",
+          isButton: true,
+          isTitle: true,
+          isDes: true,
+          isBlack: false,
+          isWhiteBotton: false,
+          isTag: true,
+          bgImg: geetestweb
+        },
+        {
+          title: "行为验证产品",
+          des:
+            "基于生物的行为特征，结合人工智能技术，帮助网站和 APP 区分人机。",
+          cardColor: "#3973FF ",
+          tag: "Web UI 设计",
+          isButton: true,
+          isTitle: true,
+          isDes: true,
+          isBlack: true,
+          isWhiteBotton: true,
+          isTag: true,
+          bgImg: ui_captcha
+        },
+        {
+          title: "APP 一键登录",
+          des: "准确识别用户手机号码，实现 App 登录注册等环节一键通过。",
+          cardColor: " ",
+          tag: "App UI 设计",
+          isButton: true,
+          isTitle: true,
+          isDes: true,
+          isBlack: false,
+          isWhiteBotton: false,
+          isTag: true,
+          bgImg: app_onelogin
+        },
+        {
+          title: "小蕉 BANANA",
+          des: "生活如此多蕉，一个原创的卡通形象。",
+          cardColor: " #FC85A1",
+          tag: "主题/表情设计",
+          isButton: true,
+          isTitle: true,
+          isDes: true,
+          isBlack: true,
+          isWhiteBotton: true,
+          isTag: true,
+          bgImg: "geetestweb.png"
+        }
+      ],
       buttons: {
         href: {
           href1: "https://baidu.com"
@@ -128,9 +216,9 @@ export default {
     padding-top: 10px;
     @include flex-column;
 
-.mb-40 {
-    margin-bottom: 40px;
-}
+    .mb-40 {
+      margin-bottom: 40px;
+    }
   }
 }
 </style>

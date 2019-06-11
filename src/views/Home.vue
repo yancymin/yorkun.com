@@ -64,8 +64,18 @@
       />
 
       <div class="smallCards">
-        <smallCard/>
-        <smallCard/>
+        <smallCard
+          v-for="(item, i) in smallCards"
+          :key="i"
+          :title="smallCards[i].title"
+          :cardColor="smallCards[i].cardColor"
+          :footer="smallCards[i].footer"
+          :tag="smallCards[i].tag"
+          :isTag="smallCards[i].isTag"
+          :logo="smallCards[i].logo"
+          :isLogo="smallCards[i].isLogo"
+          :bgImg="smallCards[i].bgImg"
+        />
       </div>
     </div>
   </div>
@@ -81,6 +91,8 @@ import geetestweb from "../assets/index/geetestweb.png";
 import ui_captcha from "../assets/index/ui_captcha.png";
 import app_onelogin from "../assets/index/app_onelogin.png";
 import Portrait from "../assets/index/IMG_3045.png";
+import gmake_logo from "../assets/index/gmake_logo.png";
+import banana from "../assets/index/banana_banner.gif";
 
 export default {
   name: "home",
@@ -158,7 +170,25 @@ export default {
           isBlack: true,
           isWhiteBotton: true,
           isTag: true,
-          bgImg: "geetestweb.png"
+          bgImg: banana
+        }
+      ],
+      smallCards: [
+        {
+          title: "动效作品集",
+          tag: "动效设计",
+          cardColor: " #222",
+          footer: "“GIF LIFE” - My animation design.",
+          isTag: true,
+          bgImg: gmake_logo
+        },
+        {
+          title: "动效作品集",
+          tag: "动效设计",
+          cardColor: " #222",
+          footer: "“GIF LIFE” - My animation design.",
+          isTag: true,
+          bgImg: gmake_logo
         }
       ],
       buttons: {
@@ -228,7 +258,7 @@ export default {
     }
 
     .smallCards {
-        margin-top: 10px;
+      margin-top: 10px;
       .smallCard {
         margin-right: 20px;
 

@@ -77,6 +77,14 @@
           :bgImg="smallCards[i].bgImg"
         />
       </div>
+      <div class="xsCards">
+        <xsCard
+          v-for="(item, i) in xsCards"
+          :key="i"
+          :title="xsCards[i].title"
+          :bgImg="xsCards[i].bgImg"
+        />
+      </div>
     </div>
   </div>
 </template>
@@ -86,6 +94,7 @@ import defaultButton from "../components/defaultButton.vue";
 import ghostButton from "../components/ghostButton.vue";
 import card from "../components/card.vue";
 import smallCard from "../components/smallCard.vue";
+import xsCard from "../components/xsCard.vue";
 import link from "../assets/index/button-icon/link_icon.svg";
 import geetestweb from "../assets/index/geetestweb.png";
 import ui_captcha from "../assets/index/ui_captcha.png";
@@ -101,7 +110,8 @@ export default {
     defaultButton,
     ghostButton,
     card,
-    smallCard
+    smallCard,
+    xsCard
   },
   data() {
     return {
@@ -191,6 +201,20 @@ export default {
           bgImg: gmake_logo
         }
       ],
+      xsCards: [
+        {
+          title: `我的\nDribbble`,
+          bgImg: gmake_logo
+        },
+        {
+          title: `团队\nDribbble`,
+          bgImg: gmake_logo
+        },
+        {
+          title: `我的\nDribbble`,
+          bgImg: ""
+        }
+      ],
       buttons: {
         href: {
           href1: "https://baidu.com"
@@ -259,6 +283,8 @@ export default {
 
     .smallCards {
       margin-top: 10px;
+      max-width: 1200px;
+      width: 100%;
       .smallCard {
         margin-right: 20px;
 
@@ -266,6 +292,16 @@ export default {
           margin-right: 0;
         }
       }
+      @include flex-all-center {
+        justify-content: space-between;
+      }
+    }
+
+    .xsCards {
+      max-width: 1200px;
+      width: 100%;
+      margin-top: 10px;
+
       @include flex-all-center {
         justify-content: space-between;
       }

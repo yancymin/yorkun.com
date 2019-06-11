@@ -62,6 +62,11 @@
         :isTag="cards[i].isTag"
         :bgImg="cards[i].bgImg"
       />
+
+      <div class="smallCards">
+        <smallCard/>
+        <smallCard/>
+      </div>
     </div>
   </div>
 </template>
@@ -70,11 +75,12 @@
 import defaultButton from "../components/defaultButton.vue";
 import ghostButton from "../components/ghostButton.vue";
 import card from "../components/card.vue";
+import smallCard from "../components/smallCard.vue";
 import link from "../assets/index/button-icon/link_icon.svg";
-import me_photo from "../assets/index/me_photo.png";
 import geetestweb from "../assets/index/geetestweb.png";
 import ui_captcha from "../assets/index/ui_captcha.png";
 import app_onelogin from "../assets/index/app_onelogin.png";
+import Portrait from "../assets/index/IMG_3045.png";
 
 export default {
   name: "home",
@@ -82,7 +88,8 @@ export default {
   components: {
     defaultButton,
     ghostButton,
-    card
+    card,
+    smallCard
   },
   data() {
     return {
@@ -98,7 +105,7 @@ export default {
           isBlack: true,
           isWhiteBotton: false,
           isTag: false,
-          bgImg: me_photo
+          bgImg: Portrait
         },
         {
           title: "GEETEST 网站",
@@ -218,6 +225,20 @@ export default {
 
     .mb-40 {
       margin-bottom: 40px;
+    }
+
+    .smallCards {
+        margin-top: 10px;
+      .smallCard {
+        margin-right: 20px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+      @include flex-all-center {
+        justify-content: space-between;
+      }
     }
   }
 }

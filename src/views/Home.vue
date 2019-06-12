@@ -118,6 +118,7 @@
           </div>
         </div>
       </div>
+     <globalFooter/>
     </div>
   </div>
 </template>
@@ -128,6 +129,7 @@ import ghostButton from "../components/ghostButton.vue";
 import card from "../components/card.vue";
 import smallCard from "../components/smallCard.vue";
 import xsCard from "../components/xsCard.vue";
+import globalFooter from "../components/globalFooter.vue";
 import link from "../assets/index/button-icon/link_icon.svg";
 import geetestweb from "../assets/index/geetestweb.png";
 import ui_captcha from "../assets/index/ui_captcha.png";
@@ -144,7 +146,8 @@ export default {
     ghostButton,
     card,
     smallCard,
-    xsCard
+    xsCard,
+    globalFooter
   },
   data() {
     return {

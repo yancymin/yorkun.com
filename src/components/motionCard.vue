@@ -113,6 +113,18 @@ export default {
   overflow: hidden;
   @include flex-all-center;
 
+  &:before {
+    content: "";
+    z-index: 999;
+    position: absolute;
+    right: 60px;
+    bottom: 0;
+    display: block;
+    height: 210px;
+    width: 500px;
+    background: linear-gradient(0deg, #141516 0%, rgba(20, 21, 22, 0) 100%);
+  }
+
   .tag {
     z-index: 100;
     position: absolute;
@@ -162,6 +174,7 @@ export default {
 
   .img-area {
     z-index: 0;
+    opacity: 0.6;
     @include flex-all-center {
       align-items: flex-start;
     }
@@ -180,8 +193,9 @@ export default {
     animation: scroll 20s infinite linear forwards;
   }
   .img-area-2 {
+    z-index: 100;
     animation: scrollDelay 20s infinite linear forwards;
-    animation-delay:20s;
+    animation-delay: 20s;
 
     .left {
       position: relative;
@@ -195,10 +209,11 @@ export default {
     }
     99% {
       transform: translateY(-100%);
-      opacity: 1;
+      opacity: 0.6;
     }
     100% {
       opacity: 0;
+      transform: translateY(0);
     }
   }
   @keyframes scrollDelay {
@@ -206,8 +221,8 @@ export default {
       transform: translateY(0);
     }
     99% {
-      transform: translateY(-200%);
-      opacity: 1;
+      transform: translateY(-100%);
+      opacity: 0.6;
     }
     100% {
       opacity: 0;

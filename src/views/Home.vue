@@ -87,11 +87,11 @@
       </div>
       <div class="info">
         <div class="info_about">
-          <div class="h1">{{info.about.title}}</div>
-          <div class="h1">{{info.about.des}}</div>
+          <h1>{{info.about.title}}</h1>
+          <div class="des" v-html="info.about.des"></div>
         </div>
         <div class="info_contact">
-          <div class="h1">{{info.contact.title}}</div>
+          <h1>{{info.contact.title}}</h1>
           <div class="social">
             <div class="links">
               <a href>
@@ -106,8 +106,14 @@
               </a>
             </div>
             <div class="contact-wrap">
-              <div class="mail"><i class="fas fa-envelope"></i><p>yorkun@gmail.com</p></div>
-              <div class="wechat"><i class="fas fa-wechat"></i><p>chengyorkun</p></div>
+              <div class="mail">
+                <i class="fas fa-envelope"></i>
+                <p>yorkun@gmail.com</p>
+              </div>
+              <div class="wechat">
+                <i class="fab fa-weixin"></i>
+                <p>chengyorkun</p>
+              </div>
             </div>
           </div>
         </div>
@@ -250,15 +256,13 @@ export default {
       },
       info: {
         about: {
-          title: "ddd",
-          des: "dddddd"
+          title: "关于我",
+          des: `我的姓名有点复杂，以至于输入法里要翻很多页才能找到。为了自己和他人的方便，索性以首字母和谐音取了 “YorKun” 这个别名。<br/><br/>
+                因为从小对画画感兴趣，我读小学时周末通常是在绘画兴趣班度过的，随后高中开始系统的学习美术，大学于湖北美术学院动画系就读。可能是在学习环境中接触「实验性」和「纯艺」比较多，我更向往紧贴生活的表现形式，想要利用所学知识来解决实际问题，加上自己热衷于数码产品，对带有显示屏的东西情有独钟，所以大三决定学习 UI 设计，毕业后也进入了这一行业。<br/><br/>
+                无论是坚定信念做「好」事，还是在大海中探寻「活」法，希望自己能一直热爱设计，持谦逊之心、尽进取之力。`
         },
         contact: {
-          title: "ff"
-        },
-        social: {
-          weibo: `<i class="fab fa-instagram"></i>`,
-          weibo: `<i class="fab fa-instagram"></i>`
+          title: "联系我"
         }
       }
     };
@@ -344,6 +348,77 @@ export default {
 
       @include flex-all-center {
         justify-content: space-between;
+      }
+    }
+
+    .info {
+      width: 100%;
+      margin-top: 150px;
+      margin-bottom: 120px;
+      &_about {
+        @include flex-all-center {
+          align-items: flex-start;
+        }
+        h1 {
+          margin-right: 110px;
+          @include font(30px, $font-color-white-1, 500);
+        }
+
+        .des {
+          max-width: 760px;
+          @include font(14px, $font-color-white-2, 400) {
+            line-height: 20px;
+          }
+        }
+      }
+      &_contact {
+        width: 100%;
+        margin-top: 80px;
+        @include flex-all-center {
+          align-items: flex-start;
+        }
+        h1 {
+          margin-right: 110px;
+          @include font(30px, $font-color-white-1, 500);
+        }
+
+        .social {
+          width: 760px;
+          .links {
+            i {
+              font-size: 22px;
+              margin-right: 20px;
+              color: $font-color-white-2;
+            }
+          }
+
+          .contact-wrap {
+            margin-top: 30px;
+            @include flex-all-center {
+              justify-content: flex-start;
+            }
+
+            div {
+              padding: 12px 16px;
+              background-color: #40454b;
+              border-radius: 8px;
+              @include font(12px, $font-color-white-1, 400);
+              @include flex-all-center {
+                justify-content: flex-start;
+              }
+
+              i {
+                font-size: 14px;
+                margin-right: 8px;
+                color: $font-color-white-2;
+              }
+
+              &:first-child {
+                margin-right: 20px;
+              }
+            }
+          }
+        }
       }
     }
   }

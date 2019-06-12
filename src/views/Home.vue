@@ -31,22 +31,6 @@
       </div>
     </div>
     <div class="container">
-      <!-- <card :isButton="false" cardColor="#141516" :isBlack="true" :isTag="false">
-        <h1>你好, 我叫 YorKun, 是一名设计师</h1>
-        <p class="mb-40">在互联网公司担任设计负责人一职，喜欢尝试不同的设计：UI、网页、图形、动效……</p>
-        <h1>欢迎来到我的个人站点</h1>
-        <p>你可以通过我参与的项目以及设计作品来了解我。</p>
-      </card>
-      <card h1="我是个设计师" tag="网页设计" des="今天天气真好阿" :isH1="true" :isDes="true" :isButton="true"/>
-      <card
-        h1="我是个设计师"
-        tag="网页设计"
-        des="2018 年网站改版，配合极验的品牌形象，采用了全新的视觉风格。"
-        :isH1="true"
-        :isDes="true"
-        :isButton="true"
-      />-->
-
       <card
         :title="cardMe.title"
         :des="cardMe.des"
@@ -96,6 +80,22 @@
           :bgImg="smallCards[i].bgImg"
         />
       </div>
+
+      <motionCard
+        :title="motionCard.title"
+        :des="motionCard.des"
+        :cardColor="motionCard.cardColor"
+        :btnColor="motionCard.btnColor"
+        :btnIcon="motionCard.btnIcon"
+        :tag="motionCard.tag"
+        :isTitle="motionCard.isTitle"
+        :isButton="motionCard.isButton"
+        :isDes="motionCard.isDes"
+        :isBlack="motionCard.isBlack"
+        :isWhiteBotton="motionCard.isWhiteBotton"
+        :isTag="motionCard.isTag"
+      />
+
       <div class="xsCards">
         <xsCard
           v-for="(item, i) in xsCards"
@@ -143,6 +143,7 @@
 import defaultButton from "../components/defaultButton.vue";
 import ghostButton from "../components/ghostButton.vue";
 import card from "../components/card.vue";
+import motionCard from "../components/motionCard.vue";
 import smallCard from "../components/smallCard.vue";
 import xsCard from "../components/xsCard.vue";
 import globalFooter from "../components/globalFooter.vue";
@@ -155,6 +156,7 @@ import gmake_logo from "../assets/index/gmake_logo.png";
 import banana from "../assets/index/banana_banner.gif";
 import myDribbble from "../assets/index/mydribbble.png";
 import teamDribbble from "../assets/index/teamdribbble.png";
+import link_icon_w from "../assets/index/link_icon_w.svg";
 
 export default {
   name: "home",
@@ -163,6 +165,7 @@ export default {
     defaultButton,
     ghostButton,
     card,
+    motionCard,
     smallCard,
     xsCard,
     globalFooter
@@ -275,6 +278,20 @@ export default {
           isCenterImg: true
         }
       ],
+      motionCard: {
+        title: "YorKun 的设计博客",
+        des: "里面上传了我不同时期的作品，并且更新频繁。",
+        cardColor: "#141516 ",
+        btnColor: "#40454B",
+        tag: " ",
+        isButton: true,
+        isTitle: true,
+        isDes: true,
+        isBlack: true,
+        isWhiteBotton: false,
+        isTag: false,
+        btnIcon: link_icon_w
+      },
       buttons: {
         href: {
           href1: "https://baidu.com"

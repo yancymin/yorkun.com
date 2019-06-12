@@ -1,13 +1,14 @@
 <template>
-  <div class="defaultButton">
+  <div class="defaultButton" :style="'background-color:' + btnColor">
     <a :href="href">{{buttonText}}</a>
+   <img :src="btnIcon" alt>
   </div>
 </template>
 
 <script>
 export default {
   name: "defaultButton",
-  props: ["buttonText", "href"]
+  props: ["buttonText", "href", "btnColor", "btnIcon"]
 };
 </script>
 
@@ -20,11 +21,10 @@ export default {
   border-radius: 6px;
   background-color: $blue;
   @include font(14px, $font-color-white-1, 500);
+  @include flex-all-center;
 
-  a {
-      width: 100%;
-      height: 100%;
-      @include flex-all-center;
+  img {
+    margin-left: 8px;
   }
 }
 </style>

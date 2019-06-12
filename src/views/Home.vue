@@ -102,6 +102,8 @@
           :key="i"
           :title="xsCards[i].title"
           :bgImg="xsCards[i].bgImg"
+          :cardColor="xsCards[i].cardColor"
+          :isCenterImg="xsCards[i].isCenterImg"
         />
       </div>
       <div class="info">
@@ -151,6 +153,8 @@ import app_onelogin from "../assets/index/app_onelogin.png";
 import Portrait from "../assets/index/IMG_3045.png";
 import gmake_logo from "../assets/index/gmake_logo.png";
 import banana from "../assets/index/banana_banner.gif";
+import myDribbble from "../assets/index/mydribbble.png";
+import teamDribbble from "../assets/index/teamdribbble.png";
 
 export default {
   name: "home",
@@ -254,15 +258,21 @@ export default {
       xsCards: [
         {
           title: `我的\nDribbble`,
-          bgImg: gmake_logo
+          bgImg: myDribbble,
+          cardColor: "",
+          isCenterImg: false
         },
         {
           title: `团队\nDribbble`,
-          bgImg: gmake_logo
+          bgImg: teamDribbble,
+          cardColor: "#3973E7",
+          isCenterImg: false
         },
         {
-          title: `我的\nDribbble`,
-          bgImg: ""
+          title: ` `,
+          bgImg: "",
+          cardColor: "#E5E7EB",
+          isCenterImg: true
         }
       ],
       buttons: {

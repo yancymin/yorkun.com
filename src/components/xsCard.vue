@@ -1,14 +1,15 @@
 <template>
-  <div class="xsCard">
+  <div class="xsCard" :style="'background-color:' + cardColor">
     <h2>{{title}}</h2>
-    <img :src="bgImg" alt>
+    <img :src="bgImg" alt class="bg">
+    <img src="../assets/index/gdesign_logo.svg" alt v-if="isCenterImg" class="centerImg">
   </div>
 </template>
 
 <script>
 export default {
   name: "xsCard",
-  props: ["title", "bgImg"]
+  props: ["title", "bgImg", "cardColor", "isCenterImg"]
 };
 </script>
 
@@ -35,12 +36,22 @@ export default {
     }
   }
 
-  img {
+  .bg {
     z-index: 0;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
+  }
+  .centerImg {
+    width: 167px;
+    height: 66px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 22%;
+    bottom: 0;
+    margin: 0 auto;
   }
 }
 </style>

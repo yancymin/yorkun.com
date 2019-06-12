@@ -85,6 +85,33 @@
           :bgImg="xsCards[i].bgImg"
         />
       </div>
+      <div class="info">
+        <div class="info_about">
+          <div class="h1">{{info.about.title}}</div>
+          <div class="h1">{{info.about.des}}</div>
+        </div>
+        <div class="info_contact">
+          <div class="h1">{{info.contact.title}}</div>
+          <div class="social">
+            <div class="links">
+              <a href>
+                <i class="fab fa-weibo"></i>
+              </a>
+              <i class="fab fa-instagram"></i>
+              <a href>
+                <i class="fab fa-github"></i>
+              </a>
+              <a href>
+                <i class="fab fa-codepen"></i>
+              </a>
+            </div>
+            <div class="contact-wrap">
+              <div class="mail"><i class="fas fa-envelope"></i><p>yorkun@gmail.com</p></div>
+              <div class="wechat"><i class="fas fa-wechat"></i><p>chengyorkun</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -220,6 +247,19 @@ export default {
           href1: "https://baidu.com"
         },
         buttonIcon: link
+      },
+      info: {
+        about: {
+          title: "ddd",
+          des: "dddddd"
+        },
+        contact: {
+          title: "ff"
+        },
+        social: {
+          weibo: `<i class="fab fa-instagram"></i>`,
+          weibo: `<i class="fab fa-instagram"></i>`
+        }
       }
     };
   }

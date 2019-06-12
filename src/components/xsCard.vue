@@ -29,7 +29,7 @@ export default {
 
   h2 {
     z-index: 1;
-    width: 20%;
+    width: 50%;
     @include font(30px, $font-color-white-1, 600) {
       line-height: 34px;
     }

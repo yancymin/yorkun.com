@@ -48,6 +48,25 @@
       />-->
 
       <card
+        :title="cardMe.title"
+        :des="cardMe.des"
+        :cardColor="cardMe.cardColor"
+        :tag="cardMe.tag"
+        :isTitle="cardMe.isTitle"
+        :isButton="cardMe.isButton"
+        :isDes="cardMe.isDes"
+        :isBlack="cardMe.isBlack"
+        :isWhiteBotton="cardMe.isWhiteBotton"
+        :isTag="cardMe.isTag"
+        :bgImg="cardMe.bgImg"
+      >
+        <h1>你好, 我叫 YorKun, 是一名设计师</h1>
+        <p class="mb-40">在互联网公司担任设计负责人一职，喜欢尝试不同的设计：UI、网页、图形、动效……</p>
+        <h1>欢迎来到我的个人站点</h1>
+        <p>你可以通过我参与的项目以及设计作品来了解我。</p>
+      </card>
+
+      <card
         v-for="(item, i) in cards"
         :key="i"
         :title="cards[i].title"
@@ -94,31 +113,26 @@
           <h1>{{info.contact.title}}</h1>
           <div class="social">
             <div class="links">
-              <a href>
-                <i class="fab fa-weibo"></i>
-              </a>
-              <i class="fab fa-instagram"></i>
-              <a href>
-                <i class="fab fa-github"></i>
-              </a>
-              <a href>
-                <i class="fab fa-codepen"></i>
-              </a>
+              <a href></a>
+              <a href></a>
+              <a href></a>
+              <a href></a>
+              <a href></a>
             </div>
             <div class="contact-wrap">
               <div class="mail">
-                <i class="fas fa-envelope"></i>
+                <i></i>
                 <p>yorkun@gmail.com</p>
               </div>
               <div class="wechat">
-                <i class="fab fa-weixin"></i>
+                <i></i>
                 <p>chengyorkun</p>
               </div>
             </div>
           </div>
         </div>
       </div>
-     <globalFooter/>
+      <globalFooter/>
     </div>
   </div>
 </template>
@@ -132,7 +146,7 @@ import xsCard from "../components/xsCard.vue";
 import globalFooter from "../components/globalFooter.vue";
 import link from "../assets/index/button-icon/link_icon.svg";
 import geetestweb from "../assets/index/geetestweb.png";
-import ui_captcha from "../assets/index/ui_captcha.png";
+import ui_captcha from "../assets/index/ui_captcha.gif";
 import app_onelogin from "../assets/index/app_onelogin.png";
 import Portrait from "../assets/index/IMG_3045.png";
 import gmake_logo from "../assets/index/gmake_logo.png";
@@ -151,20 +165,20 @@ export default {
   },
   data() {
     return {
+      cardMe: {
+        title: " ",
+        des: " ",
+        cardColor: "#141516",
+        tag: "tag",
+        isButton: false,
+        isTitle: false,
+        isDes: false,
+        isBlack: true,
+        isWhiteBotton: false,
+        isTag: false,
+        bgImg: Portrait
+      },
       cards: [
-        {
-          title: "xxddd",
-          des: "des",
-          cardColor: "#141516",
-          tag: "tag",
-          isButton: false,
-          isTitle: false,
-          isDes: false,
-          isBlack: true,
-          isWhiteBotton: false,
-          isTag: false,
-          bgImg: Portrait
-        },
         {
           title: "GEETEST 网站",
           des: "2018 年网站改版，配合极验的品牌形象，采用了全新的视觉风格。",
@@ -317,6 +331,10 @@ export default {
         }
       }
     }
+
+    .lang {
+      display: none;
+    }
   }
 
   .container {
@@ -369,7 +387,7 @@ export default {
 
         .des {
           max-width: 760px;
-          @include font(14px, $font-color-white-2, 400) {
+          @include font(14px, $font-color-white-3, 400) {
             line-height: 20px;
           }
         }
@@ -388,10 +406,29 @@ export default {
         .social {
           width: 760px;
           .links {
-            i {
-              font-size: 22px;
+            a {
+              display: inline-block;
+              width: 22px;
+              height: 22px;
               margin-right: 20px;
-              color: $font-color-white-2;
+              background-position: center center;
+              background-size: 22px 22px;
+
+              &:nth-of-type(1) {
+                background-image: url("../assets/index/links/weibo_icon.svg");
+              }
+              &:nth-of-type(2) {
+                background-image: url("../assets/index/links/ig_icon.svg");
+              }
+              &:nth-of-type(3) {
+                background-image: url("../assets/index/links/github_icon.svg");
+              }
+              &:nth-of-type(4) {
+                background-image: url("../assets/index/links/unsplash_icon.svg");
+              }
+              &:nth-of-type(5) {
+                background-image: url("../assets/index/links/codepen_icon.svg");
+              }
             }
           }
 
@@ -410,14 +447,31 @@ export default {
                 justify-content: flex-start;
               }
 
-              i {
-                font-size: 14px;
-                margin-right: 8px;
-                color: $font-color-white-2;
-              }
-
               &:first-child {
                 margin-right: 20px;
+              }
+            }
+
+            .mail {
+              i {
+                width: 16px;
+                height: 16px;
+                display: inline-block;
+                margin-right: 8px;
+                background-image: url("../assets/index/links/mail_icon.svg");
+                background-position: center center;
+                background-size: 16px 16px;
+              }
+            }
+            .wechat {
+              i {
+                width: 16px;
+                height: 16px;
+                display: inline-block;
+                margin-right: 8px;
+                background-image: url("../assets/index/links/wechat_icon.svg");
+                background-position: center center;
+                background-size: 16px 16px;
               }
             }
           }

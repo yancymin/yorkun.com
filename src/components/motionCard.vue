@@ -21,18 +21,6 @@
             <img src="../assets/index/scroll/Slide_04.png" alt>
             <img src="../assets/index/scroll/Slide_05.png" alt>
             <img src="../assets/index/scroll/Slide_06.png" alt>
-          </div>
-          <div class="right">
-            <img src="../assets/index/scroll/Slide_07.png" alt>
-            <img src="../assets/index/scroll/Slide_08.png" alt>
-            <img src="../assets/index/scroll/Slide_09.png" alt>
-            <img src="../assets/index/scroll/Slide_10.png" alt>
-            <img src="../assets/index/scroll/Slide_11.png" alt>
-            <img src="../assets/index/scroll/Slide_12.png" alt>
-          </div>
-        </div>
-        <div class="img-area img-area-2">
-          <div class="left">
             <img src="../assets/index/scroll/Slide_01.png" alt>
             <img src="../assets/index/scroll/Slide_02.png" alt>
             <img src="../assets/index/scroll/Slide_03.png" alt>
@@ -47,7 +35,14 @@
             <img src="../assets/index/scroll/Slide_10.png" alt>
             <img src="../assets/index/scroll/Slide_11.png" alt>
             <img src="../assets/index/scroll/Slide_12.png" alt>
+            <img src="../assets/index/scroll/Slide_07.png" alt>
+            <img src="../assets/index/scroll/Slide_08.png" alt>
+            <img src="../assets/index/scroll/Slide_09.png" alt>
+            <img src="../assets/index/scroll/Slide_10.png" alt>
+            <img src="../assets/index/scroll/Slide_11.png" alt>
+            <img src="../assets/index/scroll/Slide_12.png" alt>
           </div>
+        </div>
         </div>
       </div>
     </div>
@@ -170,8 +165,6 @@ export default {
     right: 120px;
     width: 420px;
     top: 0;
-    animation: scroll 135s infinite linear normal;
-
   }
 
   .img-area {
@@ -183,11 +176,18 @@ export default {
 
     .left,
     .right {
+    animation: scroll 60s infinite linear;
+
       img {
         width: 200px;
         border-radius: 4px;
         margin: 10px;
       }
+    }
+
+     .left {
+      position: relative;
+      top: -30px;
     }
   }
 
@@ -199,23 +199,16 @@ export default {
     /* animation: scrollDelay 20s infinite linear forwards; */
     /* animation-delay: 20s; */
 
-    .left {
-      position: relative;
-      top: -113px;
-    }
+   
   }
 
   @keyframes scroll {
     0% {
-      transform: translateY(0);
+      transform: translate3d(0,0,0);
     }
-    99% {
-      transform: translateY(-100%);
-      opacity: 0.8;
-    }
+ 
     100% {
-      opacity: 0;
-      transform: translateY(0);
+      transform: translate3d(0,-50%,0);
     }
   }
   @keyframes scrollDelay {

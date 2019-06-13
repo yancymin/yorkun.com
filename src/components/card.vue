@@ -121,7 +121,7 @@ export default {
     position: absolute;
     right: 0;
     img {
-      height: 420px;
+      height: 422px;
     }
   }
 }

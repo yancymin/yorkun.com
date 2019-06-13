@@ -440,6 +440,11 @@ export default {
               margin-right: 20px;
               background-position: center center;
               background-size: 22px 22px;
+              transition: all 0.3s ease;
+
+              &:hover {
+                filter: contrast(2);
+              }
 
               &:nth-of-type(1) {
                 background-image: url("../assets/index/links/weibo_icon.svg");

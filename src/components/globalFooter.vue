@@ -19,6 +19,7 @@ export default {
 @import "./src/style/global.scss";
 
 .globalFooter {
+  max-width: 1200px;
   width: 100%;
   padding: 24px 0 40px 0;
   border-top: 1px solid rgba(255, 255, 255, 0.1);

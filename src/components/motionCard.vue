@@ -43,7 +43,6 @@
             <img src="../assets/index/scroll/Slide_12.png" alt>
           </div>
         </div>
-        </div>
       </div>
     </div>
   </div>
@@ -179,7 +178,7 @@ export default {
 
     .left,
     .right {
-    animation: scroll 60s infinite linear;
+      animation: scroll 60s infinite linear;
 
       img {
         width: 200px;
@@ -188,27 +187,24 @@ export default {
       }
     }
 
-     .left {
+    .left {
       position: relative;
       top: 0px;
     }
 
     .right {
-    animation: scroll 65s infinite linear;
-    
+      animation: scroll 65s infinite linear;
     }
   }
-
 
   @keyframes scroll {
     0% {
-      transform: translate3d(0,0,0);
+      transform: translate3d(0, 0, 0);
     }
- 
+
     100% {
-      transform: translate3d(0,50%,0);
+      transform: translate3d(0, 50%, 0);
     }
   }
-
 }
 </style>

@@ -170,7 +170,7 @@ export default {
 
   .img-area {
     z-index: 0;
-    opacity: 0.8;
+    opacity: 0.6;
     position: relative;
     bottom: 1233px;
     @include flex-all-center {
@@ -190,7 +190,12 @@ export default {
 
      .left {
       position: relative;
-      top: -60px;
+      top: 0px;
+    }
+
+    .right {
+    animation: scroll 65s infinite linear;
+    
     }
   }
 

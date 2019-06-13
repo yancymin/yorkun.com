@@ -165,11 +165,14 @@ export default {
     right: 120px;
     width: 420px;
     top: 0;
+    bottom: 0;
   }
 
   .img-area {
     z-index: 0;
     opacity: 0.8;
+    position: relative;
+    bottom: 1233px;
     @include flex-all-center {
       align-items: flex-start;
     }
@@ -187,20 +190,10 @@ export default {
 
      .left {
       position: relative;
-      top: -30px;
+      top: -60px;
     }
   }
 
-  .img-area-1 {
-    /* animation: scroll 20s infinite linear forwards; */
-  }
-  .img-area-2 {
-    z-index: 100;
-    /* animation: scrollDelay 20s infinite linear forwards; */
-    /* animation-delay: 20s; */
-
-   
-  }
 
   @keyframes scroll {
     0% {
@@ -208,20 +201,9 @@ export default {
     }
  
     100% {
-      transform: translate3d(0,-50%,0);
+      transform: translate3d(0,50%,0);
     }
   }
-  @keyframes scrollDelay {
-    0% {
-      transform: translateY(0);
-    }
-    99% {
-      transform: translateY(-100%);
-      opacity: 0.6;
-    }
-    100% {
-      opacity: 0;
-    }
-  }
+
 }
 </style>

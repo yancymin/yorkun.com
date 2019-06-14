@@ -14,7 +14,13 @@
       </div>
       <div class="motion-group">
         <div class="img-area img-area-1">
-          <div class="left">
+          <div class="slide">
+            <img src="../assets/index/slide.png" alt>
+          </div>
+          <div class="slide">
+            <img src="../assets/index/slide.png" alt>
+          </div>
+          <!-- <div class="left">
             <img src="../assets/index/scroll/Slide_01.png" alt>
             <img src="../assets/index/scroll/Slide_02.png" alt>
             <img src="../assets/index/scroll/Slide_03.png" alt>
@@ -41,7 +47,7 @@
             <img src="../assets/index/scroll/Slide_10.png" alt>
             <img src="../assets/index/scroll/Slide_11.png" alt>
             <img src="../assets/index/scroll/Slide_12.png" alt>
-          </div>
+          </div>-->
         </div>
       </div>
     </div>
@@ -171,9 +177,18 @@ export default {
     z-index: 0;
     opacity: 0.6;
     position: relative;
-    bottom: 1233px;
+    /* bottom: 1233px; */
     @include flex-all-center {
       align-items: flex-start;
+      flex-direction: column;
+    }
+
+    .slide {
+      animation: scroll 6s infinite linear;
+
+      img {
+              width: 420px;
+      }
     }
 
     .left,

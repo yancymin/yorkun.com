@@ -15,13 +15,13 @@
             <a href>关于我</a>
           </li>
         </ul>
-        <div class="lang">
+        <!-- <div class="lang">
           <span>CN</span>
           <ul>
             <li>CN</li>
             <li>EN</li>
           </ul>
-        </div>
+        </div>-->
       </div>
       <div class="head_container">
         <img src="../assets/index/logo_banner.svg" alt class="logo">
@@ -343,6 +343,10 @@ export default {
         li {
           display: inline;
           margin: 0 40px;
+
+          &:first-child {
+            margin-left: 53px;
+          }
         }
       }
     }
@@ -351,10 +355,44 @@ export default {
       @include flex-column;
       margin-top: 120px;
 
+      .logo {
+               opacity: 0;
+          animation: showLogo2 2.5s linear forwards;
+          animation-delay: 1s;
+
+          @keyframes showLogo2 {
+            to {
+               opacity: 1;
+            }
+          }
+      }
+
       .motion {
+        position: relative;
+        &::before {
+          content: "";
+          z-index: 100;
+          position: absolute;
+          display: block;
+          width: 385px;
+          height: 360px;
+          top: 46px;
+          background-color: $black;
+          transform: scaleY(1);
+          transform-origin: top;
+          will-change: transform;
+          animation: showLogo1 2.2s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+
+          @keyframes showLogo1 {
+            to {
+                transform: scaleY(0);
+            }
+          }
+        }
         &_logo {
           position: relative;
           margin-top: 60px;
+          bottom: -2px;
         }
       }
     }

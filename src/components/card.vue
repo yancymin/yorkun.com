@@ -11,7 +11,7 @@
         <span v-if="isDes">{{des}}</span>
         <defaultButton buttonText="查看详情" v-if="isButton"/>
         <slot></slot>
-      </div>
+      </div> 
       <div class="img-area">
         <img :src="bgImg" alt>
       </div>
@@ -25,7 +25,6 @@ import ghostButton from "../components/ghostButton.vue";
 
 export default {
   name: "card",
-  //   props: ["title", "des", "cardColor", "tag", "isButton", "isTitle", "isDes" ,"isBlack", "isTag"],
   props: {
     title: String,
     des: String,

@@ -369,6 +369,7 @@ export default {
 
       .motion {
         position: relative;
+        bottom: -122px;
         &::before {
           content: "";
           z-index: 100;

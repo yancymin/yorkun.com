@@ -356,15 +356,16 @@ export default {
       margin-top: 120px;
 
       .logo {
-               opacity: 0;
-          animation: showLogo2 2.5s linear forwards;
-          animation-delay: 1s;
+        position: absolute;
+        opacity: 0;
+        animation: showLogo2 2.5s linear forwards;
+        animation-delay: 1s;
 
-          @keyframes showLogo2 {
-            to {
-               opacity: 1;
-            }
+        @keyframes showLogo2 {
+          to {
+            opacity: 1;
           }
+        }
       }
 
       .motion {
@@ -386,7 +387,7 @@ export default {
 
           @keyframes showLogo1 {
             to {
-                transform: scaleY(0);
+              transform: scaleY(0);
             }
           }
         }

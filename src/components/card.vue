@@ -14,7 +14,10 @@
       <div class="des">
         <img v-if="isTitle" :src="cardLogo">
         <span v-if="isDes">{{des}}</span>
-        <defaultButton buttonText="查看详情" v-if="isButton"/>
+        <div class="btn-wrap">
+          <defaultButton :buttonText="buttonTextD" v-if="isButton" :btnIcon="btnIconD" />
+          <ghostButton :buttonText="buttonTextG" v-if="isGhostButton" :buttonIcon="btnIconG" />
+        </div>
         <slot></slot>
       </div>
       <div class="img-area">
@@ -43,8 +46,13 @@ export default {
     isWhiteBotton: Boolean,
     isTag: Boolean,
     isTagWhite: Boolean,
+    isGhostButton: Boolean,
     tagColor: String,
-    bgImg: String
+    bgImg: String,
+    btnIconD: String,
+    btnIconG: String,
+    buttonTextG: String,
+    buttonTextD: String,
   },
   components: {
     defaultButton,
@@ -111,6 +119,15 @@ export default {
       left: 120px;
       @include flex-column {
         align-items: flex-start;
+      }
+
+      .btn-wrap {
+        .defaultButton {
+          margin-right: 20px;
+        }
+        @include flex-all-center {
+          align-items: flex-start;
+        }
       }
 
       h1 {

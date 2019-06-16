@@ -31,7 +31,7 @@ export default {
   justify-content: center;
   align-items: center;
   width: 136px;
-  height: 46px;
+  height: 44px;
   border-radius: 6px;
   border: 1.5px solid #3a4151;
   background-color: $white;

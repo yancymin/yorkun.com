@@ -67,6 +67,11 @@
         :isWhiteBotton="cards[i].isWhiteBotton"
         :isTag="cards[i].isTag"
         :bgImg="cards[i].bgImg"
+        :isGhostButton="cards[i].isGhostButton"
+        :btnIconD="cards[i].btnIconD"
+        :btnIconG="cards[i].btnIconG"
+        :buttonTextD="cards[i].buttonTextD"
+        :buttonTextG="cards[i].buttonTextG"
       />
 
       <div class="smallCards">
@@ -160,6 +165,8 @@ import banana from "../assets/index/banana_banner.gif";
 import myDribbble from "../assets/index/mydribbble.png";
 import teamDribbble from "../assets/index/teamdribbble.png";
 import link_icon_w from "../assets/index/link_icon_w.svg";
+import link_icon_b from "../assets/index/link_icon_b.svg";
+import reweima_icon from "../assets/index/reweima_icon.svg";
 import geetestweb_logo from "../assets/index/geetestweb_logo.svg";
 import captcha_logo from "../assets/index/captcha_logo.svg";
 import wangguan_logo from "../assets/index/wangguan_logo.svg";
@@ -200,9 +207,15 @@ export default {
             "安全服务类企业网站的一次改版，承接起业务线的扩充和品牌视觉的升级。",
           cardColor: " ",
           tag: "网页设计",
+          buttonTextD: "项目详情",
+          buttonTextG: "网站地址",
+
           isTagWhite: false,
           tagColor: "#DEE1E7",
           isButton: true,
+          isGhostButton: true,
+          btnIconD: "",
+          btnIconG: link_icon_b,
           isTitle: true,
           isDes: true,
           isBlack: false,
@@ -217,9 +230,15 @@ export default {
             "基于生物的行为特征，结合人工智能技术，帮助网站和 APP 区分人机，一个拥有全球 26 万家客户的革命性安全产品。 ",
           cardColor: "#3973FF ",
           tag: "Web UI 设计",
+          buttonTextD: "项目详情",
+          buttonTextG: " ",
+
           isTagWhite: true,
-            tagColor: "rgba(0,0,0,0.08)",
+          tagColor: "rgba(0,0,0,0.08)",
           isButton: true,
+          btnIconD: "",
+          btnIconG: "",
+          isGhostButton: false,
           isTitle: true,
           isDes: true,
           isBlack: true,
@@ -234,9 +253,15 @@ export default {
             "准确识别用户手机号码，实现 App 的登录注册等环节一键通过，帮助企业优化验证流程，让其用户享受更好的体验。",
           cardColor: " ",
           tag: "App UI 设计",
+          buttonTextD: "项目详情",
+          buttonTextG: " ",
+
           isTagWhite: false,
-            tagColor: "rgba(0,0,0,0.08)",
+          tagColor: "rgba(0,0,0,0.08)",
           isButton: true,
+          btnIconD: "",
+          btnIconG: "",
+          isGhostButton: false,
           isTitle: true,
           isDes: true,
           isBlack: false,
@@ -250,9 +275,15 @@ export default {
           des: "生活如此多蕉，听听小香蕉的故事，自己设计的第一个卡通形象。",
           cardColor: " #FC85A1",
           tag: "主题/表情设计",
+          buttonTextD: "Bananaaa~",
+          buttonTextG: "表情包下载",
+
           isTagWhite: true,
-            tagColor: "rgba(0,0,0,0.08)",
+          tagColor: "rgba(0,0,0,0.08)",
           isButton: true,
+          btnIconD: "",
+          btnIconG: reweima_icon,
+          isGhostButton: true,
           isTitle: true,
           isDes: true,
           isBlack: true,
@@ -454,6 +485,23 @@ export default {
 
           span {
             color: rgba(255, 255, 255, 0.9) !important;
+          }
+          
+          .defaultButton {
+            background-color: #FFDE4A !important;
+            color: #AF6E13 !important;
+          }
+
+          .ghostButton {
+            background-color: rgb(252, 133, 161);
+            border-color: white;
+            color: white;
+
+            .ghostButton-icon {
+              margin-left: 8px;
+              width: 14px !important;
+              height: 14px !important;
+            }
           }
         }
       }

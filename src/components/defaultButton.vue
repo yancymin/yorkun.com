@@ -1,14 +1,21 @@
 <template>
   <div class="defaultButton" :style="'background-color:' + btnColor">
     <a :href="href">{{buttonText}}</a>
-   <img :src="btnIcon" alt>
+    <img :src="btnIcon" id="defaultButton-icon" alt>
   </div>
 </template>
 
 <script>
 export default {
   name: "defaultButton",
-  props: ["buttonText", "href", "btnColor", "btnIcon"]
+  props: ["buttonText", "href", "btnColor", "btnIcon"],
+  mounted() {
+    let icon = document.getElementById("defaultButton-icon");
+
+    if (this.btnIcon === "") {
+      icon.style.display = "none";
+    }
+  }
 };
 </script>
 

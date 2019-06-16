@@ -1,18 +1,18 @@
 <template>
-  <div class="home">
+  <div class="home" id="top">
     <!-- <defaultButton buttonText="fffff" :href="buttons.href.href1"/>
     <ghostButton buttonText="fffff" :buttonIcon="buttons.buttonIcon" :href="buttons.href.href1"/>-->
     <div class="head">
       <div class="nav-1">
         <ul>
           <li>
-            <a href>项目</a>
+            <a href="#project">项目</a>
           </li>
           <li>
-            <a href>作品</a>
+            <a href="#works">作品</a>
           </li>
           <li>
-            <a href>关于我</a>
+            <a href="#about">关于我</a>
           </li>
         </ul>
         <!-- <div class="lang">
@@ -49,7 +49,7 @@
         <h1>欢迎来到我的个人站点</h1>
         <p>你可以通过这个网站来了解我。😊</p>
       </card>
-
+      <span id="project"></span>
       <card
         v-for="(item, i) in cards"
         :key="i"
@@ -74,7 +74,7 @@
         :buttonTextG="cards[i].buttonTextG"
       />
 
-      <div class="smallCards">
+      <div class="smallCards" id="works">
         <smallCard
           v-for="(item, i) in smallCards"
           :key="i"
@@ -116,7 +116,7 @@
           :isCenterImg="xsCards[i].isCenterImg"
         />
       </div>
-      <div class="info">
+      <div class="info" id="about">
         <div class="info_about">
           <h1>{{info.about.title}}</h1>
           <div class="des" v-html="info.about.des"></div>
@@ -146,6 +146,7 @@
       </div>
       <globalFooter/>
     </div>
+    <a class="top" href="#top"></a>
   </div>
 </template>
 
@@ -186,6 +187,16 @@ export default {
     smallCard,
     xsCard,
     globalFooter
+  },
+  created() {
+    window.onscroll = function() {
+      var backTop = document.querySelector(".top");
+      if (document.documentElement.scrollTop + document.body.scrollTop > 100) {
+        backTop.style.display = "block";
+      } else {
+        backTop.style.display = "none";
+      }
+    };
   },
   data() {
     return {
@@ -646,10 +657,10 @@ export default {
             }
 
             .mail {
-                  transition: all 0.3s ease;
+              transition: all 0.3s ease;
               &:hover {
                 filter: brightness(1.05);
-               i {
+                i {
                   filter: contrast(2);
                 }
               }
@@ -704,6 +715,24 @@ export default {
           }
         }
       }
+    }
+  }
+
+  .top {
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: #141516;
+    background-image: url("../assets/index/up_icon.png");
+    background-repeat: no-repeat;
+    background-size: 21px 12px;
+    background-position: center center;
+
+    &:hover {
+      background-color: #1a1b1d;
     }
   }
 }

@@ -134,11 +134,11 @@
             <div class="contact-wrap">
               <div class="mail">
                 <i></i>
-                <p>yorkun@gmail.com</p>
+                <p>yorkuncheng@gmail.comm</p>
               </div>
               <div class="wechat">
                 <i></i>
-                <p>chengyorkun</p>
+                <p>chengyork</p>
               </div>
             </div>
           </div>
@@ -360,9 +360,9 @@ export default {
       info: {
         about: {
           title: "关于我",
-          des: `我的姓名有点复杂，以至于输入法里要翻很多页才能找到。为了自己和他人的方便，索性以首字母和谐音取了 “YorKun” 这个别名。<br/><br/>
-                因为从小对画画感兴趣，我读小学时周末通常是在绘画兴趣班度过的，随后高中开始系统的学习美术，大学于湖北美术学院动画系就读。可能是在学习环境中接触「实验性」和「纯艺」比较多，我更向往紧贴生活的表现形式，想要利用所学知识来解决实际问题，加上自己热衷于数码产品，对带有显示屏的东西情有独钟，所以大三决定学习 UI 设计，毕业后也进入了这一行业。<br/><br/>
-                无论是坚定信念做「好」事，还是在大海中探寻「活」法，希望自己能一直热爱设计，持谦逊之心、尽进取之力。`
+          des: `大家好，我是设计师 YorKun。事实上我姓名的字有点儿复杂，以至于输入法里要翻很多页才能找到。为了自己和他人的方便，索性以首字母和谐音取了现在的这个别名，大家更习惯叫我 “york”。<br/><br/>
+                因为从小对画画感兴趣，我小学时周末通常是在绘画兴趣班度过的，随后高中开始系统的学习美术，大学于湖北美术学院动画系就读。可能是在学习环境中接触「实验性」和「纯艺」比较多，我更向往贴近生活的视觉表现形式，希望利用所学知识来解决周身的实际问题，再加上自己热衷于数码产品，对带有显示屏的东西情有独钟，所以大三决定「转行」学习 UI 设计，毕业后也顺其自然进入到这个行业。<br/><br/>
+                无论是坚定信念做「好」事，还是在大海中寻「活」法，我希望自己能一直热爱设计，持谦逊之心、尽拼搏之力。`
         },
         contact: {
           title: "联系我"
@@ -493,10 +493,10 @@ export default {
           span {
             color: rgba(255, 255, 255, 0.9) !important;
           }
-          
+
           .defaultButton {
-            background-color: #FFDE4A !important;
-            color: #AF6E13 !important;
+            background-color: #ffde4a !important;
+            color: #af6e13 !important;
           }
 
           .ghostButton {
@@ -518,21 +518,20 @@ export default {
       margin-top: 10px;
       max-width: 1200px;
       width: 100%;
-      
+
       .smallCard {
         margin-right: 20px;
 
         &:first-child {
-         /deep/ .smallCard_text 
-          {
-           position: absolute;
-           top: 70px;
+          /deep/ .smallCard_text {
+            position: absolute;
+            top: 70px;
           }
           /deep/img {
             position: absolute;
             bottom: 80px;
-                width: 100%;
-                height: auto;
+            width: 100%;
+            height: auto;
           }
         }
 
@@ -636,7 +635,7 @@ export default {
               padding: 12px 16px;
               background-color: #40454b;
               border-radius: 8px;
-              @include font(12px, $font-color-white-1, 400);
+              @include font(12px, $font-color-white-3, 400);
               @include flex-all-center {
                 justify-content: flex-start;
               }

@@ -646,6 +646,13 @@ export default {
             }
 
             .mail {
+                  transition: all 0.3s ease;
+              &:hover {
+                filter: brightness(1.05);
+               i {
+                  filter: contrast(2);
+                }
+              }
               i {
                 width: 16px;
                 height: 16px;
@@ -654,9 +661,35 @@ export default {
                 background-image: url("../assets/index/links/mail_icon.svg");
                 background-position: center center;
                 background-size: 16px 16px;
+                transition: all 0.3s ease;
               }
             }
             .wechat {
+              position: relative;
+              transition: all 0.3s ease;
+              &:hover {
+                filter: brightness(1.1);
+                &::before {
+                  opacity: 1;
+                }
+
+                i {
+                  filter: contrast(2);
+                }
+              }
+              &::before {
+                content: "";
+                opacity: 0;
+                position: absolute;
+                top: -145px;
+                left: -13px;
+                display: block;
+                width: 136px;
+                height: 141px;
+                background-image: url("../assets/index/reweima_hover.png");
+                background-size: 100% 100%;
+                transition: all 0.3s ease;
+              }
               i {
                 width: 16px;
                 height: 16px;
@@ -665,6 +698,7 @@ export default {
                 background-image: url("../assets/index/links/wechat_icon.svg");
                 background-position: center center;
                 background-size: 16px 16px;
+                transition: all 0.3s ease;
               }
             }
           }

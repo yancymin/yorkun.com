@@ -13,41 +13,13 @@
         <slot></slot>
       </div>
       <div class="motion-group">
-        <div class="img-area img-area-1">
-          <div class="slide">
-            <img src="../assets/index/slide.png" alt>
-          </div>
-          <div class="slide">
-            <img src="../assets/index/slide.png" alt>
-          </div>
-          <!-- <div class="left">
-            <img src="../assets/index/scroll/Slide_01.png" alt>
-            <img src="../assets/index/scroll/Slide_02.png" alt>
-            <img src="../assets/index/scroll/Slide_03.png" alt>
-            <img src="../assets/index/scroll/Slide_04.png" alt>
-            <img src="../assets/index/scroll/Slide_05.png" alt>
-            <img src="../assets/index/scroll/Slide_06.png" alt>
-            <img src="../assets/index/scroll/Slide_01.png" alt>
-            <img src="../assets/index/scroll/Slide_02.png" alt>
-            <img src="../assets/index/scroll/Slide_03.png" alt>
-            <img src="../assets/index/scroll/Slide_04.png" alt>
-            <img src="../assets/index/scroll/Slide_05.png" alt>
-            <img src="../assets/index/scroll/Slide_06.png" alt>
-          </div>
-          <div class="right">
-            <img src="../assets/index/scroll/Slide_07.png" alt>
-            <img src="../assets/index/scroll/Slide_08.png" alt>
-            <img src="../assets/index/scroll/Slide_09.png" alt>
-            <img src="../assets/index/scroll/Slide_10.png" alt>
-            <img src="../assets/index/scroll/Slide_11.png" alt>
-            <img src="../assets/index/scroll/Slide_12.png" alt>
-            <img src="../assets/index/scroll/Slide_07.png" alt>
-            <img src="../assets/index/scroll/Slide_08.png" alt>
-            <img src="../assets/index/scroll/Slide_09.png" alt>
-            <img src="../assets/index/scroll/Slide_10.png" alt>
-            <img src="../assets/index/scroll/Slide_11.png" alt>
-            <img src="../assets/index/scroll/Slide_12.png" alt>
-          </div>-->
+        <div class="left">
+          <img src="../assets/index/scroll/slide-1.png" alt>
+          <img src="../assets/index/scroll/slide-1.png" alt>
+        </div>
+        <div class="right">
+          <img src="../assets/index/scroll/slide-2.png" alt>
+          <img src="../assets/index/scroll/slide-2.png" alt>
         </div>
       </div>
     </div>
@@ -169,47 +141,34 @@ export default {
     position: absolute;
     right: 120px;
     width: 420px;
+    height: 420px;
     top: 0;
     bottom: 0;
-  }
-
-  .img-area {
     z-index: 0;
     opacity: 0.6;
+    // overflow: hidden;
+    @include flex-all-center;
+  }
+
+  .left,
+  .right {
     position: relative;
-    /* bottom: 1233px; */
-    @include flex-all-center {
-      align-items: flex-start;
-      flex-direction: column;
+    top: -100%;
+    animation: scroll 60s infinite linear;
+
+    img {
+      width: 210px;
     }
+  }
 
-    .slide {
-      animation: scroll 6s infinite linear;
+  .left {
+    margin-right: 20px;
+    @include flex-column;
+  }
 
-      img {
-              width: 420px;
-      }
-    }
-
-    .left,
-    .right {
-      animation: scroll 60s infinite linear;
-
-      img {
-        width: 200px;
-        border-radius: 4px;
-        margin: 10px;
-      }
-    }
-
-    .left {
-      position: relative;
-      top: 0px;
-    }
-
-    .right {
-      animation: scroll 65s infinite linear;
-    }
+  .right {
+    top: -105%;
+    animation: scroll 65s infinite linear;
   }
 
   @keyframes scroll {

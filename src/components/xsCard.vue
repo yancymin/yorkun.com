@@ -18,12 +18,14 @@ export default {
 
 .xsCard {
   position: relative;
-  width: calc(386px - 30px);
+  // width: calc(386px - 30px);
+  width: 100%;
   height: 120px;
   border-radius: 10px;
   background-color: #2dc8dd;
   overflow: hidden;
   padding-left: 30px;
+  margin-right: 20px;
   @include flex-all-center {
     justify-content: flex-start;
   }

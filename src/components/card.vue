@@ -4,14 +4,19 @@
     :style="'background-color:' + cardColor"
     :class="{fontBlack: isBlack, whiteBotton: isWhiteBotton}"
   >
-    <div class="tag" v-if="isTag">{{tag}}</div>
+    <div
+      class="tag"
+      v-if="isTag"
+      :class="{whiteTag: isTagWhite}"
+      :style="'background-color:' + tagColor"
+    >{{tag}}</div>
     <div class="card_wrap">
       <div class="des">
-        <h1 v-if="isTitle">{{title}}</h1>
+        <img v-if="isTitle" :src="cardLogo">
         <span v-if="isDes">{{des}}</span>
         <defaultButton buttonText="查看详情" v-if="isButton"/>
         <slot></slot>
-      </div> 
+      </div>
       <div class="img-area">
         <img :src="bgImg" alt>
       </div>
@@ -27,6 +32,7 @@ export default {
   name: "card",
   props: {
     title: String,
+    cardLogo: String,
     des: String,
     cardColor: String,
     tag: String,
@@ -36,6 +42,8 @@ export default {
     isBlack: Boolean,
     isWhiteBotton: Boolean,
     isTag: Boolean,
+    isTagWhite: Boolean,
+    tagColor: String,
     bgImg: String
   },
   components: {
@@ -56,6 +64,10 @@ export default {
   p {
     color: $font-color-white-3 !important;
   }
+}
+
+.whiteTag {
+  color: white !important;
 }
 
 .whiteBotton {
@@ -97,6 +109,10 @@ export default {
       z-index: 1;
       position: absolute;
       left: 120px;
+      @include flex-column {
+        align-items: flex-start;
+      }
+
       h1 {
         word-break: keep-all;
         margin-bottom: 10px;
@@ -104,9 +120,14 @@ export default {
           line-height: 56px;
         }
       }
+
+      img {
+        height: 30px;
+        margin-bottom: 24px;
+      }
       span {
         display: inline-block;
-        min-width: 600px;
+        width: 410px;
         margin-bottom: 50px;
         @include font(14px, $font-color-black-2, 400) {
           line-height: 20px;

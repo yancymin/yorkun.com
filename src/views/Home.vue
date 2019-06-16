@@ -91,6 +91,8 @@
         />
       </div>
 
+      <span class="break-line"></span>
+
       <motionCard
         :title="motionCard.title"
         :des="motionCard.des"
@@ -734,6 +736,14 @@ export default {
     &:hover {
       background-color: #1a1b1d;
     }
+  }
+
+  .break-line {
+    height: 1px;
+    width: 1200px;
+    opacity: 0.1;
+    background-color: #ffffff;
+    margin: 60px 0;
   }
 }
 </style>

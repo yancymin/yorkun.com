@@ -26,8 +26,15 @@ export default {
   overflow: hidden;
   padding-left: 30px;
   margin-right: 20px;
+   cursor: pointer;
   @include flex-all-center {
     justify-content: flex-start;
+  }
+
+  &:hover {
+    img {
+      transform: scale(1.1)
+    }
   }
 
   h2 {
@@ -36,6 +43,10 @@ export default {
     @include font(30px, $font-color-white-1, 600) {
       line-height: 34px;
     }
+  }
+
+  img {
+        transition: all 0.3s ease;
   }
 
   .bg {

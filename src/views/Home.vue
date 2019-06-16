@@ -86,6 +86,8 @@
           :logo="smallCards[i].logo"
           :isLogo="smallCards[i].isLogo"
           :bgImg="smallCards[i].bgImg"
+          :tagColor="smallCards[i].tagColor"
+          :isCenterImg="smallCards[i].isCenterImg"
         />
       </div>
 
@@ -171,6 +173,7 @@ import geetestweb_logo from "../assets/index/geetestweb_logo.svg";
 import captcha_logo from "../assets/index/captcha_logo.svg";
 import wangguan_logo from "../assets/index/wangguan_logo.svg";
 import banana_logo from "../assets/index/banana_logo.svg";
+import animation from "../assets/index/animation.png";
 
 export default {
   name: "home",
@@ -296,18 +299,22 @@ export default {
         {
           title: "动效作品集",
           tag: "动效设计",
-          cardColor: " #222",
-          footer: "“GIF LIFE” - My animation design.",
+          cardColor: " #FFA51D",
+          footer: "",
           isTag: true,
-          bgImg: gmake_logo
+          tagColor: "rgba(0,0,0,0.08)",
+          bgImg: animation,
+          isCenterImg: false
         },
         {
-          title: "动效作品集",
-          tag: "动效设计",
+          title: " ",
+          tag: "平面设计",
           cardColor: " #222",
-          footer: " ",
+          footer: "© 2019 GEETEST. Design by G-MAKE.",
           isTag: true,
-          bgImg: gmake_logo
+          tagColor: "rgba(0,0,0,0.4)",
+          bgImg: gmake_logo,
+          isCenterImg: true
         }
       ],
       xsCards: [
@@ -511,8 +518,23 @@ export default {
       margin-top: 10px;
       max-width: 1200px;
       width: 100%;
+      
       .smallCard {
         margin-right: 20px;
+
+        &:first-child {
+         /deep/ .smallCard_text 
+          {
+           position: absolute;
+           top: 70px;
+          }
+          /deep/img {
+            position: absolute;
+            bottom: 80px;
+                width: 100%;
+                height: auto;
+          }
+        }
 
         &:last-child {
           margin-right: 0;

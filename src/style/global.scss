@@ -31,3 +31,7 @@ $font-color-black-2: rgba(0, 0, 0, 0.8);
     justify-content: flex-start;
     @content;
 }
+
+img {
+    pointer-events: none;
+}

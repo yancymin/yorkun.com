@@ -1,10 +1,11 @@
 <template>
   <div class="smallCard" :style="'background-color:' + cardColor">
-    <div class="tag" v-if="isTag">{{tag}}</div>
-    <img :src="bgImg">
+    <div class="tag" v-if="isTag" :style="'background-color:' + tagColor">{{tag}}</div>
+    <img :src="bgImg" class="bgImg">
     <div class="smallCard_text">
       <h1>{{title}}</h1>
       <span>{{footer}}</span>
+      <img src="../assets/index/gmake_logo_w.svg" alt v-if="isCenterImg" class="centerImg">
     </div>
   </div>
 </template>
@@ -18,7 +19,9 @@ export default {
     footer: String,
     bgImg: String,
     tag: String,
-    isTag: Boolean
+    tagColor: String,
+    isTag: Boolean,
+    isCenterImg: Boolean
   }
 };
 </script>
@@ -34,20 +37,27 @@ export default {
   background-color: #ffa51d;
   overflow: hidden;
   margin-bottom: 10px;
+  transition: all 0.3s ease;
+  cursor: pointer;
   @include flex-all-center;
+
+  &:hover {
+    .bgImg {
+      transform: scale(1.1);
+    }
+  }
 
   &_text {
     z-index: 1;
-  @include flex-all-center;
-
+    @include flex-all-center;
 
     h1 {
       @include font(40px, $font-color-white-1, 600);
     }
     span {
-        position: absolute;
-        bottom: 24px;
-      @include font(14px, $font-color-white-1, 400);
+      position: absolute;
+      bottom: 24px;
+      @include font(14px, $font-color-white-2, 400);
     }
   }
 
@@ -57,15 +67,26 @@ export default {
     top: 10px;
     right: 10px;
     padding: 8px 16px;
+    // color: white !important;
     background-color: #d9dbdf;
     border-radius: 50px;
-    @include font(12px, $font-color-black-2, 400);
+    @include font(12px, $font-color-white-2, 400);
   }
 
   img {
     z-index: 0;
     position: absolute;
     height: 100%;
+    transition: all 0.3s ease;
+  }
+  .centerImg {
+    height: 90px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top:35%;
+    bottom: 0;
+    margin: 0 auto;
   }
 }
 </style>

@@ -487,7 +487,7 @@ export default {
 
     .card {
       &:nth-of-type(2) {
-        /deep/ .des {
+       &::v-deep .des {
           span {
             width: auto;
           }
@@ -498,7 +498,7 @@ export default {
       }
 
       &:nth-of-type(5) {
-        /deep/ .des {
+       &::v-deep .des {
           img {
             height: 60px;
           }
@@ -536,11 +536,11 @@ export default {
         margin-right: 20px;
 
         &:first-child {
-          /deep/ .smallCard_text {
+         &::v-deep .smallCard_text {
             position: absolute;
             top: 70px;
           }
-          /deep/img {
+         &::v-deep img {
             position: absolute;
             bottom: 80px;
             width: 100%;

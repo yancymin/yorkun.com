@@ -27,6 +27,7 @@ export default {
   padding-left: 30px;
   margin-right: 20px;
    cursor: pointer;
+   overflow: hidden;
   @include flex-all-center {
     justify-content: flex-start;
   }

@@ -15,8 +15,8 @@
         <img v-if="isTitle" :src="cardLogo">
         <span v-if="isDes">{{des}}</span>
         <div class="btn-wrap">
-          <defaultButton :buttonText="buttonTextD" v-if="isButton" :btnIcon="btnIconD" />
-          <ghostButton :buttonText="buttonTextG" v-if="isGhostButton" :buttonIcon="btnIconG" />
+          <defaultButton :buttonText="buttonTextD" v-if="isButton" :btnIcon="btnIconD" :href="hrefD"/>
+          <ghostButton :buttonText="buttonTextG" v-if="isGhostButton" :buttonIcon="btnIconG" :href="hrefG" />
         </div>
         <slot></slot>
       </div>
@@ -53,6 +53,8 @@ export default {
     btnIconG: String,
     buttonTextG: String,
     buttonTextD: String,
+    hrefD: String,
+    hrefG: String,
   },
   components: {
     defaultButton,

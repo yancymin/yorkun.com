@@ -26,15 +26,15 @@ export default {
   overflow: hidden;
   padding-left: 30px;
   margin-right: 20px;
-   cursor: pointer;
-   overflow: hidden;
+  cursor: pointer;
+  overflow: hidden;
   @include flex-all-center {
     justify-content: flex-start;
   }
 
   &:hover {
     img {
-      transform: scale(1.1)
+      transform: scale(1.04);
     }
   }
 
@@ -47,7 +47,7 @@ export default {
   }
 
   img {
-        transition: all 0.3s ease;
+    transition: all 0.3s ease;
   }
 
   .bg {
@@ -56,6 +56,7 @@ export default {
     top: 0;
     left: 0;
     width: 100%;
+    transform-origin: 75% center;
   }
   .centerImg {
     width: 167px;

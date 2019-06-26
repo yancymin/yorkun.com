@@ -72,6 +72,8 @@
         :btnIconG="cards[i].btnIconG"
         :buttonTextD="cards[i].buttonTextD"
         :buttonTextG="cards[i].buttonTextG"
+        :hrefD="cards[i].hrefD"
+        :hrefG="cards[i].hrefG"
       />
 
       <div class="smallCards" id="works">
@@ -106,6 +108,7 @@
         :isBlack="motionCard.isBlack"
         :isWhiteBotton="motionCard.isWhiteBotton"
         :isTag="motionCard.isTag"
+        :hrefD="motionCard.hrefD"
       />
 
       <div class="xsCards">
@@ -225,7 +228,6 @@ export default {
           tag: "网页设计",
           buttonTextD: "项目详情",
           buttonTextG: "网站地址",
-
           isTagWhite: false,
           tagColor: "#DEE1E7",
           isButton: true,
@@ -237,7 +239,8 @@ export default {
           isBlack: false,
           isWhiteBotton: false,
           isTag: true,
-          bgImg: geetestweb
+          bgImg: geetestweb,
+          hrefG :'http://www.geetest.com'
         },
         {
           title: "行为验证产品",
@@ -362,7 +365,8 @@ export default {
         isBlack: true,
         isWhiteBotton: false,
         isTag: false,
-        btnIcon: link_icon_w
+        btnIcon: link_icon_w,
+        hrefD: "http://yorkun.lofter.com"
       },
       buttons: {
         href: {
@@ -388,6 +392,7 @@ export default {
 
 <style lang="scss" scoped>
 @import "./src/style/global.scss";
+@import "./src/style/mobile.scss";
 
 .home {
   width: 100%;

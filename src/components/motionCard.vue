@@ -9,7 +9,7 @@
       <div class="des">
         <h1 v-if="isTitle">{{title}}</h1>
         <span v-if="isDes">{{des}}</span>
-        <defaultButton buttonText="查看详情" v-if="isButton" :btnColor="btnColor" :btnIcon="btnIcon"/>
+        <defaultButton buttonText="查看详情" v-if="isButton" :btnColor="btnColor" :btnIcon="btnIcon" :href="hrefD"/>
         <slot></slot>
       </div>
       <div class="motion-group">
@@ -32,13 +32,13 @@ import ghostButton from "../components/ghostButton.vue";
 
 export default {
   name: "motionCard",
-  //   props: ["title", "des", "cardColor", "tag", "isButton", "isTitle", "isDes" ,"isBlack", "isTag"],
   props: {
     title: String,
     des: String,
     cardColor: String,
     btnColor: String,
     btnIcon: String,
+    hrefD: String,
     tag: String,
     isButton: Boolean,
     isTitle: Boolean,
@@ -87,7 +87,7 @@ export default {
 
   &:before {
     content: "";
-    z-index: 999;
+    z-index: 1;
     position: absolute;
     right: 60px;
     bottom: 0;

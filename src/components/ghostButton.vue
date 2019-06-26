@@ -27,6 +27,7 @@ export default {
 @import "../style/global.scss";
 
 .ghostButton {
+  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;

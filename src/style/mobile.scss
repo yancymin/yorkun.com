@@ -17,20 +17,77 @@
                             z-index: 100;
                         }
                     }
+
+                    .img-area {
+                        bottom: 0;
+                        &::after {
+                            position: absolute;
+                            top: 0;
+                            z-index: 2;
+                            content: "";
+                            display: block;
+                            width: 120%;
+                            height: 160px;
+                            background-image: linear-gradient(bottom, transparent 0%, transparent 50%, rgba(20, 21, 22, 1) 100%);
+                        }
+                    }
+                }
+
+                &:nth-of-type(2) {
+                    .des {
+                        word-break: normal;
+
+                        p,
+                        h1 {
+                        word-break: normal;
+
+                            z-index: 100;
+                        }
+                    }
+
+                    .img-area {
+                        bottom: 0;
+                        &::after {
+                            position: absolute;
+                            top: 0;
+                            z-index: 2;
+                            content: "";
+                            display: block;
+                            width: 120%;
+                            height: 160px;
+                            background-image: linear-gradient(bottom, transparent 0%, transparent 50%, rgba(245, 246, 248, 1) 100%);
+                        }
+                    }
+                }
+                &:nth-of-type(4) {
+                    .des {
+                        word-break: normal;
+
+                        p,
+                        h1 {
+                        word-break: normal;
+
+                            z-index: 100;
+                        }
+                    }
+
+                    .img-area {
+                        bottom: 0;
+                        &::after {
+                            position: absolute;
+                            top: 0;
+                            z-index: 2;
+                            content: "";
+                            display: block;
+                            width: 120%;
+                            height: 160px;
+                            background-image: linear-gradient(bottom, transparent 0%, transparent 50%, rgba(245, 246, 248, 1) 100%);
+                        }
+                    }
                 }
 
                 .img-area {
                     bottom: 0;
-                    &::after {
-                        position: absolute;
-                        top: 0;
-                        z-index: 2;
-                        content: "";
-                        display: block;
-                        width: 120%;
-                        height: 160px;
-                        background-image: linear-gradient(bottom, transparent 0%, transparent 50%, rgba(20, 21, 22, 1) 100%);
-                    }
                 }
 
                 .card_wrap {

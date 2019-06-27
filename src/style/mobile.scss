@@ -6,8 +6,31 @@
                 height: 800px;
                 text-align: center;
 
+                &:nth-of-type(1) {
+                    .des {
+                        word-break: normal;
+
+                        p,
+                        h1 {
+                        word-break: normal;
+
+                            z-index: 100;
+                        }
+                    }
+                }
+
                 .img-area {
                     bottom: 0;
+                    &::after {
+                        position: absolute;
+                        top: 0;
+                        z-index: 2;
+                        content: "";
+                        display: block;
+                        width: 120%;
+                        height: 160px;
+                        background-image: linear-gradient(bottom, transparent 0%, transparent 50%, rgba(20, 21, 22, 1) 100%);
+                    }
                 }
 
                 .card_wrap {
@@ -50,6 +73,15 @@
                 &:nth-of-type(2) {
                     margin-bottom: 20px;
                 }
+            }
+        }
+
+        .info_about,
+        .info_contact {
+            flex-direction: column;
+
+            h1 {
+                margin-bottom: 40px;
             }
         }
     }

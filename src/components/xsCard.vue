@@ -37,7 +37,7 @@ export default {
   &:hover {
     .bg {
       transform: scale(1.02) translateX(4px);
-      border-radius: 13px;
+      border-radius: 18px;
     
     }
     img {

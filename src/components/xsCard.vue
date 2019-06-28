@@ -36,11 +36,12 @@ export default {
 
   &:hover {
     .bg {
-      transform: scale(1.04);
+      transform: scale(1.02) translateX(4px);
       border-radius: 13px;
+    
     }
     img {
-      transform: scale(1.04);
+      transform: scale(1.02);
     }
   }
 
@@ -61,14 +62,15 @@ export default {
     position: absolute;
     top: 0;
     right: 0;
-    width: 50%;
+    width: 195px;
     height: 100%;
     transition: all 0.2s ease;
     border-radius: 10px;
     overflow: hidden;
     transform-origin: right center;
-    background-position: center center;
+    background-position: center right;
     background-size: cover;
+    background-repeat: no-repeat;
   }
   .centerImg {
     width: 167px;

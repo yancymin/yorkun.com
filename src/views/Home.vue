@@ -139,7 +139,7 @@
             <div class="contact-wrap">
               <div class="mail">
                 <i></i>
-                <p>yorkuncheng@gmail.comm</p>
+                <p>yorkuncheng@gmail.com</p>
               </div>
               <div class="wechat">
                 <i></i>
@@ -665,12 +665,12 @@ export default {
 
             .mail {
               transition: all 0.3s ease;
-              &:hover {
+              /* &:hover {
                 filter: brightness(1.05);
                 i {
                   filter: contrast(2);
                 }
-              }
+              } */
               i {
                 width: 16px;
                 height: 16px;
@@ -685,7 +685,7 @@ export default {
             .wechat {
               position: relative;
               transition: all 0.3s ease;
-              &:hover {
+              /* &:hover {
                 filter: brightness(1.1);
                 &::before {
                   opacity: 1;
@@ -694,7 +694,7 @@ export default {
                 i {
                   filter: contrast(2);
                 }
-              }
+              } */
               &::before {
                 content: "";
                 opacity: 0;

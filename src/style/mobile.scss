@@ -1,6 +1,10 @@
 @media screen and (max-width: 800px) {
     #top {
 
+        .top {
+            display: none !important;
+        }
+
         .container {
             ::v-deep .card {
                 height: 800px;

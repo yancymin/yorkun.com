@@ -9,7 +9,7 @@
       <div class="des">
         <h1 v-if="isTitle">{{title}}</h1>
         <span v-if="isDes">{{des}}</span>
-        <defaultButton buttonText="查看详情" v-if="isButton" :btnColor="btnColor" :btnIcon="btnIcon" :href="hrefD"/>
+        <defaultButton buttonText="去瞧瞧" v-if="isButton" :btnColor="btnColor" :btnIcon="btnIcon" :href="hrefD"/>
         <slot></slot>
       </div>
       <div class="motion-group">

@@ -337,13 +337,13 @@ export default {
         {
           title: `我的\nDribbble`,
           bgImg: myDribbble,
-          cardColor: "",
+          cardColor: "#2BC6DB ",
           isCenterImg: false
         },
         {
           title: `团队\nDribbble`,
           bgImg: teamDribbble,
-          cardColor: "#3973E7",
+          cardColor: "#3873FF",
           isCenterImg: false
         },
         {

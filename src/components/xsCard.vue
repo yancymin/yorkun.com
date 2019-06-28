@@ -1,7 +1,7 @@
 <template>
   <div class="xsCard" :style="'background-color:' + cardColor">
     <h2>{{title}}</h2>
-    <img :src="bgImg" alt class="bg">
+    <div :style="'background-image: url('+ bgImg+')'" class="bg"></div>
     <img src="../assets/index/gdesign_logo.svg" alt v-if="isCenterImg" class="centerImg">
   </div>
 </template>
@@ -22,17 +22,23 @@ export default {
   width: 100%;
   height: 120px;
   border-radius: 10px;
-  background-color: #2dc8dd;
+  background-color: #ffffff;
   overflow: hidden;
   padding-left: 30px;
   margin-right: 20px;
   cursor: pointer;
   overflow: hidden;
+  transition: all 0.3s ease;
+
   @include flex-all-center {
     justify-content: flex-start;
   }
 
   &:hover {
+    .bg {
+      transform: scale(1.04);
+      border-radius: 13px;
+    }
     img {
       transform: scale(1.04);
     }
@@ -54,9 +60,15 @@ export default {
     z-index: 0;
     position: absolute;
     top: 0;
-    left: 0;
-    width: 100%;
-    transform-origin: 75% center;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    transition: all 0.2s ease;
+    border-radius: 10px;
+    overflow: hidden;
+    transform-origin: right center;
+    background-position: center center;
+    background-size: cover;
   }
   .centerImg {
     width: 167px;

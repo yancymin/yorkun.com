@@ -1,4 +1,4 @@
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 600px) {
     #top {
         .break-line {
             width: 100%;
@@ -235,7 +235,8 @@
 
                 &:nth-of-type(2) {
                     img {
-                        height: inherit;
+                        height: auto;
+                        width: auto;
                     }
 
                     .centerImg {

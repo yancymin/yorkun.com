@@ -505,6 +505,20 @@ export default {
           }
         }
       }
+       &:nth-of-type(3) {
+          &::v-deep .defaultButton {
+            img {
+              display: none;
+            }
+          }
+       }
+       &:nth-of-type(4) {
+          &::v-deep .defaultButton {
+            img {
+              display: none;
+            }
+          }
+       }
 
       &:nth-of-type(5) {
        &::v-deep .des {

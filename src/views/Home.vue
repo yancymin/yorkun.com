@@ -119,6 +119,7 @@
           :bgImg="xsCards[i].bgImg"
           :cardColor="xsCards[i].cardColor"
           :isCenterImg="xsCards[i].isCenterImg"
+          :link="xsCards[i].link"
         />
       </div>
       <div class="info" id="about">
@@ -130,11 +131,11 @@
           <h1>{{info.contact.title}}</h1>
           <div class="social">
             <div class="links">
-              <a href></a>
-              <a href></a>
-              <a href></a>
-              <a href></a>
-              <a href></a>
+              <a href="https://weibo.com/chengyork" target="_blank"></a>
+              <a href="https://www.instagram.com/yorkun_cheng/" target="_blank"></a>
+              <a href="https://github.com/Yorkun" target="_blank"></a>
+              <a href="https://unsplash.com/@yorkun" target="_blank"></a>
+              <a href="https://codepen.io/YorKun/" target="_blank"></a>
             </div>
             <div class="contact-wrap">
               <div class="mail">
@@ -338,19 +339,22 @@ export default {
           title: `我的\nDribbble`,
           bgImg: myDribbble,
           cardColor: "#2BC6DB ",
-          isCenterImg: false
+          isCenterImg: false,
+          link: "https://dribbble.com/yorkun"
         },
         {
           title: `团队\nDribbble`,
           bgImg: teamDribbble,
           cardColor: "#3873FF",
-          isCenterImg: false
+          isCenterImg: false,
+          link: "https://dribbble.com/geetest"
         },
         {
           title: ` `,
           bgImg: "",
           cardColor: "#E5E7EB",
-          isCenterImg: true
+          isCenterImg: true,
+          link: "https://design.geetest.com/"
         }
       ],
       motionCard: {

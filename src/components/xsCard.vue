@@ -1,15 +1,17 @@
 <template>
   <div class="xsCard" :style="'background-color:' + cardColor">
+    <a :href="link" target="_blank">
     <h2>{{title}}</h2>
     <div :style="'background-image: url('+ bgImg+')'" class="bg"></div>
     <img src="../assets/index/gdesign_logo.svg" alt v-if="isCenterImg" class="centerImg">
+    </a>
   </div>
 </template>
 
 <script>
 export default {
   name: "xsCard",
-  props: ["title", "bgImg", "cardColor", "isCenterImg"]
+  props: ["title", "bgImg", "cardColor", "isCenterImg","link"]
 };
 </script>
 

@@ -387,3 +387,11 @@
 
     }
 }
+
+@media screen and (max-width: 1440px) {
+  #top {
+    .top {
+        display: none !important;
+            }
+  }
+}

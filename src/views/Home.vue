@@ -503,7 +503,11 @@ export default {
             margin: 0 40px;
 
             a {
-              transition: all 0.8s cubic-bezier(0.4, 0, 0, 1);
+              transition: all 0.3s ease;
+
+              &:hover {
+                color: white;
+              }
             }
 
             &:first-child {

@@ -16,16 +16,18 @@
               <a href="#about">关于我</a>
             </li>
           </ul>
-          <div class="lang">
-            <div class="lang_now">
+        </div>
+        <div class="lang">
+          <div class="lang_now">
+            <div class="lang_inner">
               <span>CN</span>
               <i></i>
             </div>
-            <!-- <ul>
+          </div>
+          <!-- <ul>
             <li>CN</li>
             <li>EN</li>
-            </ul>-->
-          </div>
+          </ul>-->
         </div>
       </nav>
       <div class="head_container">
@@ -416,19 +418,39 @@ export default {
 
 .nav-move {
   z-index: 99999;
-  padding: 32px 24px;
+  padding: 24px 24px;
   background-color: $black;
   position: fixed;
   top: 0;
   left: 0;
   width: calc(100vw - 48px) !important;
   max-width: none !important;
+  border-bottom: 1px solid rgba(76, 79, 84, 0.6);
+
   .nav-wrap {
-      justify-content: flex-end !important;
+    justify-content: flex-end !important;
+
+    &::before {
+      opacity: 1 !important;
+      transform: translateY(0) !important;
+    }
   }
 
   ul {
-    margin: 0 16px !important;
+    animation: ulMove 0.6s cubic-bezier(0.4, 0, 0, 1) forwards;
+
+    li {
+      margin: 20px !important;
+    }
+  }
+
+  @keyframes ulMove {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(-66px);
+    }
   }
 }
 
@@ -446,21 +468,39 @@ export default {
     @include font(14px, $font-color-white-3, 500);
 
     .nav-1 {
+      z-index: 99999;
       position: fixed;
       width: 100%;
       padding-top: 24px;
-      transition: all 0.8s cubic-bezier(0.4, 0, 0, 1);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0, 1);
+      @include flex-all-center;
 
       .nav-wrap {
+        z-index: 999;
+        position: relative;
         max-width: 1200px;
+        width: 90%;
+
+        &::before {
+          opacity: 0;
+          content: "";
+          position: absolute;
+          left: 0;
+          display: block;
+          width: 34px;
+          height: 22px;
+          background-image: url("../assets/index/small_logo.svg");
+          background-size: cover;
+          transition: all 0.3s cubic-bezier(0.4, 0, 0, 1);
+          transform: translateY(-200%);
+        }
+
         > ul {
-          margin: 0 auto;
-          transition: all 0.8s cubic-bezier(0.4, 0, 0, 1);
+          transition: all 0.6s cubic-bezier(0.4, 0, 0, 1);
 
           li {
             display: inline;
             margin: 0 40px;
-            transition: all 0.8s cubic-bezier(0.4, 0, 0, 1);
 
             a {
               transition: all 0.8s cubic-bezier(0.4, 0, 0, 1);
@@ -472,9 +512,7 @@ export default {
           }
         }
 
-        @include flex-all-center {
-          justify-content: space-between;
-        }
+        @include flex-all-center;
       }
     }
 
@@ -488,6 +526,7 @@ export default {
         animation: showLogo2 2.5s linear forwards;
         animation-delay: 1s;
         width: 160px;
+        top: 148px;
 
         @keyframes showLogo2 {
           to {
@@ -498,7 +537,7 @@ export default {
 
       .motion {
         position: relative;
-        bottom: -122px;
+        bottom: -158px;
         &::before {
           content: "";
           z-index: 100;
@@ -528,20 +567,36 @@ export default {
     }
 
     .lang {
-      width: 40px;
+      width: 100vw;
+      position: absolute;
+      right: 0;
+      height: 15px;
       transition: all 0.4s cubic-bezier(0.4, 0, 0, 1);
+      @include flex-all-center;
 
       &_now {
+        width: 90%;
+        height: 20px;
+        max-width: 1200px;
+        position: relative;
+        right: 0;
         @include flex-all-center;
         @include font(14px, rgba(255, 255, 255, 0.6), 500);
 
+        .lang_inner {
+          z-index: 1000;
+          position: absolute;
+          right: 0;
+        }
+
         i {
-          margin-left: 2px;
+          position: relative;
+          top: 1px;
+          margin-left: 4px;
           display: inline-block;
-          width: 8px;
-          height: 6px;
-          background-image: url("../assets/index/language_icon.png");
-          background-size: 8px auto;
+          width: 12px;
+          height: 12px;
+          background-image: url("../assets/index/language_icon.svg");
           background-repeat: no-repeat;
         }
       }

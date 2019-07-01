@@ -30,8 +30,10 @@ export default {
   height: 46px;
   border-radius: 6px;
   background-color: $blue;
+  transition: all 0.3s ease;
   @include font(14px, $font-color-white-1, 500);
   @include flex-all-center;
+
 
   a {
     display: flex;

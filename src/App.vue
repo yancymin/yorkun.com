@@ -17,4 +17,9 @@
   width: 100vw;
   background-color: $gray;
 }
+
+body {
+  width: 100vw;
+  overflow-x: hidden;
+}
 </style>

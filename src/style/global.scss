@@ -35,3 +35,30 @@ $font-color-black-2: rgba(0, 0, 0, 0.8);
 img {
     pointer-events: none;
 }
+
+html::-webkit-scrollbar {
+    width: 0 !important
+}
+
+html {
+    -ms-overflow-style: none;
+}
+
+html {
+    overflow: -moz-scrollbars-none;
+}
+
+html::-webkit-scrollbar {
+    display: none
+}
+
+html::-webkit-scrollbar {
+    width: 0px
+}
+
+
+::-webkit-scrollbar-track-piece {
+    background-color: rgba(0,0,0,.2);
+    -webkit-border-radius: 6px;
+}
+

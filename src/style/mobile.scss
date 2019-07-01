@@ -1,5 +1,8 @@
 @media screen and (max-width: 800px) {
     #top {
+        .break-line {
+            width: 100%;
+        }
 
         .top {
             display: none !important;
@@ -7,23 +10,41 @@
 
         .container {
             ::v-deep .card {
-                height: 800px;
+                // height: 600px;
                 text-align: center;
 
                 &:nth-of-type(1) {
+                    height: 500px;
+
                     .des {
+                        top: -102px;
                         word-break: normal;
+
+                        h1 {
+                            font-size: 24px;
+                            line-height: 32px;
+                            margin-bottom: 16px;
+
+                        }
+
+                        p {
+                            font-size: 14px;
+                            line-height: 18px;
+
+                            &:nth-of-type(1) {
+                                margin-bottom: 24px;
+                            }
+                        }
 
                         p,
                         h1 {
-                            word-break: normal;
-
+                            // word-break: normal;
                             z-index: 100;
                         }
                     }
 
                     .img-area {
-                        bottom: 0;
+                        bottom: -100px;
 
                         &::after {
                             position: absolute;
@@ -39,8 +60,18 @@
                 }
 
                 &:nth-of-type(2) {
+                    height: 500px;
+
                     .des {
-                        word-break: normal;
+                        top: -96px;
+
+                        img {
+                            height: 32px;
+                        }
+
+                        span {
+                            margin-bottom: 24px;
+                        }
 
                         p,
                         h1 {
@@ -51,7 +82,7 @@
                     }
 
                     .img-area {
-                        bottom: 0;
+                        bottom: -100px;
 
                         &::after {
                             position: absolute;
@@ -66,9 +97,42 @@
                     }
                 }
 
-                &:nth-of-type(4) {
+                &:nth-of-type(3) {
+                    height: 580px;
+
                     .des {
-                        word-break: normal;
+                        top: -120px;
+
+                        span {
+                            width: auto;
+                            margin-bottom: 24px;
+                        }
+
+                    }
+
+                    .img-area {
+                        width: 100%;
+                        bottom: -20px;
+
+                        img {
+                            position: relative;
+                            left: 32px;
+                            height: 320px;
+                        }
+                    }
+
+                }
+
+                &:nth-of-type(4) {
+                    height: 600px;
+
+                    .des {
+                        top: -130px;
+
+                        span {
+                            width: auto;
+                            margin-bottom: 24px;
+                        }
 
                         p,
                         h1 {
@@ -79,7 +143,14 @@
                     }
 
                     .img-area {
-                        bottom: 0;
+                        width: 100%;
+                        bottom: -10px;
+
+                        img {
+                            height: 330px;
+                            position: relative;
+                            left: -180px;
+                        }
 
                         &::after {
                             position: absolute;
@@ -90,6 +161,30 @@
                             width: 120%;
                             height: 160px;
                             background-image: linear-gradient(bottom, transparent 0%, transparent 50%, rgba(245, 246, 248, 1) 100%);
+                        }
+                    }
+                }
+
+                &:nth-of-type(5) {
+                    height: 600px;
+
+                    .des {
+                        top: -120px;
+
+                        span {
+                            width: auto;
+                            margin-bottom: 24px;
+                        }
+                    }
+
+                    .img-area {
+                        width: 100%;
+                        bottom: -10px;
+
+                        img {
+                            height: 320px;
+                            position: relative;
+                            left: -40px;
                         }
                     }
                 }
@@ -106,8 +201,8 @@
                         position: relative;
                         align-items: center;
                         left: 0;
-                        top: -160px;
-                        padding: 0 32px;
+                        // top: -160px;
+                        padding: 0 24px;
                     }
                 }
             }
@@ -116,13 +211,36 @@
         .smallCards {
             flex-direction: column;
 
-            .smallCard {
+            ::v-deep .smallCard {
                 width: 100%;
                 margin-right: 0;
                 margin-bottom: 20px;
+                height: 300px;
 
-                ::v-deep img {
+                img {
                     height: auto;
+                }
+
+                &:nth-of-type(1) {
+                    h1 {
+                        font-size: 32px;
+                    }
+
+                    img {
+                        width: 150%;
+                        position: relative;
+                        top: 60px;
+                    }
+                }
+
+                &:nth-of-type(2) {
+                    img {
+                        height: inherit;
+                    }
+
+                    .centerImg {
+                        height: 64px;
+                    }
                 }
             }
         }
@@ -139,6 +257,79 @@
                     margin-bottom: 20px;
                 }
             }
+        }
+
+        ::v-deep .motionCard {
+            height: 560px;
+
+            &::before {
+                right: 0;
+            }
+
+            .des {
+                padding: 0 24px;
+                width: 91%;
+                text-align: center;
+                left: 0;
+                top: 40px;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+
+                h1 {
+                    font-size: 24px;
+                }
+
+                span {
+                    width: auto;
+                    display: inline;
+                    margin-bottom: 24px;
+
+                }
+            }
+
+            .motion-group {
+                width: 100%;
+                right: 0;
+                height: 300px;
+                overflow: hidden;
+                top: inherit;
+
+                .left,
+                .right {
+                    width: 45%;
+                    margin: 0 2px;
+                }
+
+                .right {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+
+
+
+                &::after {
+                    position: absolute;
+                    top: 0;
+                    z-index: 2;
+                    content: "";
+                    display: block;
+                    width: 120%;
+                    height: 160px;
+                    background-image: linear-gradient(bottom, transparent 0%, transparent 50%, rgba(20, 21, 22, 1) 100%);
+                }
+
+                img {
+                    width: 140px;
+                }
+
+
+            }
+        }
+
+        .info {
+            margin-bottom: 60px;
         }
 
         .info_about,
@@ -164,7 +355,11 @@
         }
 
         .globalFooter {
+            // align-items: flex-start;
+
+            flex-direction: column;
             align-items: flex-start;
+
             ::v-deep .globalFooter_links {
                 display: flex;
                 flex-direction: column;
@@ -179,10 +374,12 @@
                 }
 
             }
+
             ::v-deep .globalFooter_copyright {
-                max-width: 54%;
-                text-align: right;
+                max-width: 100%;
+                text-align: left;
                 line-height: 18px;
+                margin-top: 16px;
             }
         }
 

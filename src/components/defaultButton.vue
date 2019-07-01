@@ -26,9 +26,10 @@ export default {
 .defaultButton {
   z-index: 1000;
   cursor: pointer;
-  width: 136px;
-  height: 46px;
+  width: 132px;
+  height: 42px;
   border-radius: 6px;
+  border: 1px solid transparent;
   background-color: $blue;
   transition: all 0.3s ease;
   @include font(14px, $font-color-white-1, 500);

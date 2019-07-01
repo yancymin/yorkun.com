@@ -35,6 +35,11 @@ export default {
   &_links {
     a {
       margin-right: 10px;
+      transition: all 0.3s ease;
+
+      &:hover {
+        color: white;
+      }
 
       &:last-child {
         display: inline-block;

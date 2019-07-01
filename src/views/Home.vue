@@ -3,30 +3,35 @@
     <!-- <defaultButton buttonText="fffff" :href="buttons.href.href1"/>
     <ghostButton buttonText="fffff" :buttonIcon="buttons.buttonIcon" :href="buttons.href.href1"/>-->
     <div class="head">
-      <div class="nav-1">
-        <ul>
-          <li>
-            <a href="#project">项目</a>
-          </li>
-          <li>
-            <a href="#works">作品</a>
-          </li>
-          <li>
-            <a href="#about">关于我</a>
-          </li>
-        </ul>
-        <!-- <div class="lang">
-          <span>CN</span>
+      <nav class="nav-1" id="nav-1">
+        <div class="nav-wrap">
           <ul>
+            <li>
+              <a href="#project">项目</a>
+            </li>
+            <li>
+              <a href="#works">作品</a>
+            </li>
+            <li>
+              <a href="#about">关于我</a>
+            </li>
+          </ul>
+          <div class="lang">
+            <div class="lang_now">
+              <span>CN</span>
+              <i></i>
+            </div>
+            <!-- <ul>
             <li>CN</li>
             <li>EN</li>
-          </ul>
-        </div>-->
-      </div>
+            </ul>-->
+          </div>
+        </div>
+      </nav>
       <div class="head_container">
-        <img src="../assets/index/logo_banner.svg" alt class="logo">
+        <img src="../assets/index/logo_banner.svg" alt class="logo" />
         <div class="motion">
-          <img src="../assets/index/name_logo.svg" alt class="motion_logo">
+          <img src="../assets/index/name_logo.svg" alt class="motion_logo" />
         </div>
       </div>
     </div>
@@ -150,7 +155,7 @@
           </div>
         </div>
       </div>
-      <globalFooter/>
+      <globalFooter />
     </div>
     <a class="top" href="#top"></a>
   </div>
@@ -204,6 +209,18 @@ export default {
       }
     };
   },
+  mounted() {
+    const nav = document.getElementById("nav-1");
+    const headerOffset = nav.offsetTop + nav.offsetHeight;
+
+    window.addEventListener("scroll", e => {
+      if (window.scrollY >= headerOffset) {
+        nav.classList.add("nav-move");
+      } else {
+        nav.classList.remove("nav-move");
+      }
+    });
+  },
   data() {
     return {
       cardMe: {
@@ -241,7 +258,7 @@ export default {
           isWhiteBotton: false,
           isTag: true,
           bgImg: geetestweb,
-          hrefG :'http://www.geetest.com'
+          hrefG: "http://www.geetest.com"
         },
         {
           title: "行为验证产品",
@@ -297,7 +314,6 @@ export default {
           tag: "主题/表情设计",
           buttonTextD: "Bananaaa~",
           buttonTextG: "表情包下载",
-
           isTagWhite: true,
           tagColor: "rgba(0,0,0,0.08)",
           isButton: true,
@@ -381,7 +397,7 @@ export default {
       info: {
         about: {
           title: "关于我",
-          des: `大家好，我是设计师 YorKun。事实上我姓名的字有点儿复杂，以至于输入法里要翻很多页才能找到。为了自己和他人的方便，索性以首字母和谐音取了现在的这个别名，大家更习惯叫我 “york”。<br/><br/>
+          des: `大家好，我是设计师 YorKun。事实上我姓名的字有点儿复杂，以至于输入法里要翻很多页才能找到。为了自己和他人的方便，索性以首字母和谐音取了现在的这个别名，大家更习惯叫我 「右可」。<br/><br/>
                 因为从小对画画感兴趣，我小学时周末通常是在绘画兴趣班度过的，随后高中开始系统的学习美术，大学于湖北美术学院动画系就读。可能是在学习环境中接触「实验性」和「纯艺」比较多，我更向往贴近生活的视觉表现形式，希望利用所学知识来解决周身的实际问题，再加上自己热衷于数码产品，对带有显示屏的东西情有独钟，所以大三决定「转行」学习 UI 设计，毕业后也顺其自然进入到这个行业。<br/><br/>
                 无论是坚定信念做「好」事，还是在大海中寻「活」法，我希望自己能一直热爱设计，持谦逊之心、尽拼搏之力。`
         },
@@ -398,6 +414,24 @@ export default {
 @import "./src/style/global.scss";
 @import "./src/style/mobile.scss";
 
+.nav-move {
+  z-index: 99999;
+  padding: 32px 24px;
+  background-color: $black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: calc(100vw - 48px) !important;
+  max-width: none !important;
+  .nav-wrap {
+      justify-content: flex-end !important;
+  }
+
+  ul {
+    margin: 0 16px !important;
+  }
+}
+
 .home {
   width: 100%;
   background-color: $gray;
@@ -412,22 +446,34 @@ export default {
     @include font(14px, $font-color-white-3, 500);
 
     .nav-1 {
-      max-width: 1200px;
-      width: 90%;
+      position: fixed;
+      width: 100%;
       padding-top: 24px;
-      @include flex-all-center {
-        justify-content: space-between;
-      }
+      transition: all 0.8s cubic-bezier(0.4, 0, 0, 1);
 
-      > ul {
-        margin: 0 auto;
-        li {
-          display: inline;
-          margin: 0 40px;
+      .nav-wrap {
+        max-width: 1200px;
+        > ul {
+          margin: 0 auto;
+          transition: all 0.8s cubic-bezier(0.4, 0, 0, 1);
 
-          &:first-child {
-            margin-left: 53px;
+          li {
+            display: inline;
+            margin: 0 40px;
+            transition: all 0.8s cubic-bezier(0.4, 0, 0, 1);
+
+            a {
+              transition: all 0.8s cubic-bezier(0.4, 0, 0, 1);
+            }
+
+            &:first-child {
+              margin-left: 53px;
+            }
           }
+        }
+
+        @include flex-all-center {
+          justify-content: space-between;
         }
       }
     }
@@ -441,6 +487,7 @@ export default {
         opacity: 0;
         animation: showLogo2 2.5s linear forwards;
         animation-delay: 1s;
+        width: 160px;
 
         @keyframes showLogo2 {
           to {
@@ -481,7 +528,23 @@ export default {
     }
 
     .lang {
-      display: none;
+      width: 40px;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0, 1);
+
+      &_now {
+        @include flex-all-center;
+        @include font(14px, rgba(255, 255, 255, 0.6), 500);
+
+        i {
+          margin-left: 2px;
+          display: inline-block;
+          width: 8px;
+          height: 6px;
+          background-image: url("../assets/index/language_icon.png");
+          background-size: 8px auto;
+          background-repeat: no-repeat;
+        }
+      }
     }
   }
 
@@ -494,9 +557,57 @@ export default {
       margin-bottom: 40px;
     }
 
+    /*********** card btn hover  **************/
+    ::v-deep .card {
+      &:nth-of-type(2) {
+        .defaultButton {
+          &:hover {
+            background-color: white;
+            color: $blue;
+            border: 1px solid $blue;
+          }
+        }
+
+        .ghostButton {
+          &:hover {
+            filter: invert(1);
+            border-color: white;
+          }
+        }
+      }
+      &:nth-of-type(3) {
+        .defaultButton {
+          &:hover {
+            color: $blue;
+            border: 1px solid white;
+            background-color: $blue !important;
+            color: white !important;
+          }
+        }
+      }
+      &:nth-of-type(4) {
+        .defaultButton {
+          &:hover {
+            background-color: white;
+            color: $blue;
+            border: 1px solid $blue;
+          }
+        }
+      }
+      &:nth-of-type(5) {
+        .defaultButton {
+          &:hover {
+            background-color: white !important;
+            color: #ffde4a !important;
+            border: 1px solid #ffde4a !important;
+          }
+        }
+      }
+    }
+
     .card {
       &:nth-of-type(2) {
-       &::v-deep .des {
+        &::v-deep .des {
           span {
             width: auto;
           }
@@ -505,23 +616,23 @@ export default {
           }
         }
       }
-       &:nth-of-type(3) {
-          &::v-deep .defaultButton {
-            img {
-              display: none;
-            }
+      &:nth-of-type(3) {
+        &::v-deep .defaultButton {
+          img {
+            display: none;
           }
-       }
-       &:nth-of-type(4) {
-          &::v-deep .defaultButton {
-            img {
-              display: none;
-            }
+        }
+      }
+      &:nth-of-type(4) {
+        &::v-deep .defaultButton {
+          img {
+            display: none;
           }
-       }
+        }
+      }
 
       &:nth-of-type(5) {
-       &::v-deep .des {
+        &::v-deep .des {
           img {
             height: 60px;
           }
@@ -559,11 +670,11 @@ export default {
         margin-right: 20px;
 
         &:first-child {
-         &::v-deep .smallCard_text {
+          &::v-deep .smallCard_text {
             position: absolute;
             top: 70px;
           }
-         &::v-deep img {
+          &::v-deep img {
             position: absolute;
             bottom: 80px;
             width: 100%;

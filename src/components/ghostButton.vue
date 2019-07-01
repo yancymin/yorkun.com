@@ -32,10 +32,11 @@ export default {
   justify-content: center;
   align-items: center;
   width: 136px;
-  height: 44px;
+  height: 43px;
   border-radius: 6px;
-  border: 1.5px solid #3a4151;
+  border: 1px solid #3a4151;
   background-color: $white;
+  transition: all 0.3s ease;
   @include font(14px, $font-color-black-1, 500);
 
   a {

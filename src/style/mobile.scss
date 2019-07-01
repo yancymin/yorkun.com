@@ -10,7 +10,6 @@
 
         .container {
             ::v-deep .card {
-                // height: 600px;
                 text-align: center;
 
                 &:nth-of-type(1) {
@@ -44,7 +43,8 @@
                     }
 
                     .img-area {
-                        bottom: -100px;
+                        bottom: -20px;
+                        right: 0;
 
                         &::after {
                             position: absolute;
@@ -235,8 +235,7 @@
 
                 &:nth-of-type(2) {
                     img {
-                        height: auto;
-                        width: auto;
+                       height: 310px;
                     }
 
                     .centerImg {

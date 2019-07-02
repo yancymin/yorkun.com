@@ -798,7 +798,9 @@ export default {
         }
 
         .social {
-          width: 760px;
+          width: 100%;
+          max-width: 760px;
+
           .links {
             a {
               display: inline-block;

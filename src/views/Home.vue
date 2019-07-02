@@ -548,13 +548,15 @@ export default {
           position: absolute;
           display: block;
           width: 385px;
-          height: 360px;
+          height: 500px;
           top: 46px;
           background-color: $black;
           transform: scaleY(1);
           transform-origin: top;
           will-change: transform;
-          animation: showLogo1 2.2s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+          animation-delay: 10s;
+          animation: showLogo1 3s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+          filter: blur(10);
 
           @keyframes showLogo1 {
             to {

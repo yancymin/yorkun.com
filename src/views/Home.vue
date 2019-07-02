@@ -436,6 +436,8 @@ export default {
     }
   }
 
+  /****/
+
   ul {
     animation: ulMove 0.8s cubic-bezier(0.4, 0, 0, 1) forwards;
 

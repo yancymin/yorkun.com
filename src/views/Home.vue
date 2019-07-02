@@ -621,7 +621,7 @@ export default {
       &:nth-of-type(2) {
         .defaultButton {
           &:hover {
-            background-color: white;
+            background-color: $white;
             color: $blue;
             border: 1px solid $blue;
           }
@@ -647,7 +647,7 @@ export default {
       &:nth-of-type(4) {
         .defaultButton {
           &:hover {
-            background-color: white;
+            background-color: $white;
             color: $blue;
             border: 1px solid $blue;
           }
@@ -656,7 +656,7 @@ export default {
       &:nth-of-type(5) {
         .defaultButton {
           &:hover {
-            background-color: white !important;
+            background-color: #EDF0F2 !important;
             color: #ffde4a !important;
             border: 1px solid #ffde4a !important;
           }
@@ -725,13 +725,23 @@ export default {
       max-width: 1200px;
       width: 100%;
 
+     ::v-deep  .smallCard {
+          &:first-child {
+           &:hover {
+            .bgImg {
+              transform: scale(1.04);
+            }
+          }
+        }
+      }
+
       .smallCard {
         margin-right: 20px;
 
         &:first-child {
           &::v-deep .smallCard_text {
             position: absolute;
-            top: 70px;
+            top: 90px;
           }
           &::v-deep img {
             position: absolute;

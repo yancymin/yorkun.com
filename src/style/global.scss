@@ -62,3 +62,11 @@ html::-webkit-scrollbar {
     -webkit-border-radius: 6px;
 }
 
+html {
+    background-color: $black;
+}
+
+::selection {
+    background-color: $black;
+    color: $white;
+}

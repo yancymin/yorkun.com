@@ -22,12 +22,12 @@ export default {
   position: relative;
   // width: calc(386px - 30px);
   width: 100%;
+  max-width: 340px;
   height: 120px;
   border-radius: 10px;
   background-color: #ffffff;
   overflow: hidden;
   padding-left: 30px;
-  margin-right: 20px;
   cursor: pointer;
   overflow: hidden;
   transition: all 0.3s ease;
@@ -65,7 +65,7 @@ export default {
     top: 0;
     right: 0;
     width: 195px;
-    height: 100%;
+    height: 120px;
     transition: all 0.2s ease;
     border-radius: 10px;
     overflow: hidden;

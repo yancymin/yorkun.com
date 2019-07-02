@@ -20,7 +20,7 @@
         <div class="lang">
           <div class="lang_now">
             <div class="lang_inner">
-              <span>CN</span>
+              <!-- <span>CN</span> -->
               <i></i>
             </div>
           </div>
@@ -437,7 +437,7 @@ export default {
   }
 
   ul {
-    animation: ulMove 0.6s cubic-bezier(0.4, 0, 0, 1) forwards;
+    animation: ulMove 0.8s cubic-bezier(0.4, 0, 0, 1) forwards;
 
     li {
       margin: 20px !important;
@@ -449,7 +449,7 @@ export default {
       opacity: 0;
     }
     100% {
-      transform: translateX(-66px);
+      transform: translateX(-26px);
     }
   }
 }
@@ -598,8 +598,8 @@ export default {
           top: 1px;
           margin-left: 4px;
           display: inline-block;
-          width: 12px;
-          height: 12px;
+          width: 23px;
+          height: 20px;
           background-image: url("../assets/index/language_icon.svg");
           background-repeat: no-repeat;
         }

@@ -554,9 +554,7 @@ export default {
           transform: scaleY(1);
           transform-origin: top;
           will-change: transform;
-          animation-delay: 10s;
           animation: showLogo1 3s cubic-bezier(0.77, 0, 0.175, 1) forwards;
-          filter: blur(10);
 
           @keyframes showLogo1 {
             to {

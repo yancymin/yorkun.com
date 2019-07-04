@@ -20,15 +20,15 @@
                         word-break: normal;
 
                         h1 {
-                            font-size: 24px;
-                            line-height: 32px;
+                            font-size: 20px;
+                            line-height: 26px;
                             margin-bottom: 16px;
 
                         }
 
                         p {
-                            font-size: 14px;
-                            line-height: 18px;
+                            font-size: 12px;
+                            line-height: 16px;
 
                             &:nth-of-type(1) {
                                 margin-bottom: 24px;
@@ -70,6 +70,8 @@
                         }
 
                         span {
+                            font-size: 12px;
+                            line-height: 16px;
                             margin-bottom: 24px;
                         }
 
@@ -104,10 +106,16 @@
                         top: -120px;
 
                         span {
+                            font-size: 12px;
+                            line-height: 16px;
                             width: auto;
                             margin-bottom: 24px;
                         }
 
+                    }
+
+                    .defaultButton {
+                        margin: 0;
                     }
 
                     .img-area {
@@ -130,6 +138,8 @@
                         top: -130px;
 
                         span {
+                            font-size: 12px;
+                            line-height: 16px;
                             width: auto;
                             margin-bottom: 24px;
                         }
@@ -139,6 +149,10 @@
                             word-break: normal;
 
                             z-index: 100;
+                        }
+
+                        .defaultButton {
+                            margin: 0;
                         }
                     }
 
@@ -172,6 +186,8 @@
                         top: -120px;
 
                         span {
+                            font-size: 12px;
+                            line-height: 16px;
                             width: auto;
                             margin-bottom: 24px;
                         }
@@ -285,6 +301,8 @@
                 }
 
                 span {
+                    font-size: 12px;
+                    line-height: 16px;
                     width: auto;
                     display: inline;
                     margin-bottom: 24px;

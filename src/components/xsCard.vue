@@ -10,8 +10,8 @@
 
 <script>
 export default {
-  name: "xsCard",
-  props: ["title", "bgImg", "cardColor", "isCenterImg","link"]
+  name: 'xsCard',
+  props: ['title', 'bgImg', 'cardColor', 'isCenterImg', 'link'],
 };
 </script>
 
@@ -40,7 +40,7 @@ export default {
     .bg {
       transform: scale(1.02) translateX(4px);
       border-radius: 18px;
-    
+
     }
     img {
       transform: scale(1.02);
@@ -86,4 +86,3 @@ export default {
   }
 }
 </style>
-

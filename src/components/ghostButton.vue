@@ -11,15 +11,15 @@
 
 <script>
 export default {
-  name: "ghostButton",
-  props: ["buttonText", "buttonIcon", "href"],
+  name: 'ghostButton',
+  props: ['buttonText', 'buttonIcon', 'href'],
   mounted() {
-      let icon = document.getElementById("ghostButton-icon");
+    const icon = document.getElementById('ghostButton-icon');
 
-      if(this.buttonIcon === undefined) {
-        icon.style.display = "none";
-      }
-  }
+    if (this.buttonIcon === undefined) {
+      icon.style.display = 'none';
+    }
+  },
 };
 </script>
 

@@ -11,7 +11,7 @@
 
 <script>
 export default {
-  name: "globalFooter"
+  name: 'globalFooter',
 };
 </script>
 

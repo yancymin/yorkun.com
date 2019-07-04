@@ -44,7 +44,11 @@
 
                     .img-area {
                         bottom: -20px;
-                        right: 0;
+                        right: -20px;
+
+                        img {
+                            height: 320px;
+                        }
 
                         &::after {
                             position: absolute;
@@ -54,7 +58,7 @@
                             display: block;
                             width: 120%;
                             height: 160px;
-                            background-image: linear-gradient(bottom, transparent 0%, transparent 50%, rgba(20, 21, 22, 1) 100%);
+                            background-image: linear-gradient(bottom, rgba(20, 21, 22, 0)  0%, rgba(20, 21, 22, 1) 100%);
                         }
                     }
                 }
@@ -94,7 +98,7 @@
                             display: block;
                             width: 120%;
                             height: 160px;
-                            background-image: linear-gradient(bottom, transparent 0%, transparent 50%, rgba(245, 246, 248, 1) 100%);
+                            background-image: linear-gradient(bottom, rgba(245, 246, 248, 0)  0%,  rgba(245, 246, 248, 1) 100%);
                         }
                     }
                 }
@@ -174,7 +178,7 @@
                             display: block;
                             width: 120%;
                             height: 160px;
-                            background-image: linear-gradient(bottom, transparent 0%, transparent 50%, rgba(245, 246, 248, 1) 100%);
+                            background-image: linear-gradient(bottom, rgba(245, 246, 248, 0)  0%,  rgba(245, 246, 248, 1) 100%);                            
                         }
                     }
                 }

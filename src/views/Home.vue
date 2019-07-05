@@ -453,6 +453,7 @@ export default {
 
 .nav-2 {
   transform: translateY(-110%);
+  opacity: 0;
 
   .nav-wrap {
     &::before {
@@ -463,6 +464,7 @@ export default {
 
 .m-nav-move {
   transform: translateY(0);
+  opacity:1;
 }
 
 .nav-move {

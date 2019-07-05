@@ -30,6 +30,33 @@
           </ul>-->
         </div>
       </nav>
+      <nav class="nav-2 nav-1" id="nav-2">
+        <div class="nav-wrap">
+          <ul>
+            <li>
+              <a href="#project">项目</a>
+            </li>
+            <li>
+              <a href="#works">作品</a>
+            </li>
+            <li>
+              <a href="#about">关于我</a>
+            </li>
+          </ul>
+        </div>
+        <div class="lang">
+          <div class="lang_now">
+            <div class="lang_inner">
+              <!-- <span>CN</span> -->
+              <i></i>
+            </div>
+          </div>
+          <!-- <ul>
+            <li>CN</li>
+            <li>EN</li>
+          </ul>-->
+        </div>
+      </nav>
       <div class="head_container">
         <img src="../assets/index/logo_banner.svg" alt class="logo" />
         <div class="motion">
@@ -213,13 +240,21 @@ export default {
   },
   mounted() {
     const nav = document.getElementById('nav-1');
+    const mobileNav = document.getElementById('nav-2');
     const headerOffset = nav.offsetTop + nav.offsetHeight;
+    const mobileHeaderOffset = mobileNav.offsetTop + mobileNav.offsetHeight + 100;
 
     window.addEventListener('scroll', (e) => {
       if (window.scrollY >= headerOffset) {
         nav.classList.add('nav-move');
       } else {
         nav.classList.remove('nav-move');
+      }
+      
+      if(window.scrollY >= mobileHeaderOffset) {
+        mobileNav.classList.add ('nav-move','m-nav-move');
+      } else {
+        mobileNav.classList.remove ('nav-move','m-nav-move');
       }
     });
   },
@@ -415,6 +450,20 @@ export default {
 <style lang="scss" scoped>
 @import "./src/style/global.scss";
 @import "./src/style/mobile.scss";
+
+.nav-2 {
+  transform: translateY(-110%);
+
+  .nav-wrap {
+    &::before {
+          left: -24px !important;
+    }
+  }
+}
+
+.m-nav-move {
+  transform: translateY(0);
+}
 
 .nav-move {
   z-index: 99999;

@@ -1,17 +1,37 @@
 @media screen and (max-width: 600px) {
+    #nav-1 {
+        display: none;
+    }
+
     #top {
         .break-line {
             width: 100%;
+        }
+
+        .head {
+            position: relative;
+            height: 600px;
+            .head_container {
+                .motion {
+                    position: absolute;
+                    bottom: 0;
+                    .motion_logo {
+                        width: 71vw;
+                    }
+                }
+            }
         }
 
         .top {
             display: none !important;
         }
 
+       
+
         .container {
             ::v-deep .card {
                 text-align: center;
-                
+
                 .defaultButton {
                     margin-right: 10px;
                 }
@@ -61,7 +81,7 @@
                             display: block;
                             width: 120%;
                             height: 160px;
-                            background-image: linear-gradient(bottom, rgba(20, 21, 22, 0)  0%, rgba(20, 21, 22, 1) 100%);
+                            background-image: linear-gradient(bottom, rgba(20, 21, 22, 0) 0%, rgba(20, 21, 22, 1) 100%);
                         }
                     }
                 }
@@ -101,7 +121,7 @@
                             display: block;
                             width: 120%;
                             height: 160px;
-                            background-image: linear-gradient(bottom, rgba(245, 246, 248, 0)  0%,  rgba(245, 246, 248, 1) 100%);
+                            background-image: linear-gradient(bottom, rgba(245, 246, 248, 0) 0%, rgba(245, 246, 248, 1) 100%);
                         }
                     }
                 }
@@ -181,7 +201,7 @@
                             display: block;
                             width: 120%;
                             height: 160px;
-                            background-image: linear-gradient(bottom, rgba(245, 246, 248, 0)  0%,  rgba(245, 246, 248, 1) 100%);                            
+                            background-image: linear-gradient(bottom, rgba(245, 246, 248, 0) 0%, rgba(245, 246, 248, 1) 100%);
                         }
                     }
                 }
@@ -262,7 +282,7 @@
 
                 &:nth-of-type(2) {
                     img {
-                       height: 310px;
+                        height: 310px;
                     }
 
                     .centerImg {
@@ -417,12 +437,13 @@
 }
 
 @media screen and (max-width: 1440px) {
-  #top {
-    .top {
-        display: none !important;
-            }
-  }
+    #top {
+        .top {
+            display: none !important;
+        }
+    }
 }
+
 // @media screen and (max-width: 1100px) {
 //   #top {
 //   ::v-deep  .card_wrap {

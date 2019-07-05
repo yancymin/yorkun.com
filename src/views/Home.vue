@@ -645,6 +645,7 @@ export default {
         }
 
         i {
+          cursor: pointer;
           position: relative;
           top: 1px;
           margin-left: 4px;
@@ -653,6 +654,11 @@ export default {
           height: 20px;
           background-image: url("../assets/index/language_icon.svg");
           background-repeat: no-repeat;
+          transition: all 0.3s ease;
+
+          &:hover {
+            filter: contrast(2);
+          }
         }
       }
     }

@@ -768,6 +768,7 @@ export default {
       margin-top: 10px;
 
       .xsCard {
+        margin-right: 20px;
         &:last-child {
           margin-right: 0;
         }

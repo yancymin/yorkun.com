@@ -48,6 +48,8 @@ export default {
   }
 
   h2 {
+    position: absolute;
+    top: 28px;
     z-index: 1;
     width: 50%;
     @include font(30px, $font-color-white-1, 600) {

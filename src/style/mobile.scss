@@ -11,19 +11,22 @@
         .container {
             ::v-deep .card {
                 text-align: center;
+                
+                .defaultButton {
+                    margin-right: 10px;
+                }
 
                 &:nth-of-type(1) {
                     height: 500px;
 
                     .des {
-                        top: -102px;
+                        top: -116px;
                         word-break: normal;
 
                         h1 {
                             font-size: 20px;
                             line-height: 26px;
-                            margin-bottom: 16px;
-
+                            margin-bottom: 10px;
                         }
 
                         p {
@@ -64,10 +67,10 @@
                 }
 
                 &:nth-of-type(2) {
-                    height: 500px;
+                    height: 560px;
 
                     .des {
-                        top: -96px;
+                        top: -120px;
 
                         img {
                             height: 32px;

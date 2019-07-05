@@ -600,6 +600,7 @@ export default {
           display: block;
           width: 385px;
           height: 500px;
+          border-radius: 0 0 8px 8px;
           top: 46px;
           background-color: $black;
           transform: scaleY(1);

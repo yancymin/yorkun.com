@@ -250,11 +250,11 @@ export default {
       } else {
         nav.classList.remove('nav-move');
       }
-      
-      if(window.scrollY >= mobileHeaderOffset) {
-        mobileNav.classList.add ('nav-move','m-nav-move');
+
+      if (window.scrollY >= mobileHeaderOffset) {
+        mobileNav.classList.add('nav-move', 'm-nav-move');
       } else {
-        mobileNav.classList.remove ('nav-move','m-nav-move');
+        mobileNav.classList.remove('nav-move', 'm-nav-move');
       }
     });
   },

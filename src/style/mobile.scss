@@ -20,9 +20,12 @@
 
         .head {
             position: relative;
-            height: 600px;
+            height: 560px;
 
             .head_container {
+                .logo {
+                    top: 95px;
+                }
                 .motion {
                     position: absolute;
                     bottom: 0;

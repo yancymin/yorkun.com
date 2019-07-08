@@ -1,4 +1,3 @@
-
 @media screen and (min-width: 600px) {
     #nav-2 {
         display: none;
@@ -6,6 +5,10 @@
 }
 
 @media screen and (max-width: 600px) {
+    #project, #works {
+        position: relative !important;
+        bottom: 0 !important;
+    }
     #nav-1 {
         display: none;
     }
@@ -18,22 +21,40 @@
         .head {
             position: relative;
             height: 600px;
+
             .head_container {
                 .motion {
                     position: absolute;
                     bottom: 0;
+
                     .motion_logo {
                         width: 71vw;
                     }
                 }
             }
+
+            .nav-move {
+                .nav-wrap {
+                    ul {
+                        animation: ulMove2 0.8s cubic-bezier(0.4, 0, 0, 1) forwards !important;
+
+                        @keyframes ulMove2 {
+                            0% {
+                                opacity: 0;
+                            }
+
+                            100% {
+                                transform: translateX(-24px);
+                            }
+                        }
+                    }
+                }
+            }
         }
 
-        .top {
-            display: none !important;
-        }
+     
 
-       
+
 
         .container {
             ::v-deep .card {
@@ -307,7 +328,7 @@
             flex-direction: column;
             width: calc(100% - 30px);
 
-          ::v-deep  .xsCard {
+            ::v-deep .xsCard {
                 margin: 0;
 
                 &:nth-of-type(1),
@@ -454,7 +475,7 @@
     }
 }
 
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1380px) {
     #top {
         .top {
             display: none !important;

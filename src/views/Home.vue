@@ -3,7 +3,7 @@
     <!-- <defaultButton buttonText="fffff" :href="buttons.href.href1"/>
     <ghostButton buttonText="fffff" :buttonIcon="buttons.buttonIcon" :href="buttons.href.href1"/>-->
     <div class="head">
-      <nav class="nav-1" id="nav-1">
+      <nav class="nav-1 my-header-nav" id="nav-1">
         <div class="nav-wrap">
           <ul>
             <li>
@@ -30,7 +30,7 @@
           </ul>-->
         </div>
       </nav>
-      <nav class="nav-2 nav-1" id="nav-2">
+      <nav class="nav-2 nav-1 my-header-nav" id="nav-2">
         <div class="nav-wrap">
           <ul>
             <li>
@@ -77,9 +77,10 @@
         :isWhiteBotton="cardMe.isWhiteBotton"
         :isTag="cardMe.isTag"
         :bgImg="cardMe.bgImg"
+        id="cardMe"
       >
         <h1>你好, 我是设计师 YorKun</h1>
-        <p class="mb-40">在互联网公司担任设计负责人一职，我喜欢尝试不同的形式：UI、图形、动效……</p>
+        <p class="mb-40">在互联网公司担任设计负责人，我喜欢尝试不同的形式：UI、图形、动效……</p>
         <h1>欢迎来到我的个人站点</h1>
         <p>你可以通过这个网站来了解我。😊</p>
       </card>
@@ -109,8 +110,35 @@
         :hrefD="cards[i].hrefD"
         :hrefG="cards[i].hrefG"
       />
+      <card
+        v-for="(item, i) in banana"
+        :key="i"
+        :title="banana[i].title"
+        :cardLogo="banana[i].cardLogo"
+        :des="banana[i].des"
+        :cardColor="banana[i].cardColor"
+        :tag="banana[i].tag"
+        :isTagWhite="banana[i].isTagWhite"
+        :tagColor="banana[i].tagColor"
+        :isTitle="banana[i].isTitle"
+        :isButton="banana[i].isButton"
+        :isDes="banana[i].isDes"
+        :isBlack="banana[i].isBlack"
+        :isWhiteBotton="banana[i].isWhiteBotton"
+        :isTag="banana[i].isTag"
+        :bgImg="banana[i].bgImg"
+        :isGhostButton="banana[i].isGhostButton"
+        :btnIconD="banana[i].btnIconD"
+        :btnIconG="banana[i].btnIconG"
+        :buttonTextD="banana[i].buttonTextD"
+        :buttonTextG="banana[i].buttonTextG"
+        :hrefD="banana[i].hrefD"
+        :hrefG="banana[i].hrefG"
+        id="banana"
+      />
+      <span id="works"></span>
 
-      <div class="smallCards" id="works">
+      <div class="smallCards">
         <smallCard
           v-for="(item, i) in smallCards"
           :key="i"
@@ -191,34 +219,34 @@
 </template>
 
 <script>
-import defaultButton from '../components/defaultButton.vue';
-import ghostButton from '../components/ghostButton.vue';
-import card from '../components/card.vue';
-import motionCard from '../components/motionCard.vue';
-import smallCard from '../components/smallCard.vue';
-import xsCard from '../components/xsCard.vue';
-import globalFooter from '../components/globalFooter.vue';
-import link from '../assets/index/button-icon/link_icon.svg';
-import geetestweb from '../assets/index/geetestweb.png';
-import ui_captcha from '../assets/index/ui_captcha.gif';
-import app_onelogin from '../assets/index/app_onelogin.png';
-import Portrait from '../assets/index/IMG_3045.png';
-import gmake_logo from '../assets/index/gmake_logo.png';
-import banana from '../assets/index/banana_banner.gif';
-import myDribbble from '../assets/index/mydribbble.png';
-import teamDribbble from '../assets/index/teamdribbble.png';
-import link_icon_w from '../assets/index/link_icon_w.svg';
-import link_icon_b from '../assets/index/link_icon_b.svg';
-import reweima_icon from '../assets/index/reweima_icon.svg';
-import geetestweb_logo from '../assets/index/geetestweb_logo.svg';
-import captcha_logo from '../assets/index/captcha_logo.svg';
-import wangguan_logo from '../assets/index/wangguan_logo.svg';
-import banana_logo from '../assets/index/banana_logo.svg';
-import animation from '../assets/index/animation.png';
+import defaultButton from "../components/defaultButton.vue";
+import ghostButton from "../components/ghostButton.vue";
+import card from "../components/card.vue";
+import motionCard from "../components/motionCard.vue";
+import smallCard from "../components/smallCard.vue";
+import xsCard from "../components/xsCard.vue";
+import globalFooter from "../components/globalFooter.vue";
+import link from "../assets/index/button-icon/link_icon.svg";
+import geetestweb from "../assets/index/geetestweb.png";
+import ui_captcha from "../assets/index/ui_captcha.gif";
+import app_onelogin from "../assets/index/app_onelogin.png";
+import Portrait from "../assets/index/IMG_3045.png";
+import gmake_logo from "../assets/index/gmake_logo.png";
+import banana from "../assets/index/banana_banner.gif";
+import myDribbble from "../assets/index/mydribbble.png";
+import teamDribbble from "../assets/index/teamdribbble.png";
+import link_icon_w from "../assets/index/link_icon_w.svg";
+import link_icon_b from "../assets/index/link_icon_b.svg";
+import reweima_icon from "../assets/index/reweima_icon.svg";
+import geetestweb_logo from "../assets/index/geetestweb_logo.svg";
+import captcha_logo from "../assets/index/captcha_logo.svg";
+import wangguan_logo from "../assets/index/wangguan_logo.svg";
+import banana_logo from "../assets/index/banana_logo.svg";
+import animation from "../assets/index/animation.png";
 
 export default {
-  name: 'home',
-  props: ['buttonIcon'],
+  name: "home",
+  props: ["buttonIcon"],
   components: {
     defaultButton,
     ghostButton,
@@ -226,68 +254,69 @@ export default {
     motionCard,
     smallCard,
     xsCard,
-    globalFooter,
+    globalFooter
   },
   created() {
-    window.onscroll = function () {
-      const backTop = document.querySelector('.top');
+    window.onscroll = function() {
+      const backTop = document.querySelector(".top");
       if (document.documentElement.scrollTop + document.body.scrollTop > 100) {
-        backTop.style.display = 'block';
+        backTop.style.display = "block";
       } else {
-        backTop.style.display = 'none';
+        backTop.style.display = "none";
       }
     };
   },
   mounted() {
-    const nav = document.getElementById('nav-1');
-    const mobileNav = document.getElementById('nav-2');
+    const nav = document.getElementById("nav-1");
+    const mobileNav = document.getElementById("nav-2");
     const headerOffset = nav.offsetTop + nav.offsetHeight;
-    const mobileHeaderOffset = mobileNav.offsetTop + mobileNav.offsetHeight + 100;
+    const mobileHeaderOffset =
+      mobileNav.offsetTop + mobileNav.offsetHeight + 100;
 
-    window.addEventListener('scroll', (e) => {
+    window.addEventListener("scroll", e => {
       if (window.scrollY >= headerOffset) {
-        nav.classList.add('nav-move');
+        nav.classList.add("nav-move");
       } else {
-        nav.classList.remove('nav-move');
+        nav.classList.remove("nav-move");
       }
 
       if (window.scrollY >= mobileHeaderOffset) {
-        mobileNav.classList.add('nav-move', 'm-nav-move');
+        mobileNav.classList.add("nav-move", "m-nav-move");
       } else {
-        mobileNav.classList.remove('nav-move', 'm-nav-move');
+        mobileNav.classList.remove("nav-move", "m-nav-move");
       }
     });
   },
   data() {
     return {
       cardMe: {
-        title: ' ',
-        des: ' ',
-        cardColor: '#141516',
-        tag: 'tag',
+        title: " ",
+        des: " ",
+        cardColor: "#141516",
+        tag: "tag",
         isButton: false,
         isTitle: false,
         isDes: false,
         isBlack: true,
         isWhiteBotton: false,
         isTag: false,
-        bgImg: Portrait,
+        bgImg: Portrait
       },
       cards: [
         {
-          title: 'GEETEST 网站',
+          title: "GEETEST 网站",
           cardLogo: geetestweb_logo,
           des:
-            '安全服务类企业网站的一次改版，承接起业务线的扩充和品牌视觉的升级。',
-          cardColor: ' ',
-          tag: '网页设计',
-          buttonTextD: '项目详情',
-          buttonTextG: '网站地址',
+            "安全服务类企业网站的一次改版，承接起业务线的扩充和品牌视觉的升级。",
+          cardColor: " ",
+          tag: "网页设计",
+          buttonTextD: "项目详情",
+          buttonTextG: "网站地址",
           isTagWhite: false,
-          tagColor: '#DEE1E7',
+          tagColor: "#DEE1E7",
           isButton: true,
           isGhostButton: true,
-          btnIconD: '',
+          btnIconD: "",
           btnIconG: link_icon_b,
           isTitle: true,
           isDes: true,
@@ -295,66 +324,68 @@ export default {
           isWhiteBotton: false,
           isTag: true,
           bgImg: geetestweb,
-          hrefG: 'http://www.geetest.com',
+          hrefG: "http://www.geetest.com"
         },
         {
-          title: '行为验证产品',
+          title: "行为验证产品",
           cardLogo: captcha_logo,
           des:
-            '基于生物的行为特征，结合人工智能技术，帮助网站和 APP 区分人机，一个拥有全球 26 万家客户的革命性安全产品。 ',
-          cardColor: '#3973FF ',
-          tag: 'Web UI 设计',
-          buttonTextD: '项目详情',
-          buttonTextG: ' ',
+            "基于生物的行为特征，结合人工智能技术，帮助网站和 APP 区分人机，一个拥有全球 26 万家客户的革命性安全产品。 ",
+          cardColor: "#3973FF ",
+          tag: "Web UI 设计",
+          buttonTextD: "项目详情",
+          buttonTextG: " ",
 
           isTagWhite: true,
-          tagColor: 'rgba(0,0,0,0.08)',
+          tagColor: "rgba(0,0,0,0.08)",
           isButton: true,
-          btnIconD: '',
-          btnIconG: '',
+          btnIconD: "",
+          btnIconG: "",
           isGhostButton: false,
           isTitle: true,
           isDes: true,
           isBlack: true,
           isWhiteBotton: true,
           isTag: true,
-          bgImg: ui_captcha,
+          bgImg: ui_captcha
         },
         {
-          title: 'APP 一键登录',
+          title: "APP 一键登录",
           cardLogo: wangguan_logo,
           des:
-            '准确识别用户手机号码，实现 App 的登录注册等环节一键通过，帮助企业优化验证流程，让其用户享受更好的体验。',
-          cardColor: ' ',
-          tag: 'App UI 设计',
-          buttonTextD: '项目详情',
-          buttonTextG: ' ',
+            "准确识别用户手机号码，实现 App 的登录注册等环节一键通过，帮助企业优化验证流程，让其用户享受更好的体验。",
+          cardColor: " ",
+          tag: "App UI 设计",
+          buttonTextD: "项目详情",
+          buttonTextG: " ",
 
           isTagWhite: false,
-          tagColor: 'rgba(0,0,0,0.08)',
+          tagColor: "rgba(0,0,0,0.08)",
           isButton: true,
-          btnIconD: '',
-          btnIconG: '',
+          btnIconD: "",
+          btnIconG: "",
           isGhostButton: false,
           isTitle: true,
           isDes: true,
           isBlack: false,
           isWhiteBotton: false,
           isTag: true,
-          bgImg: app_onelogin,
-        },
+          bgImg: app_onelogin
+        }
+      ],
+      banana: [
         {
-          title: '小蕉 BANANA',
+          title: "小蕉 BANANA",
           cardLogo: banana_logo,
-          des: '生活如此多蕉，听听小香蕉的故事，自己设计的第一个卡通形象。',
-          cardColor: ' #FC85A1',
-          tag: '主题/表情设计',
-          buttonTextD: 'Bananaaa~',
-          buttonTextG: '表情包下载',
+          des: "生活如此多蕉，听听小香蕉的故事，自己设计的第一个卡通形象。",
+          cardColor: " #FC85A1",
+          tag: "主题/表情设计",
+          buttonTextD: "Bananaaa~",
+          buttonTextG: "表情包下载",
           isTagWhite: true,
-          tagColor: 'rgba(0,0,0,0.08)',
+          tagColor: "rgba(0,0,0,0.08)",
           isButton: true,
-          btnIconD: '',
+          btnIconD: "",
           btnIconG: reweima_icon,
           isGhostButton: true,
           isTitle: true,
@@ -362,60 +393,60 @@ export default {
           isBlack: true,
           isWhiteBotton: true,
           isTag: true,
-          bgImg: banana,
-        },
+          bgImg: banana
+        }
       ],
       smallCards: [
         {
-          title: '动效作品集',
-          tag: '动效设计',
-          cardColor: ' #FFA51D',
-          footer: '',
+          title: "动效作品集",
+          tag: "动效设计",
+          cardColor: " #FFA51D",
+          footer: "",
           isTag: true,
-          tagColor: 'rgba(0,0,0,0.08)',
+          tagColor: "rgba(0,0,0,0.08)",
           bgImg: animation,
-          isCenterImg: false,
+          isCenterImg: false
         },
         {
-          title: ' ',
-          tag: '平面设计',
-          cardColor: ' #222',
-          footer: '© 2019 GEETEST. Design by G-MAKE.',
+          title: " ",
+          tag: "平面设计",
+          cardColor: " #222",
+          footer: "© 2019 GEETEST. Design by G-MAKE.",
           isTag: true,
-          tagColor: 'rgba(0,0,0,0.4)',
+          tagColor: "rgba(0,0,0,0.4)",
           bgImg: gmake_logo,
-          isCenterImg: true,
-        },
+          isCenterImg: true
+        }
       ],
       xsCards: [
         {
-          title: '我的\nDribbble',
+          title: "我的\nDribbble",
           bgImg: myDribbble,
-          cardColor: '#2BC6DB ',
+          cardColor: "#2BC6DB ",
           isCenterImg: false,
-          link: 'https://dribbble.com/yorkun',
+          link: "https://dribbble.com/yorkun"
         },
         {
-          title: '团队\nDribbble',
+          title: "团队\nDribbble",
           bgImg: teamDribbble,
-          cardColor: '#3873FF',
+          cardColor: "#3873FF",
           isCenterImg: false,
-          link: 'https://dribbble.com/geetest',
+          link: "https://dribbble.com/geetest"
         },
         {
-          title: ' ',
-          bgImg: '',
-          cardColor: '#E5E7EB',
+          title: " ",
+          bgImg: "",
+          cardColor: "#E5E7EB",
           isCenterImg: true,
-          link: 'https://design.geetest.com/',
-        },
+          link: "https://design.geetest.com/"
+        }
       ],
       motionCard: {
-        title: 'YorKun 的设计博客',
-        des: '里面上传了我不同时期的作品，并且更新频繁。',
-        cardColor: '#141516 ',
-        btnColor: '#40454B',
-        tag: ' ',
+        title: "YorKun 的设计博客",
+        des: "里面上传了我不同时期的作品，并且更新频繁。",
+        cardColor: "#141516 ",
+        btnColor: "#40454B",
+        tag: " ",
         isButton: true,
         isTitle: true,
         isDes: true,
@@ -423,27 +454,27 @@ export default {
         isWhiteBotton: false,
         isTag: false,
         btnIcon: link_icon_w,
-        hrefD: 'http://yorkun.lofter.com',
+        hrefD: "http://yorkun.lofter.com"
       },
       buttons: {
         href: {
-          href1: 'https://baidu.com',
+          href1: "https://baidu.com"
         },
-        buttonIcon: link,
+        buttonIcon: link
       },
       info: {
         about: {
-          title: '关于我',
+          title: "关于我",
           des: `大家好，我是设计师 YorKun。事实上我姓名的字有点儿复杂，以至于输入法里要翻很多页才能找到。为了自己和他人的方便，索性以首字母和谐音取了现在的这个别名，大家更习惯叫我 「右可」。<br/><br/>
                 因为从小对画画感兴趣，我小学时周末通常是在绘画兴趣班度过的，随后高中开始系统的学习美术，大学于湖北美术学院动画系就读。可能是在学习环境中接触「实验性」和「纯艺」比较多，我更向往贴近生活的视觉表现形式，希望利用所学知识来解决周身的实际问题，再加上自己热衷于数码产品，对带有显示屏的东西情有独钟，所以大三决定「转行」学习 UI 设计，毕业后也顺其自然进入到这个行业。<br/><br/>
-                无论是坚定信念做「好」事，还是在大海中寻「活」法，我希望自己能一直热爱设计，持谦逊之心、尽拼搏之力。`,
+                无论是坚定信念做「好」事，还是在大海中寻「活」法，我希望自己能一直热爱设计，持谦逊之心、尽拼搏之力。`
         },
         contact: {
-          title: '联系我',
-        },
-      },
+          title: "联系我"
+        }
+      }
     };
-  },
+  }
 };
 </script>
 
@@ -457,14 +488,14 @@ export default {
 
   .nav-wrap {
     &::before {
-          left: -24px !important;
+      left: -24px !important;
     }
   }
 }
 
 .m-nav-move {
   transform: translateY(0);
-  opacity:1;
+  opacity: 1;
 }
 
 .nav-move {
@@ -502,7 +533,7 @@ export default {
       opacity: 0;
     }
     100% {
-      transform: translateX(-26px);
+      transform: translateX(-40px);
     }
   }
 }
@@ -608,7 +639,7 @@ export default {
           transform: scaleY(1);
           transform-origin: top;
           will-change: transform;
-          animation: showLogo1 3s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+          animation: showLogo1 1.4s cubic-bezier(0.77, 0, 0.175, 1) forwards;
 
           @keyframes showLogo1 {
             to {
@@ -716,7 +747,7 @@ export default {
       &:nth-of-type(5) {
         .defaultButton {
           &:hover {
-            background-color: #EDF0F2 !important;
+            background-color: #edf0f2 !important;
             color: #ffde4a !important;
             border: 1px solid #ffde4a !important;
           }
@@ -785,9 +816,9 @@ export default {
       max-width: 1200px;
       width: 100%;
 
-     ::v-deep  .smallCard {
-          &:first-child {
-           &:hover {
+      ::v-deep .smallCard {
+        &:first-child {
+          &:hover {
             .bgImg {
               transform: scale(1.04);
             }
@@ -956,19 +987,6 @@ export default {
                   filter: contrast(2);
                 }
               } */
-              &::before {
-                content: "";
-                opacity: 0;
-                position: absolute;
-                top: -145px;
-                left: -13px;
-                display: block;
-                width: 136px;
-                height: 141px;
-                background-image: url("../assets/index/reweima_hover.png");
-                background-size: 100% 100%;
-                transition: all 0.3s ease;
-              }
               i {
                 width: 16px;
                 height: 16px;
@@ -1010,6 +1028,71 @@ export default {
     opacity: 0.1;
     background-color: #ffffff;
     margin: 60px 0;
+  }
+
+  #banana {
+    ::v-deep .card_wrap {
+      .defaultButton {
+        &:hover {
+          color: #fc85a1 !important;
+          background: #ffffff !important;
+          border-color: white !important;
+        }
+      }
+      .ghostButton {
+        position: relative;
+        &:hover {
+          &::before {
+            opacity: 1;
+          }
+        }
+        &::before {
+          content: "";
+          opacity: 0;
+          position: absolute;
+          top: -145px;
+          left: 0px;
+          display: block;
+          width: 136px;
+          height: 141px;
+          background-image: url("../assets/index/reweima_hover.png");
+          background-size: 100% 100%;
+          transition: all 0.3s ease;
+        }
+      }
+    }
+  }
+
+  /* #cardMe {
+    ::v-deep .card_wrap {
+      .img-area {
+        img {
+          opacity: 0;
+          transform: translateX(80px);
+          animation: showMe 1s ease forwards;
+
+          @keyframes showMe {
+            to {
+              opacity: 1;
+          transform: translateX(0);
+
+            }
+          }
+        }
+      }
+    }
+  } */
+
+  #project {
+    opacity: 0;
+    position: absolute;
+    bottom: -90px;
+  }
+
+  #works {
+    opacity: 0;
+    position: absolute;
+    bottom: -1850px;
   }
 }
 </style>

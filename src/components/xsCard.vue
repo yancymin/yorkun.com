@@ -1,17 +1,17 @@
 <template>
   <div class="xsCard" :style="'background-color:' + cardColor">
     <a :href="link" target="_blank">
-    <h2>{{title}}</h2>
-    <div :style="'background-image: url('+ bgImg+')'" class="bg"></div>
-    <img src="../assets/index/gdesign_logo.svg" alt v-if="isCenterImg" class="centerImg">
+      <h2>{{title}}</h2>
+      <div :style="'background-image: url('+ bgImg+')'" class="bg"></div>
+      <img src="../assets/index/gdesign_logo.svg" alt v-if="isCenterImg" class="centerImg" />
     </a>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'xsCard',
-  props: ['title', 'bgImg', 'cardColor', 'isCenterImg', 'link'],
+  name: "xsCard",
+  props: ["title", "bgImg", "cardColor", "isCenterImg", "link"]
 };
 </script>
 
@@ -22,7 +22,7 @@ export default {
   position: relative;
   // width: calc(386px - 30px);
   width: 100%;
-  max-width: 340px;
+  max-width: 387px;
   height: 120px;
   border-radius: 10px;
   background-color: #ffffff;
@@ -40,7 +40,6 @@ export default {
     .bg {
       transform: scale(1.02) translateX(4px);
       border-radius: 18px;
-
     }
     img {
       transform: scale(1.02);

@@ -12,27 +12,37 @@
     >{{tag}}</div>
     <div class="card_wrap">
       <div class="des">
-        <img v-if="isTitle" :src="cardLogo">
+        <img v-if="isTitle" :src="cardLogo" />
         <span v-if="isDes">{{des}}</span>
         <div class="btn-wrap">
-          <defaultButton :buttonText="buttonTextD" v-if="isButton" :btnIcon="btnIconD" :href="hrefD"/>
-          <ghostButton :buttonText="buttonTextG" v-if="isGhostButton" :buttonIcon="btnIconG" :href="hrefG" />
+          <defaultButton
+            :buttonText="buttonTextD"
+            v-if="isButton"
+            :btnIcon="btnIconD"
+            :href="hrefD"
+          />
+          <ghostButton
+            :buttonText="buttonTextG"
+            v-if="isGhostButton"
+            :buttonIcon="btnIconG"
+            :href="hrefG"
+          />
         </div>
         <slot></slot>
       </div>
       <div class="img-area">
-        <img :src="bgImg" alt>
+        <img :src="bgImg" alt />
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import defaultButton from './defaultButton.vue';
-import ghostButton from './ghostButton.vue';
+import defaultButton from "./defaultButton.vue";
+import ghostButton from "./ghostButton.vue";
 
 export default {
-  name: 'card',
+  name: "card",
   props: {
     title: String,
     cardLogo: String,
@@ -54,12 +64,12 @@ export default {
     buttonTextG: String,
     buttonTextD: String,
     hrefD: String,
-    hrefG: String,
+    hrefG: String
   },
   components: {
     defaultButton,
-    ghostButton,
-  },
+    ghostButton
+  }
 };
 </script>
 
@@ -88,6 +98,7 @@ export default {
 }
 
 .card {
+  opacity: 0;
   position: relative;
   max-width: 1200px;
   width: 100%;
@@ -96,7 +107,17 @@ export default {
   border-radius: 8px;
   background-color: $white;
   overflow: hidden;
+  animation-delay: 1s;
+  animation: showCard 1s ease forwards;
+  transform: translateY(10%);
   @include flex-all-center;
+
+  @keyframes showCard {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 
   .tag {
     z-index: 100;
@@ -159,6 +180,17 @@ export default {
     z-index: 0;
     position: absolute;
     right: 0;
+    opacity: 0;
+    transform: scale(0.92);
+    transform-origin: right;
+    animation: showMe 1s ease forwards;
+
+    @keyframes showMe {
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
     img {
       height: 422px;
     }

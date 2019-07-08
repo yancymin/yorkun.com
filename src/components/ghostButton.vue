@@ -1,6 +1,6 @@
 <template>
   <div class="ghostButton">
-    <a :href="href">
+    <a :href="href" target="_blank">
       <div class="wrap">
         {{buttonText}}
         <div id="ghostButton-icon" class="ghostButton-icon" :style="'background-image:' + 'url(' + buttonIcon +')'"></div>

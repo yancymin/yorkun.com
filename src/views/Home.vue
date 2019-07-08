@@ -851,6 +851,17 @@ export default {
       }
     }
 
+    .motionCard {
+      ::v-deep .motionCard_wrap{
+        .defaultButton {
+          &:hover {
+            background-color: #141516 !important;
+            border-color: rgb(64, 69, 75);
+          }
+        }
+      }
+    }
+
     .xsCards {
       max-width: 1200px;
       width: 100%;
@@ -1024,7 +1035,8 @@ export default {
 
   .break-line {
     height: 1px;
-    width: 1200px;
+    width: 100%;
+    max-width: 1200px;
     opacity: 0.1;
     background-color: #ffffff;
     margin: 60px 0;

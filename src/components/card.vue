@@ -183,7 +183,7 @@ export default {
     opacity: 0;
     transform: scale(0.92);
     transform-origin: right;
-    animation: showMe 1s ease forwards;
+    animation: showMe 2s ease forwards;
 
     @keyframes showMe {
       to {

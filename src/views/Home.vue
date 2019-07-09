@@ -852,7 +852,7 @@ export default {
     }
 
     .motionCard {
-      ::v-deep .motionCard_wrap{
+      ::v-deep .motionCard_wrap {
         .defaultButton {
           &:hover {
             background-color: #141516 !important;
@@ -1044,7 +1044,15 @@ export default {
 
   #banana {
     ::v-deep .card_wrap {
+      .des {
+        span {
+          width: 420px;
+        }
+      }
       .defaultButton {
+        img {
+          display: none;
+        }
         &:hover {
           color: #fc85a1 !important;
           background: #ffffff !important;
@@ -1054,9 +1062,30 @@ export default {
       .ghostButton {
         position: relative;
         &:hover {
+          background-color: white;
+          color: #fb85a1 !important;
+
+          img {
+            opacity: 0;
+          }
           &::before {
             opacity: 1;
           }
+          &::after {
+            opacity: 1;
+          }
+        }
+        &::after {
+          content: "";
+          opacity: 0;
+          position: absolute;
+          display: block;
+          width: 14px;
+          height: 14px;
+          right: 22px;
+          background-image: url("../assets/index/reweima_icon-2.svg");
+          background-size: cover;
+          transition: all 0.3s ease;
         }
         &::before {
           content: "";

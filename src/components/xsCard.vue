@@ -10,8 +10,8 @@
 
 <script>
 export default {
-  name: "xsCard",
-  props: ["title", "bgImg", "cardColor", "isCenterImg", "link"]
+  name: 'xsCard',
+  props: ['title', 'bgImg', 'cardColor', 'isCenterImg', 'link'],
 };
 </script>
 

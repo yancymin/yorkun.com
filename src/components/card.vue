@@ -38,11 +38,11 @@
 </template>
 
 <script>
-import defaultButton from "./defaultButton.vue";
-import ghostButton from "./ghostButton.vue";
+import defaultButton from './defaultButton.vue';
+import ghostButton from './ghostButton.vue';
 
 export default {
-  name: "card",
+  name: 'card',
   props: {
     title: String,
     cardLogo: String,
@@ -64,12 +64,12 @@ export default {
     buttonTextG: String,
     buttonTextD: String,
     hrefD: String,
-    hrefG: String
+    hrefG: String,
   },
   components: {
     defaultButton,
-    ghostButton
-  }
+    ghostButton,
+  },
 };
 </script>
 

@@ -156,7 +156,7 @@ export default {
       h1 {
         word-break: keep-all;
         margin-bottom: 10px;
-        @include font(40px, $font-color-black-1, 600) {
+        @include font(40px, $font-color-black-1, 700) {
           line-height: 56px;
         }
       }

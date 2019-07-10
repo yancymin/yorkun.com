@@ -21,7 +21,7 @@
           <div class="lang_now">
             <div class="lang_inner">
               <!-- <span>CN</span> -->
-              <i></i>
+              <i :class="{langSwitch: isActive}"></i>
             </div>
           </div>
           <!-- <ul>
@@ -48,7 +48,7 @@
           <div class="lang_now">
             <div class="lang_inner">
               <!-- <span>CN</span> -->
-              <i></i>
+              <i :class="{langSwitch: isActive}"></i>
             </div>
           </div>
           <!-- <ul>
@@ -112,7 +112,7 @@
       />
       <card
         v-for="(item, i) in banana"
-        :key="i"
+        :key="i + '-label'"
         :title="banana[i].title"
         :cardLogo="banana[i].cardLogo"
         :des="banana[i].des"
@@ -258,12 +258,18 @@ export default {
   },
   methods: {
     langSwitch() {
-      this.cards[0].des = this.cards2[0].des
-      console.log("ddd")
-    
+      this.isActive = !this.isActive;
+      this.cards3 = this.cards;
 
-      if(this.isActive) {
-     this.cards2[0].des =  this.cards[0].des;
+      if (this.isActive) {
+        this.cards[0].des = this.cards2[0].des;
+        console.log("true");
+        //  this.isActive = true;
+      }
+
+      if (this.isActive === false) {
+        this.cards[0].des = this.cards3[0].des;
+        console.log("false");
       }
     }
   },
@@ -318,6 +324,9 @@ export default {
         {
           des: "dssdsd"
         }
+      ],
+      cards3: [
+        {}
       ],
       cards: [
         {
@@ -499,6 +508,10 @@ export default {
 @import "./src/style/global.scss";
 @import "./src/style/mobile.scss";
 
+.langSwitch {
+  background-image: url("../assets/index/language_cn.svg") !important;
+}
+
 .nav-2 {
   transform: translateY(-110%);
   opacity: 0;
@@ -566,7 +579,7 @@ export default {
     background-color: $black;
     overflow: hidden;
     @include flex-column;
-    @include font(14px, $font-color-white-3, 500);
+    @include font(14px, $font-color-white-3, 400);
 
     .nav-1 {
       z-index: 99999;
@@ -687,7 +700,7 @@ export default {
         position: relative;
         right: 0;
         @include flex-all-center;
-        @include font(14px, rgba(255, 255, 255, 0.6), 500);
+        @include font(14px, rgba(255, 255, 255, 0.6), 400);
 
         .lang_inner {
           z-index: 1000;
@@ -906,7 +919,7 @@ export default {
         }
         h1 {
           margin-right: 110px;
-          @include font(30px, $font-color-white-1, 500);
+          @include font(30px, $font-color-white-1, 700);
         }
 
         .des {
@@ -924,7 +937,7 @@ export default {
         }
         h1 {
           margin-right: 110px;
-          @include font(30px, $font-color-white-1, 500);
+          @include font(30px, $font-color-white-1, 700);
         }
 
         .social {

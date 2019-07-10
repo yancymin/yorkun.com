@@ -52,7 +52,7 @@ export default {
     @include flex-all-center;
 
     h1 {
-      @include font(40px, $font-color-white-1, 600);
+      @include font(40px, $font-color-white-1, 700);
     }
     span {
       position: absolute;

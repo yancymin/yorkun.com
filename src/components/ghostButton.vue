@@ -37,7 +37,7 @@ export default {
   border: 1px solid #3a4151;
   background-color: $white;
   transition: all 0.3s ease;
-  @include font(14px, $font-color-black-1, 500);
+  @include font(14px, $font-color-black-1, 400);
 
   a {
     width: 100%;

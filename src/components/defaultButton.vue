@@ -33,7 +33,7 @@ export default {
   border: 1px solid transparent;
   background-color: $blue;
   transition: all 0.3s ease;
-  @include font(14px, $font-color-white-1, 500);
+  @include font(14px, $font-color-white-1, 400);
   @include flex-all-center;
 
   a {

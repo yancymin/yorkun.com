@@ -180,17 +180,15 @@ export default {
     z-index: 0;
     position: absolute;
     right: 0;
-    opacity: 0;
-    transform: scale(0.92);
-    transform-origin: right;
-    animation: showMe 2s ease forwards;
+    opacity: 1;
+    /* animation: showMe 2s ease forwards;
 
     @keyframes showMe {
       to {
         opacity: 1;
         transform: scale(1);
       }
-    }
+    } */
     img {
       height: 422px;
     }

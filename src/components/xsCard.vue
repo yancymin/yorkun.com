@@ -50,7 +50,7 @@ export default {
     position: absolute;
     top: 28px;
     z-index: 1;
-    width: 50%;
+    width: 47%;
     @include font(30px, $font-color-white-1, 600) {
       line-height: 34px;
     }

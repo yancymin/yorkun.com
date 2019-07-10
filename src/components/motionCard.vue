@@ -93,7 +93,8 @@ export default {
     bottom: 0;
     display: block;
     height: 210px;
-    width: 500px;
+    width: 100%;
+    border-radius: 8px;
     background: linear-gradient(0deg, #141516 0%, rgba(20, 21, 22, 0) 100%);
   }
 

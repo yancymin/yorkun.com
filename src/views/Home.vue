@@ -44,7 +44,7 @@
             </li>
           </ul>
         </div>
-        <div class="lang">
+        <div class="lang" @click="langSwitch()">
           <div class="lang_now">
             <div class="lang_inner">
               <!-- <span>CN</span> -->

@@ -315,75 +315,7 @@ export default {
         isTag: false,
         bgImg: Portrait
       },
-      cards: [
-        {
-          title: "GEETEST 网站",
-          cardLogo: geetestweb_logo,
-          des:
-            "安全服务类企业网站的一次改版，承接起业务线的扩充和品牌视觉的升级。",
-          cardColor: " ",
-          tag: "网页设计",
-          buttonTextD: "项目详情",
-          buttonTextG: "网站地址",
-          isTagWhite: false,
-          tagColor: "#DEE1E7",
-          isButton: true,
-          isGhostButton: true,
-          btnIconD: "",
-          btnIconG: link_icon_b,
-          isTitle: true,
-          isDes: true,
-          isBlack: false,
-          isWhiteBotton: false,
-          isTag: true,
-          bgImg: geetestweb,
-          hrefG: "http://www.geetest.com"
-        },
-        {
-          title: "行为验证产品",
-          cardLogo: captcha_logo,
-          des:
-            "基于生物的行为特征，结合人工智能技术，帮助网站和 APP 区分人机，一个拥有全球 26 万家客户的革命性安全产品。 ",
-          cardColor: "#3973FF ",
-          tag: "Web UI 设计",
-          buttonTextD: "项目详情",
-          buttonTextG: " ",
-          isTagWhite: true,
-          tagColor: "rgba(0,0,0,0.08)",
-          isButton: true,
-          btnIconD: "",
-          btnIconG: "",
-          isGhostButton: false,
-          isTitle: true,
-          isDes: true,
-          isBlack: true,
-          isWhiteBotton: true,
-          isTag: true,
-          bgImg: ui_captcha
-        },
-        {
-          title: "APP 一键登录",
-          cardLogo: wangguan_logo,
-          des:
-            "准确识别用户手机号码，实现 App 的登录注册等环节一键通过，帮助企业优化验证流程，让其用户享受更好的体验。",
-          cardColor: " ",
-          tag: "App UI 设计",
-          buttonTextD: "项目详情",
-          buttonTextG: " ",
-          isTagWhite: false,
-          tagColor: "rgba(0,0,0,0.08)",
-          isButton: true,
-          btnIconD: "",
-          btnIconG: "",
-          isGhostButton: false,
-          isTitle: true,
-          isDes: true,
-          isBlack: false,
-          isWhiteBotton: false,
-          isTag: true,
-          bgImg: app_onelogin
-        }
-      ],
+      cards: cnDate,
       banana: [
         {
           title: "小蕉 BANANA",
@@ -473,17 +405,7 @@ export default {
         },
         buttonIcon: link
       },
-      info: {
-        about: {
-          title: "关于我",
-          des: `大家好，我是设计师 YorKun。事实上我姓名的字有点儿复杂，以至于输入法里要翻很多页才能找到。为了自己和他人的方便，索性以首字母和谐音取了现在的这个别名，大家更习惯叫我 「右可」。<br/><br/>
-                因为从小对画画感兴趣，我小学时周末通常是在绘画兴趣班度过的，随后高中开始系统的学习美术，大学于湖北美术学院动画系就读。可能是在学习环境中接触「实验性」和「纯艺」比较多，我更向往贴近生活的视觉表现形式，希望利用所学知识来解决周身的实际问题，再加上自己对带有显示屏的东西情有独钟，热衷数码产品，所以大三开始学习 UI 设计，毕业后也顺其自然进入到了这个行业。<br/><br/>
-                无论是坚定信念做「好」事，还是在大海中寻「活」法，我希望自己能一直热爱设计，持谦逊之心、尽拼搏之力。`
-        },
-        contact: {
-          title: "联系我"
-        }
-      }
+      info: cnInfo,
     };
   }
 };

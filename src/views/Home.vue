@@ -1,7 +1,5 @@
 <template>
   <div class="home" id="top">
-    <!-- <defaultButton buttonText="fffff" :href="buttons.href.href1"/>
-    <ghostButton buttonText="fffff" :buttonIcon="buttons.buttonIcon" :href="buttons.href.href1"/>-->
     <div class="head">
       <nav class="nav-1 my-header-nav" id="nav-1">
         <div class="nav-wrap">
@@ -20,14 +18,9 @@
         <div class="lang" @click="langSwitch()">
           <div class="lang_now">
             <div class="lang_inner">
-              <!-- <span>CN</span> -->
               <i :class="{langSwitch: isActive}"></i>
             </div>
           </div>
-          <!-- <ul>
-            <li>CN</li>
-            <li>EN</li>
-          </ul>-->
         </div>
       </nav>
       <nav class="nav-2 nav-1 my-header-nav" id="nav-2">
@@ -47,14 +40,9 @@
         <div class="lang" @click="langSwitch()">
           <div class="lang_now">
             <div class="lang_inner">
-              <!-- <span>CN</span> -->
               <i :class="{langSwitch: isActive}"></i>
             </div>
           </div>
-          <!-- <ul>
-            <li>CN</li>
-            <li>EN</li>
-          </ul>-->
         </div>
       </nav>
       <div class="head_container">
@@ -246,6 +234,7 @@ import animation from "../assets/index/animation.png";
 import cnDate from "../data/cn.js";
 import enDate from "../data/en.js";
 import enInfo from "../data/enInfo.js";
+import cnInfo from "../data/cnInfo.js";
 
 export default {
   name: "home",
@@ -270,6 +259,7 @@ export default {
 
       if (this.isActive === false) {
         this.cards = this.cnDate;
+        this.info = this.cnInfo;
       }
     }
   },
@@ -284,6 +274,7 @@ export default {
     };
   },
   mounted() {
+    this.langSwitch() 
     const nav = document.getElementById("nav-1");
     const mobileNav = document.getElementById("nav-2");
     const headerOffset = nav.offsetTop + nav.offsetHeight;
@@ -309,6 +300,7 @@ export default {
       cnDate: cnDate,
       enDate: enDate,
       enInfo: enInfo,
+      cnInfo: cnInfo,
       isActive: false,
       cardMe: {
         title: " ",
@@ -323,13 +315,6 @@ export default {
         isTag: false,
         bgImg: Portrait
       },
-      cards2: [
-        {
-          des: "dssdsd"
-        }
-      ],
-      cards3: [],
-      cards4: [],
       cards: [
         {
           title: "GEETEST 网站",
@@ -363,7 +348,6 @@ export default {
           tag: "Web UI 设计",
           buttonTextD: "项目详情",
           buttonTextG: " ",
-
           isTagWhite: true,
           tagColor: "rgba(0,0,0,0.08)",
           isButton: true,
@@ -386,7 +370,6 @@ export default {
           tag: "App UI 设计",
           buttonTextD: "项目详情",
           buttonTextG: " ",
-
           isTagWhite: false,
           tagColor: "rgba(0,0,0,0.08)",
           isButton: true,
@@ -791,7 +774,7 @@ export default {
       &:nth-of-type(2) {
         &::v-deep .des {
           span {
-            width: auto;
+            /* width: auto; */
           }
           img {
             height: 40px;

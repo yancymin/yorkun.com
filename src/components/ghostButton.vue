@@ -52,6 +52,8 @@ export default {
         width: 10px;
         height: 10px;
         margin-left: 5px;
+        position: relative;
+        top: 1px;
       }
     }
   }

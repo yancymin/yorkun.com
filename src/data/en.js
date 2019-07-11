@@ -53,7 +53,7 @@ export default [
     des:
       'Based on the behavioral characteristics of biology and AI, help websites and APP distinguish between human and machine.',
     cardColor: '#3973FF ',
-    tag: 'Web UI 设计',
+    tag: 'Web UI Design',
     buttonTextD: 'Detail',
     buttonTextG: ' ',
     isTagWhite: true,
@@ -75,7 +75,7 @@ export default [
     des:
       "Accurately identify the user's mobile phone number, Help companies optimize the verification process and let their users enjoy a better experience. ",
     cardColor: ' ',
-    tag: 'App UI 设计',
+    tag: 'App UI Design',
     buttonTextD: 'Detail',
     buttonTextG: ' ',
     isTagWhite: false,

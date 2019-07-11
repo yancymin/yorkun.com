@@ -1,5 +1,5 @@
 <template>
-  <div class="home" id="top">
+  <div class="home" id="top" v-show="ok">
     <div class="head">
       <nav class="nav-1 my-header-nav" id="nav-1">
         <div class="nav-wrap">
@@ -277,6 +277,7 @@ export default {
     };
   },
   mounted() {
+    this.ok = true;
     this.langSwitch() 
     const nav = document.getElementById("nav-1");
     const mobileNav = document.getElementById("nav-2");
@@ -300,6 +301,7 @@ export default {
   },
   data() {
     return {
+      ok: false,
       cnDate: cnDate,
       enDate: enDate,
       enInfo: enInfo,

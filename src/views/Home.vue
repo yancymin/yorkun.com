@@ -5,13 +5,13 @@
         <div class="nav-wrap">
           <ul>
             <li>
-              <a href="#project">项目</a>
+              <a href="#project">{{nav1[0]}}</a>
             </li>
             <li>
-              <a href="#works">作品</a>
+              <a href="#works">{{nav1[1]}}</a>
             </li>
             <li>
-              <a href="#about">关于我</a>
+              <a href="#about">{{nav1[2]}}</a>
             </li>
           </ul>
         </div>
@@ -27,13 +27,13 @@
         <div class="nav-wrap">
           <ul>
             <li>
-              <a href="#project">项目</a>
+              <a href="#project">{{nav1[0]}}</a>
             </li>
             <li>
-              <a href="#works">作品</a>
+              <a href="#works">{{nav1[1]}}</a>
             </li>
             <li>
-              <a href="#about">关于我</a>
+              <a href="#about">{{nav1[2]}}</a>
             </li>
           </ul>
         </div>
@@ -235,6 +235,7 @@ import cnDate from "../data/cn.js";
 import enDate from "../data/en.js";
 import enInfo from "../data/enInfo.js";
 import cnInfo from "../data/cnInfo.js";
+import nav from "../data/nav.js";
 
 export default {
   name: "home",
@@ -255,11 +256,13 @@ export default {
       if (this.isActive) {
         this.cards = this.enDate;
         this.info = this.enInfo;
+        this.nav1 = this.nav.en;
       }
 
       if (this.isActive === false) {
         this.cards = this.cnDate;
         this.info = this.cnInfo;
+        this.nav1 = this.nav.cn
       }
     }
   },
@@ -301,6 +304,8 @@ export default {
       enDate: enDate,
       enInfo: enInfo,
       cnInfo: cnInfo,
+      nav: nav,
+      nav1: nav.cn,
       isActive: false,
       cardMe: {
         title: " ",

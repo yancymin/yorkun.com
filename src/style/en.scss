@@ -1,0 +1,15 @@
+.en {
+        .head {
+            .nav-1 {
+               .nav-wrap {
+                   ul {
+                    li {
+                        &:nth-of-type(1) {
+                            margin: 0 40px !important;
+                        }
+                    }
+                   }
+               }
+            }
+        }
+}

@@ -1,5 +1,5 @@
 <template>
-  <div class="home" id="top" v-show="ok">
+  <div class="home" id="top" v-show="ok" :class="{en: isEn}">
     <div class="head">
       <nav class="nav-1 my-header-nav" id="nav-1">
         <div class="nav-wrap">
@@ -46,7 +46,7 @@
         </div>
       </nav>
       <div class="head_container">
-        <img src="../assets/index/logo_banner.svg" alt class="logo" />
+        <img src="../assets/index/logo_banner.png" alt class="logo" />
         <div class="motion">
           <img src="../assets/index/name_logo.svg" alt class="motion_logo" />
         </div>
@@ -257,12 +257,15 @@ export default {
         this.cards = this.enDate;
         this.info = this.enInfo;
         this.nav1 = this.nav.en;
+        this.isEn = true;
       }
 
       if (this.isActive === false) {
         this.cards = this.cnDate;
         this.info = this.cnInfo;
-        this.nav1 = this.nav.cn
+        this.nav1 = this.nav.cn;
+        this.isEn = false;
+
       }
     }
   },
@@ -278,12 +281,11 @@ export default {
   },
   mounted() {
     this.ok = true;
-    this.langSwitch() 
+    this.langSwitch();
     const nav = document.getElementById("nav-1");
     const mobileNav = document.getElementById("nav-2");
-    const headerOffset = nav.offsetTop + nav.offsetHeight;
-    const mobileHeaderOffset =
-      mobileNav.offsetTop + mobileNav.offsetHeight + 100;
+    const headerOffset = nav.offsetTop + nav.offsetHeight + 20;
+    const mobileHeaderOffset = mobileNav.offsetTop + mobileNav.offsetHeight + 100;
 
     window.addEventListener("scroll", e => {
       if (window.scrollY >= headerOffset) {
@@ -301,6 +303,7 @@ export default {
   },
   data() {
     return {
+      isEn: true,
       ok: false,
       cnDate: cnDate,
       enDate: enDate,
@@ -412,7 +415,7 @@ export default {
         },
         buttonIcon: link
       },
-      info: cnInfo,
+      info: cnInfo
     };
   }
 };
@@ -421,6 +424,7 @@ export default {
 <style lang="scss" scoped>
 @import "./src/style/global.scss";
 @import "./src/style/mobile.scss";
+@import "./src/style/en.scss";
 
 .langSwitch {
   background-image: url("../assets/index/language_cn.svg") !important;

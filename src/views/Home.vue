@@ -67,10 +67,10 @@
         :bgImg="cardMe.bgImg"
         id="cardMe"
       >
-        <h1>你好, 我是设计师 YorKun</h1>
-        <p class="mb-40">在互联网公司担任设计负责人，我喜欢尝试不同的形式：UI、图形、动效……</p>
-        <h1>欢迎来到我的个人站点</h1>
-        <p>你可以通过这个网站来了解我。😊</p>
+        <h1>{{cnMeDes[0]}}</h1>
+        <p class="mb-40">{{cnMeDes[1]}}</p>
+        <h1>{{cnMeDes[2]}}</h1>
+        <p>{{cnMeDes[3]}}</p>
       </card>
       <span id="project"></span>
       <card
@@ -99,29 +99,27 @@
         :hrefG="cards[i].hrefG"
       />
       <card
-        v-for="(item, i) in banana"
-        :key="i + '-label'"
-        :title="banana[i].title"
-        :cardLogo="banana[i].cardLogo"
-        :des="banana[i].des"
-        :cardColor="banana[i].cardColor"
-        :tag="banana[i].tag"
-        :isTagWhite="banana[i].isTagWhite"
-        :tagColor="banana[i].tagColor"
-        :isTitle="banana[i].isTitle"
-        :isButton="banana[i].isButton"
-        :isDes="banana[i].isDes"
-        :isBlack="banana[i].isBlack"
-        :isWhiteBotton="banana[i].isWhiteBotton"
-        :isTag="banana[i].isTag"
-        :bgImg="banana[i].bgImg"
-        :isGhostButton="banana[i].isGhostButton"
-        :btnIconD="banana[i].btnIconD"
-        :btnIconG="banana[i].btnIconG"
-        :buttonTextD="banana[i].buttonTextD"
-        :buttonTextG="banana[i].buttonTextG"
-        :hrefD="banana[i].hrefD"
-        :hrefG="banana[i].hrefG"
+        :title="cnBanana.title"
+        :cardLogo="cnBanana.cardLogo"
+        :des="cnBanana.des"
+        :cardColor="cnBanana.cardColor"
+        :tag="cnBanana.tag"
+        :isTagWhite="cnBanana.isTagWhite"
+        :tagColor="cnBanana.tagColor"
+        :isTitle="cnBanana.isTitle"
+        :isButton="cnBanana.isButton"
+        :isDes="cnBanana.isDes"
+        :isBlack="cnBanana.isBlack"
+        :isWhiteBotton="cnBanana.isWhiteBotton"
+        :isTag="cnBanana.isTag"
+        :bgImg="cnBanana.bgImg"
+        :isGhostButton="cnBanana.isGhostButton"
+        :btnIconD="cnBanana.btnIconD"
+        :btnIconG="cnBanana.btnIconG"
+        :buttonTextD="cnBanana.buttonTextD"
+        :buttonTextG="cnBanana.buttonTextG"
+        :hrefD="cnBanana.hrefD"
+        :hrefG="cnBanana.hrefG"
         id="banana"
       />
       <span id="works"></span>
@@ -174,11 +172,11 @@
       </div>
       <div class="info" id="about">
         <div class="info_about">
-          <h1>{{info.about.title}}</h1>
-          <div class="des" v-html="info.about.des"></div>
+          <h1>{{cnInfo.about[0]}}</h1>
+          <div class="des" v-html="cnInfo.about[1]"></div>
         </div>
         <div class="info_contact">
-          <h1>{{info.contact.title}}</h1>
+          <h1>{{cnInfo.contact.title}}</h1>
           <div class="social">
             <div class="links">
               <a href="https://weibo.com/chengyork" target="_blank"></a>
@@ -220,22 +218,20 @@ import ui_captcha from "../assets/index/ui_captcha.gif";
 import app_onelogin from "../assets/index/app_onelogin.png";
 import Portrait from "../assets/index/IMG_3045.png";
 import gmake_logo from "../assets/index/gmake_logo.png";
-import banana from "../assets/index/banana_banner.gif";
 import myDribbble from "../assets/index/mydribbble.png";
 import teamDribbble from "../assets/index/teamdribbble.png";
 import link_icon_w from "../assets/index/link_icon_w.svg";
 import link_icon_b from "../assets/index/link_icon_b.svg";
-import reweima_icon from "../assets/index/reweima_icon.svg";
 import geetestweb_logo from "../assets/index/geetestweb_logo.svg";
 import captcha_logo from "../assets/index/captcha_logo.svg";
 import wangguan_logo from "../assets/index/wangguan_logo.svg";
-import banana_logo from "../assets/index/banana_logo.svg";
 import animation from "../assets/index/animation.png";
 import cnDate from "../data/cn.js";
 import enDate from "../data/en.js";
-import enInfo from "../data/enInfo.js";
-import cnInfo from "../data/cnInfo.js";
+import info from "../data/info.js";
 import nav from "../data/nav.js";
+import meDes from "../data/cardMe.js";
+import banana from "../data/banana.js";
 
 export default {
   name: "home",
@@ -254,18 +250,21 @@ export default {
       this.isActive = !this.isActive;
 
       if (this.isActive) {
+        this.cnMeDes = this.meDes.en;
         this.cards = this.enDate;
-        this.info = this.enInfo;
+        this.cnInfo = this.info.en;
         this.nav1 = this.nav.en;
+        this.cnBanana = this.banana.en;
         this.isEn = true;
       }
 
       if (this.isActive === false) {
+        this.cnMeDes = this.meDes.cn;
         this.cards = this.cnDate;
-        this.info = this.cnInfo;
+        this.cnInfo = this.info.cn;
         this.nav1 = this.nav.cn;
+        this.cnBanana = this.banana.cn;
         this.isEn = false;
-
       }
     }
   },
@@ -285,7 +284,8 @@ export default {
     const nav = document.getElementById("nav-1");
     const mobileNav = document.getElementById("nav-2");
     const headerOffset = nav.offsetTop + nav.offsetHeight + 20;
-    const mobileHeaderOffset = mobileNav.offsetTop + mobileNav.offsetHeight + 100;
+    const mobileHeaderOffset =
+      mobileNav.offsetTop + mobileNav.offsetHeight + 100;
 
     window.addEventListener("scroll", e => {
       if (window.scrollY >= headerOffset) {
@@ -307,10 +307,14 @@ export default {
       ok: false,
       cnDate: cnDate,
       enDate: enDate,
-      enInfo: enInfo,
-      cnInfo: cnInfo,
+      info: info,
+      cnInfo: info.cn,
       nav: nav,
       nav1: nav.cn,
+      meDes: meDes,
+      cnMeDes: meDes.cn,
+      banana: banana,
+      cnBanana: banana.cn,
       isActive: false,
       cardMe: {
         title: " ",
@@ -326,29 +330,6 @@ export default {
         bgImg: Portrait
       },
       cards: cnDate,
-      banana: [
-        {
-          title: "小蕉 BANANA",
-          cardLogo: banana_logo,
-          des: "生活如此多蕉，听听小香蕉的故事，自己设计的第一个卡通形象。",
-          cardColor: " #FC85A1",
-          tag: "主题/表情设计",
-          buttonTextD: "Bananaaa~",
-          buttonTextG: "表情包下载",
-          isTagWhite: true,
-          tagColor: "rgba(0,0,0,0.08)",
-          isButton: true,
-          btnIconD: "",
-          btnIconG: reweima_icon,
-          isGhostButton: true,
-          isTitle: true,
-          isDes: true,
-          isBlack: true,
-          isWhiteBotton: true,
-          isTag: true,
-          bgImg: banana
-        }
-      ],
       smallCards: [
         {
           title: "动效作品集",
@@ -414,8 +395,7 @@ export default {
           href1: "https://baidu.com"
         },
         buttonIcon: link
-      },
-      info: cnInfo
+      }
     };
   }
 };
@@ -465,8 +445,6 @@ export default {
       transform: translateY(0) !important;
     }
   }
-
-  /****/
 
   ul {
     animation: ulMove 0.8s cubic-bezier(0.4, 0, 0, 1) forwards;
@@ -535,6 +513,7 @@ export default {
             margin: 0 40px;
 
             a {
+              @include font(14px, $font-color-white-3, 400);
               transition: all 0.3s ease;
 
               &:hover {

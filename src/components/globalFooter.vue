@@ -3,7 +3,7 @@
     <div class="globalFooter_links">
       <span>Links:</span>
       <a href="https://yancymin.design" target="_blank">Yancy Min</a>
-      <a href="http://yorkunpic.lofter.com" target="_blank">右可的影像集</a>
+      <a href="http://yorkunpic.lofter.com" target="_blank">{{footerLinkText}}</a>
     </div>
     <div class="globalFooter_copyright">Designed by YorKun. © 2019 YORKUN. All rights reserved.</div>
   </div>
@@ -12,6 +12,7 @@
 <script>
 export default {
   name: 'globalFooter',
+  props: ['footerLinkText']
 };
 </script>
 

@@ -126,48 +126,49 @@
 
       <div class="smallCards">
         <smallCard
-          v-for="(item, i) in smallCards"
+          v-for="(item, i) in cnSmallCard"
           :key="i"
-          :title="smallCards[i].title"
-          :cardColor="smallCards[i].cardColor"
-          :footer="smallCards[i].footer"
-          :tag="smallCards[i].tag"
-          :isTag="smallCards[i].isTag"
-          :logo="smallCards[i].logo"
-          :isLogo="smallCards[i].isLogo"
-          :bgImg="smallCards[i].bgImg"
-          :tagColor="smallCards[i].tagColor"
-          :isCenterImg="smallCards[i].isCenterImg"
+          :title="cnSmallCard[i].title"
+          :cardColor="cnSmallCard[i].cardColor"
+          :footer="cnSmallCard[i].footer"
+          :tag="cnSmallCard[i].tag"
+          :isTag="cnSmallCard[i].isTag"
+          :logo="cnSmallCard[i].logo"
+          :isLogo="cnSmallCard[i].isLogo"
+          :bgImg="cnSmallCard[i].bgImg"
+          :tagColor="cnSmallCard[i].tagColor"
+          :isCenterImg="cnSmallCard[i].isCenterImg"
         />
       </div>
 
       <span class="break-line"></span>
 
       <motionCard
-        :title="motionCard.title"
-        :des="motionCard.des"
-        :cardColor="motionCard.cardColor"
-        :btnColor="motionCard.btnColor"
-        :btnIcon="motionCard.btnIcon"
-        :tag="motionCard.tag"
-        :isTitle="motionCard.isTitle"
-        :isButton="motionCard.isButton"
-        :isDes="motionCard.isDes"
-        :isBlack="motionCard.isBlack"
-        :isWhiteBotton="motionCard.isWhiteBotton"
-        :isTag="motionCard.isTag"
-        :hrefD="motionCard.hrefD"
+        :title="cnMotionCardData.title"
+        :des="cnMotionCardData.des"
+        :cardColor="cnMotionCardData.cardColor"
+        :btnColor="cnMotionCardData.btnColor"
+        :btnIcon="cnMotionCardData.btnIcon"
+        :tag="cnMotionCardData.tag"
+        :isTitle="cnMotionCardData.isTitle"
+        :isButton="cnMotionCardData.isButton"
+        :isDes="cnMotionCardData.isDes"
+        :isBlack="cnMotionCardData.isBlack"
+        :isWhiteBotton="cnMotionCardData.isWhiteBotton"
+        :isTag="cnMotionCardData.isTag"
+        :hrefD="cnMotionCardData.hrefD"
+        :buttonText="cnMotionCardData.buttonText"
       />
 
       <div class="xsCards">
         <xsCard
-          v-for="(item, i) in xsCards"
+          v-for="(item, i) in cnXsCardData"
           :key="i"
-          :title="xsCards[i].title"
-          :bgImg="xsCards[i].bgImg"
-          :cardColor="xsCards[i].cardColor"
-          :isCenterImg="xsCards[i].isCenterImg"
-          :link="xsCards[i].link"
+          :title="cnXsCardData[i].title"
+          :bgImg="cnXsCardData[i].bgImg"
+          :cardColor="cnXsCardData[i].cardColor"
+          :isCenterImg="cnXsCardData[i].isCenterImg"
+          :link="cnXsCardData[i].link"
         />
       </div>
       <div class="info" id="about">
@@ -198,7 +199,7 @@
           </div>
         </div>
       </div>
-      <globalFooter />
+      <globalFooter :footerLinkText="cnFooterLinkText" />
     </div>
     <a class="top" href="#top"></a>
   </div>
@@ -217,21 +218,20 @@ import geetestweb from "../assets/index/geetestweb.png";
 import ui_captcha from "../assets/index/ui_captcha.gif";
 import app_onelogin from "../assets/index/app_onelogin.png";
 import Portrait from "../assets/index/IMG_3045.png";
-import gmake_logo from "../assets/index/gmake_logo.png";
-import myDribbble from "../assets/index/mydribbble.png";
-import teamDribbble from "../assets/index/teamdribbble.png";
-import link_icon_w from "../assets/index/link_icon_w.svg";
 import link_icon_b from "../assets/index/link_icon_b.svg";
 import geetestweb_logo from "../assets/index/geetestweb_logo.svg";
 import captcha_logo from "../assets/index/captcha_logo.svg";
 import wangguan_logo from "../assets/index/wangguan_logo.svg";
-import animation from "../assets/index/animation.png";
 import cnDate from "../data/cn.js";
 import enDate from "../data/en.js";
 import info from "../data/info.js";
 import nav from "../data/nav.js";
 import meDes from "../data/cardMe.js";
 import banana from "../data/banana.js";
+import smallCardData from "../data/smallCard.js";
+import motionCardData from "../data/motionCard.js";
+import xsCardData from "../data/xsCard.js";
+import footerTextData from "../data/footerText.js";
 
 export default {
   name: "home",
@@ -255,6 +255,10 @@ export default {
         this.cnInfo = this.info.en;
         this.nav1 = this.nav.en;
         this.cnBanana = this.banana.en;
+        this.cnSmallCard = this.smallCardData.en;
+        this.cnMotionCardData = this.motionCardData.en;
+        this.cnXsCardData = this.xsCardData.en;
+        this.cnFooterLinkText = this.footerTextData.en;
         this.isEn = true;
       }
 
@@ -264,6 +268,10 @@ export default {
         this.cnInfo = this.info.cn;
         this.nav1 = this.nav.cn;
         this.cnBanana = this.banana.cn;
+        this.cnSmallCard = this.smallCardData.cn;
+        this.cnMotionCardData = motionCardData.cn;
+        this.cnXsCardData = this.xsCardData.cn;
+        this.cnFooterLinkText = this.footerTextData.cn;
         this.isEn = false;
       }
     }
@@ -315,7 +323,15 @@ export default {
       cnMeDes: meDes.cn,
       banana: banana,
       cnBanana: banana.cn,
+      cnSmallCard: smallCardData.cn,
+      smallCardData: smallCardData,
+      motionCardData: motionCardData,
+      cnMotionCardData: motionCardData.cn,
+      cnXsCardData: xsCardData.cn,
+      xsCardData: xsCardData,
       isActive: false,
+      footerTextData: footerTextData,
+      cnFooterLinkText: footerTextData.cn,
       cardMe: {
         title: " ",
         des: " ",
@@ -330,66 +346,6 @@ export default {
         bgImg: Portrait
       },
       cards: cnDate,
-      smallCards: [
-        {
-          title: "动效作品集",
-          tag: "动效设计",
-          cardColor: " #FFA51D",
-          footer: "",
-          isTag: true,
-          tagColor: "rgba(0,0,0,0.08)",
-          bgImg: animation,
-          isCenterImg: false
-        },
-        {
-          title: " ",
-          tag: "平面设计",
-          cardColor: " #222",
-          footer: "© 2019 GEETEST. Design by G-MAKE.",
-          isTag: true,
-          tagColor: "rgba(0,0,0,0.4)",
-          bgImg: gmake_logo,
-          isCenterImg: true
-        }
-      ],
-      xsCards: [
-        {
-          title: "我的\nDribbble",
-          bgImg: myDribbble,
-          cardColor: "#2BC6DB ",
-          isCenterImg: false,
-          link: "https://dribbble.com/yorkun"
-        },
-        {
-          title: "团队\nDribbble",
-          bgImg: teamDribbble,
-          cardColor: "#3873FF",
-          isCenterImg: false,
-          link: "https://dribbble.com/geetest"
-        },
-        {
-          title: " ",
-          bgImg: "",
-          cardColor: "#E5E7EB",
-          isCenterImg: true,
-          link: "https://design.geetest.com/"
-        }
-      ],
-      motionCard: {
-        title: "YorKun 的设计博客",
-        des: "里面上传了我不同时期的作品，并且更新频繁。",
-        cardColor: "#141516 ",
-        btnColor: "#40454B",
-        tag: " ",
-        isButton: true,
-        isTitle: true,
-        isDes: true,
-        isBlack: true,
-        isWhiteBotton: false,
-        isTag: false,
-        btnIcon: link_icon_w,
-        hrefD: "http://yorkun.lofter.com"
-      },
       buttons: {
         href: {
           href1: "https://baidu.com"

@@ -9,17 +9,23 @@
       <div class="des">
         <h1 v-if="isTitle">{{title}}</h1>
         <span v-if="isDes">{{des}}</span>
-        <defaultButton buttonText="去瞧瞧" v-if="isButton" :btnColor="btnColor" :btnIcon="btnIcon" :href="hrefD"/>
+        <defaultButton
+          :buttonText="buttonText"
+          v-if="isButton"
+          :btnColor="btnColor"
+          :btnIcon="btnIcon"
+          :href="hrefD"
+        />
         <slot></slot>
       </div>
       <div class="motion-group">
         <div class="left">
-          <img src="../assets/index/scroll/slide-1.png" alt>
-          <img src="../assets/index/scroll/slide-1.png" alt>
+          <img src="../assets/index/scroll/slide-1.png" alt />
+          <img src="../assets/index/scroll/slide-1.png" alt />
         </div>
         <div class="right">
-          <img src="../assets/index/scroll/slide-2.png" alt>
-          <img src="../assets/index/scroll/slide-2.png" alt>
+          <img src="../assets/index/scroll/slide-2.png" alt />
+          <img src="../assets/index/scroll/slide-2.png" alt />
         </div>
       </div>
     </div>
@@ -27,11 +33,11 @@
 </template>
 
 <script>
-import defaultButton from './defaultButton.vue';
-import ghostButton from './ghostButton.vue';
+import defaultButton from "./defaultButton.vue";
+import ghostButton from "./ghostButton.vue";
 
 export default {
-  name: 'motionCard',
+  name: "motionCard",
   props: {
     title: String,
     des: String,
@@ -46,11 +52,12 @@ export default {
     isBlack: Boolean,
     isWhiteBotton: Boolean,
     isTag: Boolean,
+    buttonText: String
   },
   components: {
     defaultButton,
-    ghostButton,
-  },
+    ghostButton
+  }
 };
 </script>
 

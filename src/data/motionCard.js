@@ -1,0 +1,37 @@
+import link_icon_w from "../assets/index/link_icon_w.svg";
+
+
+export default {
+    cn: {
+        title: "YorKun 的设计博客",
+        des: "里面上传了我不同时期的作品，并且更新频繁。",
+        cardColor: "#141516 ",
+        btnColor: "#40454B",
+        buttonText: "去瞧瞧",
+        tag: " ",
+        isButton: true,
+        isTitle: true,
+        isDes: true,
+        isBlack: true,
+        isWhiteBotton: false,
+        isTag: false,
+        btnIcon: link_icon_w,
+        hrefD: "http://yorkun.lofter.com"
+    },
+    en: {
+        title: "YorKun`s design blog",
+        des: "It uploaded my works from different periods and updated frequently.",
+        cardColor: "#141516 ",
+        btnColor: "#40454B",
+        buttonText: "Go and see",
+        tag: " ",
+        isButton: true,
+        isTitle: true,
+        isDes: true,
+        isBlack: true,
+        isWhiteBotton: false,
+        isTag: false,
+        btnIcon: link_icon_w,
+        hrefD: "http://yorkun.lofter.com"
+    }
+}

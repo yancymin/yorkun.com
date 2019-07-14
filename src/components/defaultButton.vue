@@ -1,6 +1,6 @@
 <template>
   <div class="defaultButton" :style="'background-color:' + btnColor">
-    <a :href="href" target="_blank">
+    <a :href="href">
       {{buttonText}}
       <img :src="btnIcon" id="defaultButton-icon" alt />
     </a>

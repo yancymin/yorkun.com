@@ -201,7 +201,7 @@
       </div>
       <globalFooter :footerLinkText="cnFooterLinkText" />
     </div>
-    <a class="top" href="#top"></a>
+    <top/>
   </div>
 </template>
 
@@ -213,6 +213,7 @@ import motionCard from '../components/motionCard.vue';
 import smallCard from '../components/smallCard.vue';
 import xsCard from '../components/xsCard.vue';
 import globalFooter from '../components/globalFooter.vue';
+import top from '../components/top.vue';
 import link from '../assets/index/button-icon/link_icon.svg';
 import geetestweb from '../assets/index/geetestweb.png';
 import ui_captcha from '../assets/index/ui_captcha.gif';
@@ -244,6 +245,7 @@ export default {
     smallCard,
     xsCard,
     globalFooter,
+    top
   },
   methods: {
     langSwitch() {
@@ -275,16 +277,6 @@ export default {
         this.isEn = false;
       }
     },
-  },
-  created() {
-    window.onscroll = function () {
-      const backTop = document.querySelector('.top');
-      if (document.documentElement.scrollTop + document.body.scrollTop > 100) {
-        backTop.style.display = 'block';
-      } else {
-        backTop.style.display = 'none';
-      }
-    };
   },
   mounted() {
     this.ok = true;
@@ -897,23 +889,6 @@ export default {
     }
   }
 
-  .top {
-    position: fixed;
-    right: 50px;
-    bottom: 50px;
-    width: 50px;
-    height: 50px;
-    border-radius: 10px;
-    background-color: #141516;
-    background-image: url("../assets/index/up_icon.png");
-    background-repeat: no-repeat;
-    background-size: 21px 12px;
-    background-position: center center;
-
-    &:hover {
-      background-color: #1a1b1d;
-    }
-  }
 
   .break-line {
     height: 1px;

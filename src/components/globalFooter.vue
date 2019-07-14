@@ -3,7 +3,10 @@
     <div class="globalFooter_links">
       <span>Links:</span>
       <a href="https://yancymin.design" target="_blank">Yancy Min</a>
-      <a href="http://yorkunpic.lofter.com" target="_blank">{{footerLinkText}}</a>
+      <a href="http://yorkunpic.lofter.com" target="_blank">
+        {{footerLinkText}}
+        <slot></slot>
+      </a>
     </div>
     <div class="globalFooter_copyright">Designed by YorKun. © 2019 YORKUN. All rights reserved.</div>
   </div>
@@ -11,8 +14,8 @@
 
 <script>
 export default {
-  name: 'globalFooter',
-  props: ['footerLinkText'],
+  name: "globalFooter",
+  props: ["footerLinkText"]
 };
 </script>
 
@@ -21,8 +24,9 @@ export default {
 
 .globalFooter {
   max-width: 1200px;
-  width: 100%;
+  width: calc(100% - 32px);
   padding: 24px 0 40px 0;
+  margin: 16px;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   @include font(14px, $font-color-white-3, 400);
   @include flex-all-center {
@@ -51,8 +55,38 @@ export default {
     }
   }
   &_copyright {
-  @include font(12px, rgba(255,255,255,0.3), 400);
+    @include font(12px, rgba(255, 255, 255, 0.3), 400);
+  }
+}
 
+@media screen and (max-width: 600px) {
+  .globalFooter {
+    width: calc(100% - 40px);
+    padding: 24px 16px 40px 16px;
+
+    flex-direction: column;
+    align-items: flex-start;
+
+    .globalFooter_links {
+      display: flex;
+      flex-direction: column;
+
+      a {
+        margin: 8px 0 0 0;
+
+        &:last-child {
+          border: none;
+          padding-left: 0;
+        }
+      }
+    }
+
+    .globalFooter_copyright {
+      max-width: 100%;
+      text-align: left;
+      line-height: 18px;
+      margin-top: 16px;
+    }
   }
 }
 </style>

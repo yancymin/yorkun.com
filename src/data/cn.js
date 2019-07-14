@@ -45,6 +45,7 @@ export default [
     isTag: true,
     bgImg: geetestweb,
     hrefG: 'http://www.geetest.com',
+    hrefD: '/article-1',
   },
   {
     title: '行为验证产品',

@@ -33,11 +33,11 @@
 </template>
 
 <script>
-import defaultButton from "./defaultButton.vue";
-import ghostButton from "./ghostButton.vue";
+import defaultButton from './defaultButton.vue';
+import ghostButton from './ghostButton.vue';
 
 export default {
-  name: "motionCard",
+  name: 'motionCard',
   props: {
     title: String,
     des: String,
@@ -52,12 +52,12 @@ export default {
     isBlack: Boolean,
     isWhiteBotton: Boolean,
     isTag: Boolean,
-    buttonText: String
+    buttonText: String,
   },
   components: {
     defaultButton,
-    ghostButton
-  }
+    ghostButton,
+  },
 };
 </script>
 

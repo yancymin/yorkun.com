@@ -12,7 +12,7 @@
 <script>
 export default {
   name: 'globalFooter',
-  props: ['footerLinkText']
+  props: ['footerLinkText'],
 };
 </script>
 

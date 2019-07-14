@@ -206,36 +206,36 @@
 </template>
 
 <script>
-import defaultButton from "../components/defaultButton.vue";
-import ghostButton from "../components/ghostButton.vue";
-import card from "../components/card.vue";
-import motionCard from "../components/motionCard.vue";
-import smallCard from "../components/smallCard.vue";
-import xsCard from "../components/xsCard.vue";
-import globalFooter from "../components/globalFooter.vue";
-import link from "../assets/index/button-icon/link_icon.svg";
-import geetestweb from "../assets/index/geetestweb.png";
-import ui_captcha from "../assets/index/ui_captcha.gif";
-import app_onelogin from "../assets/index/app_onelogin.png";
-import Portrait from "../assets/index/IMG_3045.png";
-import link_icon_b from "../assets/index/link_icon_b.svg";
-import geetestweb_logo from "../assets/index/geetestweb_logo.svg";
-import captcha_logo from "../assets/index/captcha_logo.svg";
-import wangguan_logo from "../assets/index/wangguan_logo.svg";
-import cnDate from "../data/cn.js";
-import enDate from "../data/en.js";
-import info from "../data/info.js";
-import nav from "../data/nav.js";
-import meDes from "../data/cardMe.js";
-import banana from "../data/banana.js";
-import smallCardData from "../data/smallCard.js";
-import motionCardData from "../data/motionCard.js";
-import xsCardData from "../data/xsCard.js";
-import footerTextData from "../data/footerText.js";
+import defaultButton from '../components/defaultButton.vue';
+import ghostButton from '../components/ghostButton.vue';
+import card from '../components/card.vue';
+import motionCard from '../components/motionCard.vue';
+import smallCard from '../components/smallCard.vue';
+import xsCard from '../components/xsCard.vue';
+import globalFooter from '../components/globalFooter.vue';
+import link from '../assets/index/button-icon/link_icon.svg';
+import geetestweb from '../assets/index/geetestweb.png';
+import ui_captcha from '../assets/index/ui_captcha.gif';
+import app_onelogin from '../assets/index/app_onelogin.png';
+import Portrait from '../assets/index/IMG_3045.png';
+import link_icon_b from '../assets/index/link_icon_b.svg';
+import geetestweb_logo from '../assets/index/geetestweb_logo.svg';
+import captcha_logo from '../assets/index/captcha_logo.svg';
+import wangguan_logo from '../assets/index/wangguan_logo.svg';
+import cnDate from '../data/cn.js';
+import enDate from '../data/en.js';
+import info from '../data/info.js';
+import nav from '../data/nav.js';
+import meDes from '../data/cardMe.js';
+import banana from '../data/banana.js';
+import smallCardData from '../data/smallCard.js';
+import motionCardData from '../data/motionCard.js';
+import xsCardData from '../data/xsCard.js';
+import footerTextData from '../data/footerText.js';
 
 export default {
-  name: "home",
-  props: ["buttonIcon"],
+  name: 'home',
+  props: ['buttonIcon'],
   components: {
     defaultButton,
     ghostButton,
@@ -243,7 +243,7 @@ export default {
     motionCard,
     smallCard,
     xsCard,
-    globalFooter
+    globalFooter,
   },
   methods: {
     langSwitch() {
@@ -274,38 +274,37 @@ export default {
         this.cnFooterLinkText = this.footerTextData.cn;
         this.isEn = false;
       }
-    }
+    },
   },
   created() {
-    window.onscroll = function() {
-      const backTop = document.querySelector(".top");
+    window.onscroll = function () {
+      const backTop = document.querySelector('.top');
       if (document.documentElement.scrollTop + document.body.scrollTop > 100) {
-        backTop.style.display = "block";
+        backTop.style.display = 'block';
       } else {
-        backTop.style.display = "none";
+        backTop.style.display = 'none';
       }
     };
   },
   mounted() {
     this.ok = true;
     this.langSwitch();
-    const nav = document.getElementById("nav-1");
-    const mobileNav = document.getElementById("nav-2");
+    const nav = document.getElementById('nav-1');
+    const mobileNav = document.getElementById('nav-2');
     const headerOffset = nav.offsetTop + nav.offsetHeight + 20;
-    const mobileHeaderOffset =
-      mobileNav.offsetTop + mobileNav.offsetHeight + 100;
+    const mobileHeaderOffset = mobileNav.offsetTop + mobileNav.offsetHeight + 100;
 
-    window.addEventListener("scroll", e => {
+    window.addEventListener('scroll', (e) => {
       if (window.scrollY >= headerOffset) {
-        nav.classList.add("nav-move");
+        nav.classList.add('nav-move');
       } else {
-        nav.classList.remove("nav-move");
+        nav.classList.remove('nav-move');
       }
 
       if (window.scrollY >= mobileHeaderOffset) {
-        mobileNav.classList.add("nav-move", "m-nav-move");
+        mobileNav.classList.add('nav-move', 'm-nav-move');
       } else {
-        mobileNav.classList.remove("nav-move", "m-nav-move");
+        mobileNav.classList.remove('nav-move', 'm-nav-move');
       }
     });
   },
@@ -313,47 +312,47 @@ export default {
     return {
       isEn: true,
       ok: false,
-      cnDate: cnDate,
-      enDate: enDate,
-      info: info,
+      cnDate,
+      enDate,
+      info,
       cnInfo: info.cn,
-      nav: nav,
+      nav,
       nav1: nav.cn,
-      meDes: meDes,
+      meDes,
       cnMeDes: meDes.cn,
-      banana: banana,
+      banana,
       cnBanana: banana.cn,
       cnSmallCard: smallCardData.cn,
-      smallCardData: smallCardData,
-      motionCardData: motionCardData,
+      smallCardData,
+      motionCardData,
       cnMotionCardData: motionCardData.cn,
       cnXsCardData: xsCardData.cn,
-      xsCardData: xsCardData,
+      xsCardData,
       isActive: false,
-      footerTextData: footerTextData,
+      footerTextData,
       cnFooterLinkText: footerTextData.cn,
       cardMe: {
-        title: " ",
-        des: " ",
-        cardColor: "#141516",
-        tag: "tag",
+        title: ' ',
+        des: ' ',
+        cardColor: '#141516',
+        tag: 'tag',
         isButton: false,
         isTitle: false,
         isDes: false,
         isBlack: true,
         isWhiteBotton: false,
         isTag: false,
-        bgImg: Portrait
+        bgImg: Portrait,
       },
       cards: cnDate,
       buttons: {
         href: {
-          href1: "https://baidu.com"
+          href1: 'https://baidu.com',
         },
-        buttonIcon: link
-      }
+        buttonIcon: link,
+      },
     };
-  }
+  },
 };
 </script>
 

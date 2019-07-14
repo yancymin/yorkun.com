@@ -5,9 +5,9 @@ import Home from './views/Home.vue';
 Vue.use(Router);
 
 export default new Router({
-  mode: 'history',
+  mode: 'hash',
   base: process.env.BASE_URL,
-  routes: [
+  routes: [ 
     {
       path: '/',
       name: 'home',
@@ -16,7 +16,7 @@ export default new Router({
     {
       path: '/article-1',
       name: 'article-1',
-      component: () => import('./views/Article-1.vue')
+      component: () => import('./views/Article-1.vue'),
     }
   ],
 });

@@ -1,23 +1,23 @@
 <template>
   <div class="defaultButton" :style="'background-color:' + btnColor">
-    <a :href="href">
+    <router-link :to='href'>
       {{buttonText}}
       <img :src="btnIcon" id="defaultButton-icon" alt />
-    </a>
+    </router-link>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'defaultButton',
-  props: ['buttonText', 'href', 'btnColor', 'btnIcon'],
+  name: "defaultButton",
+  props: ["buttonText", "href", "btnColor", "btnIcon"],
   mounted() {
-    const icon = document.getElementById('defaultButton-icon');
+    const icon = document.getElementById("defaultButton-icon");
 
-    if (this.btnIcon === '') {
-      icon.style.display = 'none';
+    if (this.btnIcon === "") {
+      icon.style.display = "none";
     }
-  },
+  }
 };
 </script>
 

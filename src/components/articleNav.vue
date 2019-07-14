@@ -11,7 +11,7 @@
 
 <script>
 export default {
-  name: "articleNav"
+  name: 'articleNav',
 };
 </script>
 
@@ -44,5 +44,3 @@ export default {
   }
 }
 </style>
-
-

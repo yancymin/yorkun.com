@@ -6,17 +6,17 @@
 
 <script>
 export default {
-  name: "top",
+  name: 'top',
   created() {
-    window.onscroll = function() {
-      const backTop = document.querySelector(".top");
+    window.onscroll = function () {
+      const backTop = document.querySelector('.top');
       if (document.documentElement.scrollTop + document.body.scrollTop > 100) {
-        backTop.style.display = "block";
+        backTop.style.display = 'block';
       } else {
-        backTop.style.display = "none";
+        backTop.style.display = 'none';
       }
     };
-  }
+  },
 };
 </script>
 
@@ -46,4 +46,3 @@ export default {
   }
 }
 </style>
-

@@ -69,6 +69,7 @@ export default [
     isWhiteBotton: true,
     isTag: true,
     bgImg: ui_captcha,
+    hrefD: '/article-1',
   },
   {
     title: 'APP 一键登录',
@@ -92,5 +93,6 @@ export default [
     isWhiteBotton: false,
     isTag: true,
     bgImg: app_onelogin,
+    hrefD: '/article-1',
   },
 ];

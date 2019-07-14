@@ -24,6 +24,7 @@ export default {
     isWhiteBotton: true,
     isTag: true,
     bgImg: bananaGif,
+    hrefD: '/article-1',
   },
   en: {
     title: '小蕉 BANANA',
@@ -45,5 +46,6 @@ export default {
     isWhiteBotton: true,
     isTag: true,
     bgImg: bananaGif,
+    hrefD: '/article-1',
   },
 };

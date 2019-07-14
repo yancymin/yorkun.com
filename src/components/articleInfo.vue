@@ -19,8 +19,8 @@
 
 <script>
 export default {
-  name: "articleInfo",
-  props: ["links", "date"]
+  name: 'articleInfo',
+  props: ['links', 'date'],
 };
 </script>
 

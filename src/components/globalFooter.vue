@@ -14,8 +14,8 @@
 
 <script>
 export default {
-  name: "globalFooter",
-  props: ["footerLinkText"]
+  name: 'globalFooter',
+  props: ['footerLinkText'],
 };
 </script>
 

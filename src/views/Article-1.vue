@@ -14,33 +14,33 @@
 
 
 <script>
-import articleNav from "../components/articleNav.vue";
-import globalFooter from "../components/globalFooter.vue";
-import top from "../components/top.vue";
-import articleInfo from "../components/articleInfo.vue";
+import articleNav from '../components/articleNav.vue';
+import globalFooter from '../components/globalFooter.vue';
+import top from '../components/top.vue';
+import articleInfo from '../components/articleInfo.vue';
 
 export default {
-  name: "Article-1",
+  name: 'Article-1',
   components: {
     articleNav,
     globalFooter,
     top,
-    articleInfo
+    articleInfo,
   },
   data() {
     return {
       links: [
         {
           title: '「行为验证」在线体验',
-          href: "https://SSS.COM"
+          href: 'https://SSS.COM',
         },
         {
           title: '《滑动拼图验证背后的故事》',
-          href: "https://SSS.COM"
-        }
-      ]
+          href: 'https://SSS.COM',
+        },
+      ],
     };
-  }
+  },
 };
 </script>
 

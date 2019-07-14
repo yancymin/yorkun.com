@@ -245,7 +245,7 @@ export default {
     smallCard,
     xsCard,
     globalFooter,
-    top
+    top,
   },
   methods: {
     langSwitch() {

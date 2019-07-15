@@ -82,6 +82,7 @@ html {
 
 .article {
     width: 100vw;
+
     @include flex-all-center {
         flex-direction: column;
     }
@@ -101,6 +102,8 @@ html {
 
         section {
             width: 100%;
+            display: flex;
+            flex-direction: column;
         }
     }
 

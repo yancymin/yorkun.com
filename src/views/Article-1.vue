@@ -40,71 +40,71 @@ export default {
         },
       ],
 
-imgSrc : [
-{
-    src: require('../assets/article/1/CAP-01.png')
-},
-{
-    src: require('../assets/article/1/CAP-02.png')
-},
-{
-    src: require('../assets/article/1/CAP-03.png')
-},
-{
-    src: require('../assets/article/1/CAP-04.png')
-},
-{
-    src: require('../assets/article/1/CAP-05.png')
-},
-{
-    src: require('../assets/article/1/CAP-06.png')
-},
-{
-    src: require('../assets/article/1/CAP-07.gif')
-},
-{
-    src: require('../assets/article/1/CAP-08.png')
-},
-{
-    src: require('../assets/article/1/CAP-09.gif')
-},
-{
-    src: require('../assets/article/1/CAP-10.png')
-},
-{
-    src: require('../assets/article/1/CAP-11.png')
-},
-{
-    src: require('../assets/article/1/CAP-12.gif')
-},
-{
-    src: require('../assets/article/1/CAP-13.png')
-},
-{
-    src: require('../assets/article/1/CAP-14.gif')
-},
-{
-    src: require('../assets/article/1/CAP-15.gif')
-},
-{
-    src: require('../assets/article/1/CAP-16.png')
-},
-{
-    src: require('../assets/article/1/CAP-17.png')
-},
-{
-    src: require('../assets/article/1/CAP-18.png')
-},
-{
-    src: require('../assets/article/1/CAP-19.png')
-},
-{
-    src: require('../assets/article/1/CAP-20.png')
-},
-{
-    src: require('../assets/article/1/CAP-21.png')
-},
-] 
+      imgSrc: [
+        {
+          src: require('../assets/article/1/CAP-01.png'),
+        },
+        {
+          src: require('../assets/article/1/CAP-02.png'),
+        },
+        {
+          src: require('../assets/article/1/CAP-03.png'),
+        },
+        {
+          src: require('../assets/article/1/CAP-04.png'),
+        },
+        {
+          src: require('../assets/article/1/CAP-05.png'),
+        },
+        {
+          src: require('../assets/article/1/CAP-06.png'),
+        },
+        {
+          src: require('../assets/article/1/CAP-07.gif'),
+        },
+        {
+          src: require('../assets/article/1/CAP-08.png'),
+        },
+        {
+          src: require('../assets/article/1/CAP-09.gif'),
+        },
+        {
+          src: require('../assets/article/1/CAP-10.png'),
+        },
+        {
+          src: require('../assets/article/1/CAP-11.png'),
+        },
+        {
+          src: require('../assets/article/1/CAP-12.gif'),
+        },
+        {
+          src: require('../assets/article/1/CAP-13.png'),
+        },
+        {
+          src: require('../assets/article/1/CAP-14.gif'),
+        },
+        {
+          src: require('../assets/article/1/CAP-15.gif'),
+        },
+        {
+          src: require('../assets/article/1/CAP-16.png'),
+        },
+        {
+          src: require('../assets/article/1/CAP-17.png'),
+        },
+        {
+          src: require('../assets/article/1/CAP-18.png'),
+        },
+        {
+          src: require('../assets/article/1/CAP-19.png'),
+        },
+        {
+          src: require('../assets/article/1/CAP-20.png'),
+        },
+        {
+          src: require('../assets/article/1/CAP-21.png'),
+        },
+      ],
     };
   },
 };

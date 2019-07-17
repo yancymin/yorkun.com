@@ -39,11 +39,30 @@
     }
 
     #banana {
-       ::v-deep .ghostButton {
-                &::after {
-                    right: 31px !important;
-                    top: 15px !important;
+        ::v-deep .ghostButton {
+            &::after {
+                right: 31px !important;
+                top: 15px !important;
+            }
+        }
+    }
+
+    #about {
+        h1 {
+            width: 180px;
+        }
+    }
+
+    .motionCard {
+        ::v-deep .defaultButton {
+            a {
+                padding-bottom: 2px;
+
+                img {
+                    position: relative;
+                    top: 1px;
                 }
+            }
         }
     }
 }

@@ -19,7 +19,7 @@ export default {
     hrefD: 'http://yorkun.lofter.com',
   },
   en: {
-    title: 'YorKun`s design blog',
+    title: "YorKun's design blog",
     des: 'It uploaded my works from different periods and updated frequently.',
     cardColor: '#141516 ',
     btnColor: '#40454B',

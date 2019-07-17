@@ -201,7 +201,7 @@
       </div>
       <globalFooter :footerLinkText="cnFooterLinkText" />
     </div>
-    <top/>
+    <top />
   </div>
 </template>
 
@@ -278,6 +278,25 @@ export default {
       }
     },
   },
+  watch: {
+    screenWidth(val) {
+      // 为了避免频繁触发resize函数导致页面卡顿，使用定时器
+      if (!this.timer) {
+        // 一旦监听到的screenWidth值改变，就将其重新赋给data里的screenWidth
+        this.screenWidth = val;
+        this.timer = true;
+        const that = this;
+        setTimeout(() => {
+          // 打印screenWidth变化的值
+          // console.log(that.screenWidth);
+
+          that.timer = false;
+        }, 400);
+      }
+    },
+
+
+  },
   mounted() {
     this.ok = true;
     this.langSwitch();
@@ -299,9 +318,34 @@ export default {
         mobileNav.classList.remove('nav-move', 'm-nav-move');
       }
     });
+
+    function tag(val) {
+      const tags = document.querySelectorAll('.tag');
+
+      if (val < '600' || document.body.clientWidth < '600') {
+        [].forEach.call(tags, (tag) => {
+          tag.style.display = 'none';
+        });
+      } else {
+        [].forEach.call(tags, (tag) => {
+          tag.style.display = 'block';
+        });
+      }
+    }
+
+    tag();
+
+    const that = this;
+    window.onresize = () => (() => {
+      window.screenWidth = document.body.clientWidth;
+      that.screenWidth = window.screenWidth;
+
+      tag(that.screenWidth);
+    })();
   },
   data() {
     return {
+      screenWidth: document.body.clientWidth,
       isEn: true,
       ok: false,
       cnDate,
@@ -888,7 +932,6 @@ export default {
       }
     }
   }
-
 
   .break-line {
     height: 1px;

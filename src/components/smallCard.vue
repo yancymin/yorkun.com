@@ -12,7 +12,7 @@
 
 <script>
 export default {
-  name: "smallCard",
+  name: 'smallCard',
   props: {
     title: String,
     cardColor: String,
@@ -21,8 +21,8 @@ export default {
     tag: String,
     tagColor: String,
     isTag: Boolean,
-    isCenterImg: Boolean
-  }
+    isCenterImg: Boolean,
+  },
 };
 </script>
 

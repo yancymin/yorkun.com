@@ -25,7 +25,7 @@ export default {
   width: 100vw;
   height: 68px;
   background-color: $black;
-  box-shadow: 0 2px 20px 0 rgba(19, 22, 27, 0.6);
+  border-bottom: 1px solid rgba(76, 79, 84, 0.6);
   @include flex-all-center;
 
   .nav-wrap {
@@ -35,6 +35,18 @@ export default {
     margin: 0 16px;
     @include flex-all-center {
       justify-content: space-between;
+    }
+
+    a {
+      &:hover {
+         img {
+             filter: contrast(2);
+         }
+      }
+
+      img {
+        transition: all 0.3s ease;
+      }
     }
 
     img {

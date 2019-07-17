@@ -45,43 +45,49 @@ img {
     pointer-events: none;
 }
 
-html::-webkit-scrollbar {
-    width: 0 !important
-}
+// .home::-webkit-scrollbar {
+//     width: 0 !important
+// }
 
-html {
-    -ms-overflow-style: none;
-}
+// .home {
+//     -ms-overflow-style: none;
+// }
 
-html {
-    overflow: -moz-scrollbars-none;
-}
+// .home {
+//     overflow: -moz-scrollbars-none;
+// }
 
-html::-webkit-scrollbar {
-    display: none
-}
+// .home::-webkit-scrollbar {
+//     display: none
+// }
 
-html::-webkit-scrollbar {
-    width: 0px
-}
+// .home::-webkit-scrollbar {
+//     width: 0px
+// }
 
 
-::-webkit-scrollbar-track-piece {
-    background-color: rgba(0, 0, 0, .2);
-    -webkit-border-radius: 6px;
-}
+// .home::-webkit-scrollbar-track-piece {
+//     background-color: rgba(0, 0, 0, .2);
+//     -webkit-border-radius: 6px;
+// }
 
 html {
     background-color: $black;
 }
 
-::selection {
-    background-color: $black;
-    color: $white;
+.home {
+    ::selection {
+        background-color: $black;
+        color: $white;
+    }
 }
 
 .article {
     width: 100vw;
+    ::selection {
+        background-color: transparent;
+        color: $white;
+    }
 
     @include flex-all-center {
         flex-direction: column;

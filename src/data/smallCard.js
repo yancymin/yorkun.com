@@ -1,5 +1,5 @@
 import animation from '../assets/index/animation.png';
-import gmake_logo from '../assets/index/gmake_logo.png';
+import gmakeLogo from '../assets/index/gmake_logo.png';
 
 
 export default {
@@ -21,7 +21,7 @@ export default {
       footer: '© 2019 GEETEST. Design by G-MAKE.',
       isTag: true,
       tagColor: 'rgba(0,0,0,0.4)',
-      bgImg: gmake_logo,
+      bgImg: gmakeLogo,
       isCenterImg: true,
     },
   ],
@@ -43,7 +43,7 @@ export default {
       footer: '© 2019 GEETEST. Design by G-MAKE.',
       isTag: true,
       tagColor: 'rgba(0,0,0,0.4)',
-      bgImg: gmake_logo,
+      bgImg: gmakeLogo,
       isCenterImg: true,
     },
   ],

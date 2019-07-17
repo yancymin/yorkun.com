@@ -1,4 +1,4 @@
-import link_icon_w from '../assets/index/link_icon_w.svg';
+import linkIconW from '../assets/index/link_icon_w.svg';
 
 
 export default {
@@ -15,7 +15,7 @@ export default {
     isBlack: true,
     isWhiteBotton: false,
     isTag: false,
-    btnIcon: link_icon_w,
+    btnIcon: linkIconW,
     hrefD: 'http://yorkun.lofter.com',
   },
   en: {
@@ -31,7 +31,7 @@ export default {
     isBlack: true,
     isWhiteBotton: false,
     isTag: false,
-    btnIcon: link_icon_w,
+    btnIcon: linkIconW,
     hrefD: 'http://yorkun.lofter.com',
   },
 };

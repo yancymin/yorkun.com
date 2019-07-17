@@ -3,7 +3,7 @@
     <div class="nav-wrap">
       <img src="../assets/index/small_logo.svg" alt />
       <a href="/">
-        <img src="../assets/index/small_logo.svg" alt />
+        <img src="../assets/back.svg" alt />
       </a>
     </div>
   </div>

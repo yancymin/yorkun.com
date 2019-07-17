@@ -32,11 +32,11 @@ export default {
       links: [
         {
           title: '「行为验证」在线体验',
-          href: 'https://SSS.COM',
+          href: 'https://www.geetest.com/show/',
         },
         {
           title: '《滑动拼图验证背后的故事》',
-          href: 'https://SSS.COM',
+          href: 'https://geetest.design/#/article/2019-05-23?time=2019-05-23%20%E5%8F%91%E5%B8%83&tags=%E5%8E%9F%E5%88%9B%E5%86%85%E5%AE%B9&tags=UI&view=1023',
         },
       ],
 
@@ -103,6 +103,9 @@ export default {
         },
         {
           src: require('../assets/article/1/CAP-21.png'),
+        },
+        {
+          src: require('../assets/article/1/CAP-22.png'),
         },
       ],
     };

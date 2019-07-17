@@ -1,18 +1,18 @@
 <template>
   <div class="smallCard" :style="'background-color:' + cardColor">
     <div class="tag" v-if="isTag" :style="'background-color:' + tagColor">{{tag}}</div>
-    <img :src="bgImg" class="bgImg">
+    <img :src="bgImg" class="bgImg" />
     <div class="smallCard_text">
       <h1>{{title}}</h1>
       <span>{{footer}}</span>
-      <img src="../assets/index/gmake_logo_w.svg" alt v-if="isCenterImg" class="centerImg">
+      <img src="../assets/index/gmake_logo_w.svg" alt v-if="isCenterImg" class="centerImg" />
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'smallCard',
+  name: "smallCard",
   props: {
     title: String,
     cardColor: String,
@@ -21,8 +21,8 @@ export default {
     tag: String,
     tagColor: String,
     isTag: Boolean,
-    isCenterImg: Boolean,
-  },
+    isCenterImg: Boolean
+  }
 };
 </script>
 
@@ -55,8 +55,9 @@ export default {
       @include font(40px, $font-color-white-1, 700);
     }
     span {
-      position: absolute;
-      bottom: 24px;
+position: relative;
+    bottom: -170px;
+      align-self: center;
       @include font(14px, $font-color-white-2, 400);
     }
   }
@@ -84,7 +85,7 @@ export default {
     position: absolute;
     left: 0;
     right: 0;
-    top:35%;
+    top: 35%;
     bottom: 0;
     margin: 0 auto;
   }

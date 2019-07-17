@@ -633,7 +633,7 @@ export default {
       &:nth-of-type(2) {
         &::v-deep .des {
           span {
-            /* width: auto; */
+            width: auto;
           }
           img {
             height: 40px;

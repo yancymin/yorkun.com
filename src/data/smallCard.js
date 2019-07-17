@@ -27,7 +27,7 @@ export default {
   ],
   en: [
     {
-      title: 'Animation design',
+      title: 'Animations',
       tag: 'Animation',
       cardColor: ' #FFA51D',
       footer: '',

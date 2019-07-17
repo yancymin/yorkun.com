@@ -136,7 +136,6 @@ export default {
       }
       span {
         display: inline-block;
-        min-width: 600px;
         margin-bottom: 50px;
         @include font(14px, $font-color-black-2, 400) {
           line-height: 20px;

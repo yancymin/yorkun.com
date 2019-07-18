@@ -184,7 +184,7 @@
               <a href="https://www.instagram.com/yorkun_cheng/" target="_blank"></a>
               <a href="https://github.com/Yorkun" target="_blank"></a>
               <a href="https://unsplash.com/@yorkun" target="_blank"></a>
-              <a href="https://codepen.io/YorKun/" target="_blank"></a>
+              <a href="https://www.behance.net/yorkun" target="_blank"></a>
             </div>
             <div class="contact-wrap">
               <div class="mail">
@@ -859,7 +859,7 @@ export default {
                 background-image: url("../assets/index/links/unsplash_icon.svg");
               }
               &:nth-of-type(5) {
-                background-image: url("../assets/index/links/codepen_icon.svg");
+                background-image: url("../assets/index/links/behance_icon.svg");
               }
             }
           }

@@ -6,6 +6,7 @@
 import { setTimeout } from 'timers';
 export default {
   name: "loading",
+  props: ["isMotion"],
   data() {
     return {
       isMotion: false
@@ -29,7 +30,7 @@ export default {
   mounted() {
       setTimeout(() => {
           this.isMotion = false;
-      }, 1000);
+      }, 2000);
   },
   methods: {
     loading() {
@@ -46,7 +47,7 @@ export default {
   left: 0;
   width: 100vw;
   height: 4px;
-  background-color: blue;
+  background-color: white;
   transform: scaleX(0);
   transform-origin: left;
   opacity: 0;

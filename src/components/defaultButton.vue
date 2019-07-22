@@ -1,16 +1,26 @@
 <template>
   <div class="defaultButton" :style="'background-color:' + btnColor">
-    <router-link :to='href'>
+    <router-link :to='href' :onclick="loading()">
       {{buttonText}}
       <img :src="btnIcon" id="defaultButton-icon" alt />
     </router-link>
+    <loading :isMotion="isMotion"/>
   </div>
 </template>
 
 <script>
+import loading from '../components/loading.vue';
+
 export default {
   name: 'defaultButton',
   props: ['buttonText', 'href', 'btnColor', 'btnIcon'],
+  components: {
+    loading
+  },
+  data() {
+    return {
+      isMotion: false
+    }},
   mounted() {
     const icon = document.getElementById('defaultButton-icon');
 
@@ -18,6 +28,11 @@ export default {
       icon.style.display = 'none';
     }
   },
+  methods: {
+    loading() {
+      this.isMotion = true
+    }
+  }
 };
 </script>
 

@@ -1,8 +1,19 @@
 <template>
   <div id="app">
     <router-view />
+    <loading />
   </div>
 </template>
+
+<script>
+import loading from "./components/loading.vue";
+
+export default {
+  name: "app",
+  components: { loading }
+};
+</script>
+
 
 <style lang="scss">
 @import "../src/style/global.scss";

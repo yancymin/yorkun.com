@@ -19,6 +19,7 @@ import link_icon_b from '../assets/index/link_icon_b.svg';
 import reweima_icon from '../assets/index/reweima_icon.svg';
 import geetestweb_logo from '../assets/index/geetestweb_logo.svg';
 import captcha_logo from '../assets/index/captcha_logo.svg';
+import captcha_logo_en from '../assets/index/captcha_logo_en.svg';
 import wangguan_logo from '../assets/index/wangguan_logo.svg';
 import banana_logo from '../assets/index/banana_logo.svg';
 import animation from '../assets/index/animation.png';
@@ -50,7 +51,7 @@ export default [
   },
   {
     title: '行为验证产品',
-    cardLogo: captcha_logo,
+    cardLogo: captcha_logo_en,
     des:
       'Based on the behavioral characteristics of biology and AI, help websites and APP distinguish between human and machine.',
     cardColor: '#3973FF ',

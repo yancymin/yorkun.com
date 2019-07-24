@@ -18,5 +18,10 @@ export default new Router({
       name: 'article-1',
       component: () => import('./views/Article-1.vue'),
     },
+    {
+      path: '/motion',
+      name: 'motion',
+      component: () => import('./views/motion.vue'),
+    },
   ],
 });

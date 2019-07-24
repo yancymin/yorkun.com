@@ -1,5 +1,6 @@
 <template>
   <div class="smallCard" :style="'background-color:' + cardColor">
+    <router-link :to="link" class="link"></router-link>
     <div class="tag" v-if="isTag" :style="'background-color:' + tagColor">{{tag}}</div>
     <img :src="bgImg" class="bgImg" />
     <div class="smallCard_text">
@@ -22,12 +23,18 @@ export default {
     tagColor: String,
     isTag: Boolean,
     isCenterImg: Boolean,
+    link: String
   },
 };
 </script>
 
 <style lang="scss" scoped>
 @import "../style/global.scss";
+
+.link {
+  width: 100%;
+  height: 100%;
+}
 
 .smallCard {
   position: relative;

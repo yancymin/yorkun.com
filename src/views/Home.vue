@@ -138,6 +138,7 @@
           :bgImg="cnSmallCard[i].bgImg"
           :tagColor="cnSmallCard[i].tagColor"
           :isCenterImg="cnSmallCard[i].isCenterImg"
+          :link="cnSmallCard[i].link"
         />
       </div>
 

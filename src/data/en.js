@@ -18,6 +18,7 @@ import link_icon_w from '../assets/index/link_icon_w.svg';
 import link_icon_b from '../assets/index/link_icon_b.svg';
 import reweima_icon from '../assets/index/reweima_icon.svg';
 import geetestweb_logo from '../assets/index/geetestweb_logo.svg';
+import geetestweb_logo_en from '../assets/index/geetestweb_logo_en.svg';
 import captcha_logo from '../assets/index/captcha_logo.svg';
 import captcha_logo_en from '../assets/index/captcha_logo_en.svg';
 import wangguan_logo from '../assets/index/wangguan_logo.svg';
@@ -27,7 +28,7 @@ import animation from '../assets/index/animation.png';
 export default [
   {
     title: 'GEETEST 网站',
-    cardLogo: geetestweb_logo,
+    cardLogo: geetestweb_logo_en,
     des:
       'A revision of the security service enterprise website, taking over the expansion of the business line and the new brand vision.',
     cardColor: ' ',

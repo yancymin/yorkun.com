@@ -320,17 +320,17 @@ export default {
         mobileNav.classList.remove("nav-move", "m-nav-move");
       }
 
-      if (window.scrollY === 1060) {
+      if (window.scrollY === project.offsetTop) {
         nav.classList.add("anchorOn");
       } else {
         nav.classList.remove("anchorOn");
       }
-      if (window.scrollY === 2820) {
+      if (window.scrollY === works.offsetTop) {
         nav.classList.add("anchorOn2");
       } else {
         nav.classList.remove("anchorOn2");
       }
-      if (window.scrollY === 3828) {
+      if (window.scrollY === 3828 || window.scrollY === 3768) {
         nav.classList.add("anchorOn3");
       } else {
         nav.classList.remove("anchorOn3");

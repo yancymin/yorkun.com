@@ -9,13 +9,7 @@
       <div class="des">
         <h1 v-if="isTitle">{{title}}</h1>
         <span v-if="isDes">{{des}}</span>
-        <defaultButton
-          :buttonText="buttonText"
-          v-if="isButton"
-          :btnColor="btnColor"
-          :btnIcon="btnIcon"
-          :href="hrefD"
-        />
+        <a class="defaultButton" href="http://yorkun.lofter.com" target="_blank">{{buttonText}} <img src="../assets/index/link_icon_w.svg" /> </a>
         <slot></slot>
       </div>
       <div class="motion-group">
@@ -33,11 +27,11 @@
 </template>
 
 <script>
-import defaultButton from './defaultButton.vue';
-import ghostButton from './ghostButton.vue';
+// import defaultButton from "./defaultButton.vue";
+import ghostButton from "./ghostButton.vue";
 
 export default {
-  name: 'motionCard',
+  name: "motionCard",
   props: {
     title: String,
     des: String,
@@ -52,17 +46,40 @@ export default {
     isBlack: Boolean,
     isWhiteBotton: Boolean,
     isTag: Boolean,
-    buttonText: String,
+    buttonText: String
   },
   components: {
-    defaultButton,
-    ghostButton,
-  },
+    // defaultButton,
+    ghostButton
+  }
 };
 </script>
 
 <style lang="scss" scoped>
 @import "../style/global.scss";
+
+.defaultButton {
+  z-index: 1000;
+  cursor: pointer;
+  width: 132px;
+  height: 42px;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  background-color: #40454B;
+  transition: all 0.3s ease;
+  @include font(14px, $font-color-white-1, 400);
+  @include flex-all-center;
+
+  a {
+    width: 100%;
+    height: 100%;
+    @include flex-all-center;
+  }
+
+  img {
+    margin-left: 8px;
+  }
+}
 
 .fontBlack {
   h1 {

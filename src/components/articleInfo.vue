@@ -62,6 +62,7 @@ export default {
       display: flex;
       a {
         margin-left: 40px;
+        transition: all .3s ease;
         @include flex-all-center;
         @include font(14px, $font-color-white-2, 400);
 

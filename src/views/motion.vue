@@ -4,7 +4,7 @@
     <div class="article-wrap">
       <img :src="item.src" alt v-for="(item, index) in imgSrc" :key="index" />
     </div>
-    <articleInfo :links='links' date='更新于 2019.7.26'/>
+    <articleInfo :links="links" date="更新于 2019.7.26" />
     <globalFooter>右可的影像集</globalFooter>
     <top />
   </div>
@@ -28,8 +28,8 @@ export default {
     return {
       links: [
         {
-          title: '更多设计作品',
-          href: 'http://yorkun.lofter.com',
+          title: "更多设计作品",
+          href: "http://yorkun.lofter.com"
         }
       ],
       imgSrc: [
@@ -107,6 +107,14 @@ export default {
   &:nth-child(2n) {
     margin-right: 0;
   }
+
+  &:nth-last-child(2),&:nth-last-child(1){
+    margin-bottom: 0;
+  }
+}
+
+.globalFooter {
+  margin-top: 160px;
 }
 </style>
 

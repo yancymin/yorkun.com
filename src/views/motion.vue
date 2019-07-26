@@ -5,7 +5,7 @@
       <img :src="item.src" alt v-for="(item, index) in imgSrc" :key="index" />
     </div>
     <articleInfo :links="links" date="更新于 2019.7.26" />
-    <globalFooter>右可的影像集</globalFooter>
+    <globalFooter></globalFooter>
     <top />
   </div>
 </template>
@@ -108,15 +108,35 @@ export default {
     margin-right: 0;
   }
 
-  &:nth-last-child(2),&:nth-last-child(1){
+  &:nth-last-child(2),
+  &:nth-last-child(1) {
     margin-bottom: 0;
   }
 }
 
 .globalFooter {
   margin-top: 160px;
-     width: calc(100% - 32px);
-    padding: 24px 0 40px 0;
+  width: calc(100% - 32px);
+  padding: 24px 0 40px 0;
+}
+
+@media screen and (max-width: 600px) {
+  .article-wrap {
+    margin-top: 90px !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .article img {
+    max-width: 90%;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+
+    &:nth-last-child(2) {
+      margin-bottom: 20px;
+    }
+  }
 }
 </style>
 

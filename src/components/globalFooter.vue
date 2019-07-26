@@ -8,7 +8,7 @@
         <slot></slot>
       </a>
     </div>
-    <div class="globalFooter_copyright">Designed by YorKun. © 2019 YORKUN. All rights reserved.</div>
+    <div class="globalFooter_copyright">Designed by YorKun and coded by Yanc Min. © 2019 YORKUN. All rights reserved.</div>
   </div>
 </template>
 

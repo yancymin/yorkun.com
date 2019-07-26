@@ -4,7 +4,7 @@
     <div class="article-wrap">
       <img :src="item.src" alt v-for="(item, index) in imgSrc" :key="index" />
     </div>
-    <!-- <articleInfo /> -->
+    <articleInfo :links='links' date='更新于 2019.7.26'/>
     <globalFooter>右可的影像集</globalFooter>
     <top />
   </div>
@@ -26,6 +26,12 @@ export default {
   },
   data() {
     return {
+      links: [
+        {
+          title: '更多设计作品',
+          href: 'http://yorkun.lofter.com',
+        }
+      ],
       imgSrc: [
         {
           src: require("../assets/article/motion/01.gif")

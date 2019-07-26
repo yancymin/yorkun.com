@@ -1008,8 +1008,8 @@ export default {
           display: none;
         }
         &:hover {
-          color: #fc85a1 !important;
-          background: #ffffff !important;
+          color: #ffffff !important;
+          background: #fc85a1 !important;
           border-color: white !important;
         }
       }

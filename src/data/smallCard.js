@@ -28,8 +28,8 @@ export default {
   ],
   en: [
     {
-      title: 'Animations',
-      tag: 'Animation',
+      title: 'Motion Graphic',
+      tag: 'Mograh',
       cardColor: ' #FFA51D',
       footer: '',
       isTag: true,

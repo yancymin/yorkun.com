@@ -1,7 +1,9 @@
 <template>
   <div class="article-nav">
     <div class="nav-wrap">
-      <img src="../assets/index/small_logo.svg" alt />
+      <a href='/'>
+        <img src="../assets/index/small_logo.svg" alt />
+      </a>
       <a href="/">
         <img src="../assets/back.svg" alt />
       </a>
@@ -11,7 +13,7 @@
 
 <script>
 export default {
-  name: 'articleNav',
+  name: "articleNav"
 };
 </script>
 
@@ -39,9 +41,9 @@ export default {
 
     a {
       &:hover {
-         img {
-             filter: contrast(2);
-         }
+        img {
+          filter: contrast(2);
+        }
       }
 
       img {
@@ -55,4 +57,21 @@ export default {
     }
   }
 }
+
+ @media screen and (max-width: 600px)  {
+   .nav-wrap {
+     a {
+       &:first-child {
+         &::after {
+           content: '建议使用桌面浏览器观看';
+           color: #9FA5AF;
+           font-size: 12px;
+           position: relative;
+           top: -6px;
+           left: 14px;
+         }
+       }
+     }
+   }
+ }
 </style>

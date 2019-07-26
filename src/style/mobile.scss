@@ -361,13 +361,14 @@
 
             .des {
                 padding: 0 24px;
-                // width: 91%;
                 text-align: center;
-                left: 0;
-                top: 40px;
+                left: unset;
                 display: flex;
                 align-items: center;
                 flex-direction: column;
+                position: relative;
+                width: 100%;
+                top: -156px;
 
                 h1 {
                     font-size: 24px;

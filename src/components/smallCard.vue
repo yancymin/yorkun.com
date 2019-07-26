@@ -13,7 +13,7 @@
 
 <script>
 export default {
-  name: 'smallCard',
+  name: "smallCard",
   props: {
     title: String,
     cardColor: String,
@@ -24,7 +24,7 @@ export default {
     isTag: Boolean,
     isCenterImg: Boolean,
     link: String
-  },
+  }
 };
 </script>
 
@@ -34,6 +34,9 @@ export default {
 .link {
   width: 100%;
   height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
 .smallCard {
@@ -62,8 +65,8 @@ export default {
       @include font(40px, $font-color-white-1, 700);
     }
     span {
-position: relative;
-    bottom: -170px;
+      position: relative;
+      bottom: -170px;
       align-self: center;
       @include font(14px, $font-color-white-2, 400);
     }

@@ -8,14 +8,16 @@
         <slot></slot>
       </a>
     </div>
-    <div class="globalFooter_copyright">Designed by YorKun and coded by Yancy Min. © 2019 YORKUN. All rights reserved.</div>
+    <div
+      class="globalFooter_copyright"
+    >Designed by YorKun and coded by Yancy Min. © 2019 YORKUN. All rights reserved.</div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'globalFooter',
-  props: ['footerLinkText'],
+  name: "globalFooter",
+  props: ["footerLinkText"]
 };
 </script>
 
@@ -34,7 +36,7 @@ export default {
   }
 
   span {
-    margin-right: 16px;
+    margin-right: 8px;
   }
 
   &_links {
@@ -46,12 +48,12 @@ export default {
         color: white;
       }
 
-      &:last-child {
+      /* &:last-child {
         display: inline-block;
         height: 16px;
         padding-left: 10px;
         border-left: 1px solid $font-color-white-3;
-      }
+      } */
     }
   }
   &_copyright {
@@ -61,15 +63,15 @@ export default {
 
 @media screen and (max-width: 600px) {
   .globalFooter {
-    width: calc(100% - 40px);
-    padding: 24px 16px 40px 16px;
+    width: 100%;
+    padding: 24px 0px 40px 0px;
 
     flex-direction: column;
     align-items: flex-start;
 
     .globalFooter_links {
-      display: flex;
-      flex-direction: column;
+      /* display: flex;
+      flex-direction: column; */
 
       a {
         margin: 8px 0 0 0;

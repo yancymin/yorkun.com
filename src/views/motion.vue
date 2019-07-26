@@ -115,6 +115,8 @@ export default {
 
 .globalFooter {
   margin-top: 160px;
+     width: calc(100% - 32px);
+    padding: 24px 0 40px 0;
 }
 </style>
 

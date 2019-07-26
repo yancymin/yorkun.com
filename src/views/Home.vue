@@ -200,7 +200,7 @@
           </div>
         </div>
       </div>
-      <globalFooter :footerLinkText="cnFooterLinkText" />
+      <globalFooter/>
     </div>
     <top />
   </div>

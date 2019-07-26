@@ -7,7 +7,7 @@
       </section>
     </div>
     <articleInfo :links='links' date='更新于 2019.7.12'/>
-    <globalFooter>右可的影像集</globalFooter>
+    <globalFooter></globalFooter>
     <top />
   </div>
 </template>
@@ -120,5 +120,7 @@ export default {
 
 .globalFooter {
   margin-top: 160px;
+      width: calc(100% - 32px);
+    padding: 24px 0 40px 0;
 }
 </style>

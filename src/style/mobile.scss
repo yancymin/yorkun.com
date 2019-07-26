@@ -361,7 +361,7 @@
 
             .des {
                 padding: 0 24px;
-                width: 91%;
+                // width: 91%;
                 text-align: center;
                 left: 0;
                 top: 40px;
@@ -463,8 +463,8 @@
             align-items: flex-start;
 
             ::v-deep .globalFooter_links {
-                display: flex;
-                flex-direction: column;
+                // display: flex;
+                // flex-direction: column;
 
                 a {
                     margin: 8px 0 0 0;

@@ -54,6 +54,7 @@ export default {
         &:nth-of-type(2) {
           @include font(12px, white, 400);
           opacity: 0.4;
+          line-height: 16px;
         }
       }
     }

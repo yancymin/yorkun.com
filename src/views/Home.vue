@@ -304,6 +304,8 @@ export default {
     const headerOffset = nav.offsetTop + nav.offsetHeight + 20;
     const mobileHeaderOffset =
       mobileNav.offsetTop + mobileNav.offsetHeight + 100;
+    const project = document.getElementById("project");
+    const works = document.getElementById("works");
 
     window.addEventListener("scroll", e => {
       if (window.scrollY >= headerOffset) {
@@ -316,6 +318,22 @@ export default {
         mobileNav.classList.add("nav-move", "m-nav-move");
       } else {
         mobileNav.classList.remove("nav-move", "m-nav-move");
+      }
+
+      if (window.scrollY === 1060) {
+        nav.classList.add("anchorOn");
+      } else {
+        nav.classList.remove("anchorOn");
+      }
+      if (window.scrollY === 2820) {
+        nav.classList.add("anchorOn2");
+      } else {
+        nav.classList.remove("anchorOn2");
+      }
+      if (window.scrollY === 3828) {
+        nav.classList.add("anchorOn3");
+      } else {
+        nav.classList.remove("anchorOn3");
       }
     });
 
@@ -400,6 +418,41 @@ export default {
 
 .langSwitch {
   background-image: url("../assets/index/language_cn.svg") !important;
+}
+
+.anchorOn {
+  ul {
+    li {
+      &:nth-of-type(1) {
+        a {
+          color: white !important;
+        }
+      }
+    }
+  }
+}
+
+.anchorOn2 {
+  ul {
+    li {
+      &:nth-of-type(2) {
+        a {
+          color: white !important;
+        }
+      }
+    }
+  }
+}
+.anchorOn3 {
+  ul {
+    li {
+      &:nth-of-type(3) {
+        a {
+          color: white !important;
+        }
+      }
+    }
+  }
 }
 
 .nav-2 {

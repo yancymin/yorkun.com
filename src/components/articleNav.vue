@@ -4,7 +4,7 @@
       <a href='/'>
         <img src="../assets/index/small_logo.svg" alt />
       </a>
-      <a href="/">
+      <a @click="goBack()">
         <img src="../assets/back.svg" alt />
       </a>
     </div>
@@ -13,7 +13,12 @@
 
 <script>
 export default {
-  name: "articleNav"
+  name: "articleNav",
+  methods: {
+    goBack() {
+      this.$router.back(-1)
+    }
+  }
 };
 </script>
 
@@ -40,11 +45,11 @@ export default {
     }
 
     a {
-      &:hover {
+      /* &:hover {
         img {
           filter: contrast(2);
         }
-      }
+      } */
 
       img {
         transition: all 0.3s ease;

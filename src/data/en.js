@@ -78,7 +78,7 @@ export default [
     cardLogo: wangguan_logo,
     des:
       "Accurately identify the user's mobile phone number, Help companies optimize the verification process and let their users enjoy a better experience. ",
-    cardColor: ' ',
+    cardColor: '#F4F6F9',
     tag: 'App UI Design',
     buttonTextD: 'Detail',
     buttonTextG: ' ',

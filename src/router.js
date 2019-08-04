@@ -23,5 +23,10 @@ export default new Router({
       name: 'motion',
       component: () => import('./views/motion.vue'),
     },
+    {
+      path: '/onelogin',
+      name: 'onelogin',
+      component: () => import('./views/onelogin.vue'),
+    },
   ],
 });

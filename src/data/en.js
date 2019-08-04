@@ -94,6 +94,6 @@ export default [
     isWhiteBotton: false,
     isTag: true,
     bgImg: app_onelogin,
-    hrefD: '/article-1',
+    hrefD: '/onelogin',
   },
 ];

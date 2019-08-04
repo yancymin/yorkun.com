@@ -5,7 +5,13 @@
       <section>
         <div class="video-wrap">
           <div id="video-loading" :class="{loadingMotion: isLoading}"></div>
-          <video poster="../assets/article/onelogin/OL-01-pic.png" id="video" @click="clickPlay()">
+          <video
+            poster="../assets/article/onelogin/OL-01-pic.png"
+            id="video"
+            @click="clickPlay()"
+            webkit-playsinline="true"
+            playsinline="true"
+          >
             <!-- <source src="https://assets.mixkit.co/videos/867/867-720.mp4" type="video/mp4" /> -->
             <source src="../assets/article/onelogin/OL-01_video.mp4" type="video/mp4" />
           </video>

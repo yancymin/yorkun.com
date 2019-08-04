@@ -113,9 +113,9 @@ export default {
 <style lang="scss" scoped>
 video {
   width: 100%;
+  height: auto;
   max-width: 1200px;
   transition: all 0.3s ease;
-  object-fit: fill;
 }
 
 #video-loading {

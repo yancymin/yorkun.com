@@ -75,11 +75,11 @@ export default {
       console.log(this.isLoading);
     });
 
-    video.addEventListener("canplay", function() {
-      let videoWrap = document.getElementById("videoWrap");
-      videoWrap.style.height = video.videoHeight;
-      console.log(video.videoHeight)
-    });
+    // video.addEventListener("canplay", function() {
+    //   let videoWrap = document.getElementById("videoWrap");
+    //   videoWrap.style.height = video.videoHeight;
+    //   console.log(video.videoHeight)
+    // });
   },
   data() {
     return {
@@ -119,6 +119,7 @@ video {
   height: auto;
   max-width: 1200px;
   transition: all 0.3s ease;
+  object-fit: cover;
 }
 
 #video-loading {
@@ -147,7 +148,8 @@ video {
 .video-wrap {
   position: relative;
   display: inline-flex;
-  width: 100%;
+  width: 100vw;
+  height: calc((100vw / 4) * 2);
   max-width: 1200px;
   overflow: hidden;
 

@@ -3,7 +3,7 @@
     <articleNav />
     <div class="article-wrap">
       <section>
-        <div class="video-wrap">
+        <div class="video-wrap" id="videoWrap">
           <img
             id="video-loading"
             :class="{loadingMotion: isLoading}"
@@ -75,8 +75,11 @@ export default {
       console.log(this.isLoading);
     });
 
-    let videoHeight = video.videoHeight;
-    console.log(videoHeight);
+    video.addEventListener("canplay", function() {
+      let videoWrap = document.getElementById("videoWrap");
+      videoWrap.style.height = video.videoHeight;
+      console.log(video.videoHeight)
+    });
   },
   data() {
     return {

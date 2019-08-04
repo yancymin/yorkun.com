@@ -11,6 +11,8 @@
             @click="clickPlay()"
             webkit-playsinline="true"
             playsinline="true"
+            height="auto"
+            width="100vw"
           >
             <!-- <source src="https://assets.mixkit.co/videos/867/867-720.mp4" type="video/mp4" /> -->
             <source src="../assets/article/onelogin/OL-01_video.mp4" type="video/mp4" />

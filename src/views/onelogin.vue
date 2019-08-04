@@ -4,7 +4,11 @@
     <div class="article-wrap">
       <section>
         <div class="video-wrap">
-          <div id="video-loading" :class="{loadingMotion: isLoading}"></div>
+          <img
+            id="video-loading"
+            :class="{loadingMotion: isLoading}"
+            src="../assets/article/onelogin/loading.svg"
+          />
           <video
             poster="../assets/article/onelogin/OL-01-pic.png"
             id="video"
@@ -118,16 +122,14 @@ video {
   z-index: 100;
   left: 20px;
   bottom: 20px;
-  width: 80px;
-  height: 80px;
-  background-color: blue;
-  border-radius: 2%;
+  width: 40px;
+  height: 40px;
   transition: all 0.3s ease-in-out;
   transform: rotate(0);
 }
 
 .loadingMotion {
-  opacity: 1 !important;
+  opacity: 0.2 !important;
   animation: spin 0.6s infinite ease-in-out;
 
   @keyframes spin {

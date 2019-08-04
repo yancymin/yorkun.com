@@ -1,7 +1,7 @@
 <template>
   <div class="article-nav">
     <div class="nav-wrap">
-      <a href='/'>
+      <a href="/">
         <img src="../assets/index/small_logo.svg" alt />
       </a>
       <a @click="goBack()">
@@ -16,8 +16,11 @@ export default {
   name: "articleNav",
   methods: {
     goBack() {
-      this.$router.back(-1)
+      this.$router.back(-1);
     }
+  },
+  mounted() {
+    window.scrollTo(0, 0);
   }
 };
 </script>
@@ -64,20 +67,20 @@ export default {
   }
 }
 
- @media screen and (max-width: 600px)  {
-   .nav-wrap {
-     a {
-       &:first-child {
-         &::after {
-           content: '建议使用桌面浏览器观看';
-           color: #9FA5AF;
-           font-size: 12px;
-           position: relative;
-           top: -6px;
-           left: 14px;
-         }
-       }
-     }
-   }
- }
+@media screen and (max-width: 600px) {
+  .nav-wrap {
+    a {
+      &:first-child {
+        &::after {
+          content: "建议使用桌面浏览器观看";
+          color: #9fa5af;
+          font-size: 12px;
+          position: relative;
+          top: -6px;
+          left: 14px;
+        }
+      }
+    }
+  }
+}
 </style>

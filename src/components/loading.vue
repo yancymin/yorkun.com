@@ -42,6 +42,7 @@ export default {
 
 <style lang="scss" scoped>
 .loading {
+  z-index: 1000000;
   position: fixed;
   top: 0;
   left: 0;

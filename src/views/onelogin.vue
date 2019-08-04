@@ -4,7 +4,7 @@
     <div class="article-wrap">
       <section>
         <div class="video-wrap">
-          <video poster="../assets/article/onelogin/OL-01-pic.png" id="video" @click="play()">
+          <video poster="../assets/article/onelogin/OL-01-pic.png" id="video" @click="clickPlay(e)">
             <source src="../assets/article/onelogin/OL-01_video.mp4" type="video/mp4" />
           </video>
           <img src="../assets/article/onelogin/play_button.png" alt="playBtn" id="playBtn" />
@@ -23,8 +23,6 @@ import articleNav from "../components/articleNav.vue";
 import globalFooter from "../components/globalFooter.vue";
 import top from "../components/top.vue";
 import articleInfo from "../components/articleInfo.vue";
-import { SSL_OP_NO_SESSION_RESUMPTION_ON_RENEGOTIATION } from "constants";
-import func from '../../vue-temp/vue-editor-bridge';
 
 export default {
   name: "Article-1",
@@ -35,9 +33,19 @@ export default {
     articleInfo
   },
   methods: {
-    play() {
-      isPlay: true
-    
+    clickPlay() {
+      const video = document.getElementById("video");
+      const playBtn = document.getElementById("playBtn");
+
+      this.isPlay = !this.isPlay;
+      if (this.isPlay === true) {
+        video.play();
+        video.volume = 0.5;
+        playBtn.style.display = "none";
+      } else {
+        video.pause();
+        playBtn.style.display = "block";
+      }
     }
   },
   data() {
@@ -74,9 +82,10 @@ video {
 
 .video-wrap {
   position: relative;
+  display: inline-flex;
 
   &:hover {
-    video,
+
     #playBtn {
       transform: scale(1.03);
     }

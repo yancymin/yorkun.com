@@ -26,6 +26,7 @@ export default {
 @import "../style/global.scss";
 
 .article-nav {
+  z-index: 9999;
   position: fixed;
   top: 0;
   left: 0;

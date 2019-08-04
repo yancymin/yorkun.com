@@ -4,7 +4,9 @@
     <div class="article-wrap">
       <section>
         <div class="video-wrap">
-          <video poster="../assets/article/onelogin/OL-01-pic.png" id="video" @click="clickPlay(e)">
+          <div id="video-loading" :class="{loadingMotion: isLoading}"></div>
+          <video poster="../assets/article/onelogin/OL-01-pic.png" id="video" @click="clickPlay()">
+            <!-- <source src="https://assets.mixkit.co/videos/867/867-720.mp4" type="video/mp4" /> -->
             <source src="../assets/article/onelogin/OL-01_video.mp4" type="video/mp4" />
           </video>
           <img src="../assets/article/onelogin/play_button.png" alt="playBtn" id="playBtn" />
@@ -45,12 +47,34 @@ export default {
       } else {
         video.pause();
         playBtn.style.display = "block";
+        this.isLoading = false;
       }
     }
+  },
+  mounted() {
+    let _this = this;
+    video.addEventListener("playing", function() {
+      console.log("playing");
+      return (_this.isLoading = false);
+      console.log(this.isLoading);
+    });
+
+    video.addEventListener("waiting", function() {
+      console.log("loading....");
+      return (_this.isLoading = true);
+      console.log(this.isLoading);
+    });
+
+    // if (this.video.played) {
+    //   this.isLoading = false;
+    // } else {
+    //   this.isLoading = true;
+    // }
   },
   data() {
     return {
       isPlay: false,
+      isLoading: false,
       imgSrc: [
         {
           src: require("../assets/article/onelogin/OL-02.png")
@@ -80,12 +104,38 @@ video {
   transition: all 0.3s ease;
 }
 
+#video-loading {
+  opacity: 0;
+  position: absolute;
+  z-index: 100;
+  left: 20px;
+  bottom: 20px;
+  width: 80px;
+  height: 80px;
+  background-color: blue;
+  border-radius: 2%;
+  transition: all 0.3s ease-in-out;
+  transform: rotate(0);
+}
+
+.loadingMotion {
+  opacity: 1 !important;
+  animation: spin 0.6s infinite ease-in-out;
+
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
+
 .video-wrap {
   position: relative;
   display: inline-flex;
+  width: 100%;
+  max-width: 1200px;
 
   &:hover {
-
     #playBtn {
       transform: scale(1.03);
     }

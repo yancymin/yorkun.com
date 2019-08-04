@@ -145,11 +145,17 @@ video {
   }
 }
 
+@media screen and (max-width: 600px) {
+  .video-wrap {
+    height: calc((100vw / 16) * 9) !important;
+  }
+}
+
 .video-wrap {
   position: relative;
   display: inline-flex;
   width: 100vw;
-  height: calc((100vw / 4) * 2);
+  height: auto;
   max-width: 1200px;
   overflow: hidden;
 

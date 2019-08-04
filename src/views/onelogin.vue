@@ -15,8 +15,6 @@
             @click="clickPlay()"
             webkit-playsinline="true"
             playsinline="true"
-            height="auto"
-            width="100vw"
           >
             <!-- <source src="https://assets.mixkit.co/videos/867/867-720.mp4" type="video/mp4" /> -->
             <source src="../assets/article/onelogin/OL-01_video.mp4" type="video/mp4" />
@@ -77,11 +75,8 @@ export default {
       console.log(this.isLoading);
     });
 
-    // if (this.video.played) {
-    //   this.isLoading = false;
-    // } else {
-    //   this.isLoading = true;
-    // }
+    let videoHeight = video.videoHeight;
+    console.log(videoHeight);
   },
   data() {
     return {
@@ -120,6 +115,7 @@ video {
   width: 100%;
   max-width: 1200px;
   transition: all 0.3s ease;
+  object-fit: fill;
 }
 
 #video-loading {
@@ -150,6 +146,7 @@ video {
   display: inline-flex;
   width: 100%;
   max-width: 1200px;
+  overflow: hidden;
 
   &:hover {
     #playBtn {

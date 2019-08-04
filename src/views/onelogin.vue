@@ -25,7 +25,7 @@
         </div>
         <img :src="item.src" alt v-for="(item, index) in imgSrc" :key="index" />
       </section>
-      <articleInfo />
+      <articleInfo :links="links" date="更新于 2019.8.4" />
       <globalFooter />
     </div>
     <top />
@@ -87,6 +87,12 @@ export default {
     return {
       isPlay: false,
       isLoading: false,
+      links: [
+        {
+          title: "更多设计作品",
+          href: "http://yorkun.lofter.com"
+        }
+      ],
       imgSrc: [
         {
           src: require("../assets/article/onelogin/OL-02.png")

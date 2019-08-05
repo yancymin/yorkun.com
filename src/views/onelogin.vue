@@ -23,10 +23,10 @@
         </div>
         <img :src="item.src" alt v-for="(item, index) in imgSrc" :key="index" />
       </section>
+    </div>
       <articleInfo :links="links" date="更新于 2019.8.4" />
       <globalFooter />
-    </div>
-    <top />
+      <top />
   </div>
 </template>
 
@@ -150,6 +150,11 @@ video {
     height: calc((100vw / 16) * 9) !important;
   }
 }
+@media screen and (min-width: 1200px) {
+  video {
+    height: 675px;
+  }
+}
 
 .video-wrap {
   position: relative;
@@ -173,5 +178,10 @@ video {
     bottom: 20px;
     transition: all 0.3s ease;
   }
+}
+
+.globalFooter {
+  margin-top: 160px;
+
 }
 </style>

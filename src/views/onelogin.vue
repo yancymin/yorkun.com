@@ -120,6 +120,7 @@ video {
   max-width: 1200px;
   transition: all 0.3s ease;
   object-fit: cover;
+  cursor: pointer;
 }
 
 #video-loading {
@@ -166,7 +167,7 @@ video {
 
   &:hover {
     #playBtn {
-      transform: scale(1.03);
+      transform: scale(1.1);
     }
   }
 
@@ -182,6 +183,5 @@ video {
 
 .globalFooter {
   margin-top: 160px;
-
 }
 </style>

@@ -49,6 +49,8 @@ export default {
     }
 
     a {
+      cursor: pointer;
+
       /* &:hover {
         img {
           filter: contrast(2);
@@ -57,6 +59,7 @@ export default {
 
       img {
         transition: all 0.3s ease;
+        cursor: pointer;
       }
     }
 

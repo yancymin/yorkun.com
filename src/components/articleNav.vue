@@ -51,11 +51,13 @@ export default {
     a {
       cursor: pointer;
 
-      /* &:hover {
-        img {
-          filter: contrast(2);
+      &:last-child {
+        &:hover {
+          img {
+            filter: contrast(2);
+          }
         }
-      } */
+      }
 
       img {
         transition: all 0.3s ease;

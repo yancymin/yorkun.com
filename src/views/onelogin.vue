@@ -102,10 +102,13 @@ export default {
           src: require("../assets/article/onelogin/OL-04.png")
         },
         {
-          src: require("../assets/article/onelogin/OL-05.gif")
+          src: require("../assets/article/onelogin/OL-05.png")
         },
         {
           src: require("../assets/article/onelogin/OL-06.png")
+        },
+        {
+          src: require("../assets/article/onelogin/OL-07.png")
         }
       ]
     };

@@ -200,7 +200,7 @@
           </div>
         </div>
       </div>
-      <globalFooter/>
+      <globalFooter />
     </div>
     <top />
   </div>
@@ -816,6 +816,11 @@ export default {
 
         &:last-child {
           margin-right: 0;
+          filter: brightness(1.2) hue-rotate(1deg) saturate(1.2);
+
+          &::v-deep .tag {
+            opacity: 0.8;
+          }
         }
       }
       @include flex-all-center {

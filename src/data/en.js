@@ -10,7 +10,7 @@ import geetestweb from '../assets/index/geetestweb.png';
 import ui_captcha from '../assets/index/ui_captcha.gif';
 import app_onelogin from '../assets/index/app_onelogin.png';
 import Portrait from '../assets/index/IMG_3045.png';
-import gmake_logo from '../assets/index/gmake_logo.png';
+import gmake_logo from '../assets/index/gmake_logo2.png';
 import banana from '../assets/index/banana_banner.gif';
 import myDribbble from '../assets/index/mydribbble.png';
 import teamDribbble from '../assets/index/teamdribbble.png';

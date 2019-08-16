@@ -32,7 +32,7 @@ export default {
       links: [
         {
           title: '「行为验证」在线体验',
-          href: 'https://www.geetest.com/show/',
+          href: 'https://www.geetest.com/show',
         },
         {
           title: '《滑动拼图验证背后的故事》',

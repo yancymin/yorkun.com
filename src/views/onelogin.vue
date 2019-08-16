@@ -87,8 +87,8 @@ export default {
       isLoading: false,
       links: [
         {
-          title: "更多设计作品",
-          href: "http://yorkun.lofter.com"
+          title: "OneLogin 产品详情",
+          href: "https://www.geetest.com/Gateway"
         }
       ],
       imgSrc: [

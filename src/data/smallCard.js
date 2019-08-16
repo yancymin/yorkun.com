@@ -24,6 +24,7 @@ export default {
       tagColor: 'rgba(0,0,0,0.4)',
       bgImg: gmakeLogo,
       isCenterImg: true,
+      link: '/gmake',
     },
   ],
   en: [
@@ -47,6 +48,7 @@ export default {
       tagColor: 'rgba(0,0,0,0.4)',
       bgImg: gmakeLogo,
       isCenterImg: true,
+      link: '/gmake',
     },
   ],
 };

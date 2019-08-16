@@ -31,7 +31,7 @@ export default {
     return {
       links: [
         {
-          title: '「行为验证」在线体验',
+          title: '行为验证 在线体验',
           href: 'https://www.geetest.com/show',
         },
         {

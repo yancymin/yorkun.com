@@ -27,7 +27,7 @@ export default [
   {
     title: 'GEETEST 网站',
     cardLogo: geetestweb_logo,
-    des: '安全服务类企业网站的一次改版，承接起业务线的扩充和品牌视觉的升级。',
+    des: '安全服务类企业网站的一次改版，承接起业务线的扩充和视觉的升级。',
     cardColor: ' ',
     tag: '网页设计',
     buttonTextD: '项目详情',

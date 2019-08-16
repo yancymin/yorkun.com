@@ -28,5 +28,10 @@ export default new Router({
       name: 'onelogin',
       component: () => import('./views/onelogin.vue'),
     },
+    {
+      path: '/gmake',
+      name: 'gmake',
+      component: () => import('./views/gmake.vue'),
+    },
   ],
 });

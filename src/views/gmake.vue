@@ -50,6 +50,30 @@ export default {
         {
           src: require('../assets/article/gmake/GM-03.png'),
         },
+        {
+          src: require('../assets/article/gmake/GM-04.png'),
+        },
+        {
+          src: require('../assets/article/gmake/GM-05.png'),
+        },
+        {
+          src: require('../assets/article/gmake/GM-06.png'),
+        },
+        {
+          src: require('../assets/article/gmake/GM-07.png'),
+        },
+        {
+          src: require('../assets/article/gmake/GM-08.png'),
+        },
+        {
+          src: require('../assets/article/gmake/GM-09.png'),
+        },
+        {
+          src: require('../assets/article/gmake/GM-10.png'),
+        },
+        {
+          src: require('../assets/article/gmake/GM-11.png'),
+        }
       ],
     };
   },

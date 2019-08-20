@@ -848,6 +848,16 @@ export default {
         margin-right: 20px;
         &:last-child {
           margin-right: 0;
+
+          &::before {
+            content: '';
+            display: block;
+            width: 116px;
+            height: 44px;
+            background-image: url('../assets/index/gdesign_logo2.svg');
+            background-repeat: no-repeat;
+            background-size: cover;
+          }
         }
       }
 

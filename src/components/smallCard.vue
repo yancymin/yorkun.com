@@ -49,7 +49,16 @@ export default {
   margin-bottom: 10px;
   transition: all 0.3s ease;
   cursor: pointer;
+  transform: translateY(10%);
+  animation: showCard 1s ease forwards;
   @include flex-all-center;
+
+    @keyframes showCard {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 
   &:hover {
     .bgImg {

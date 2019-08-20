@@ -3,7 +3,9 @@
     <articleNav />
     <div class="article-wrap">
       <section>
-        <img :src="item.src" alt v-for="(item, index) in imgSrc" :key="index" />
+        <div class="img" v-for="(item, index) in imgSrc" :key="index">
+          <img :src="item.src" alt />
+        </div>
       </section>
     </div>
     <articleInfo :links="links" date="更新于 2019.7.12" />
@@ -64,20 +66,24 @@ export default {
           src: require("../assets/article/gmake/GM-07.jpg")
         },
         {
-          src: require("../assets/article/gmake/GM-08.jpg")
+          src: require("../assets/article/gmake/GM-08.png")
         },
         {
-          src: require("../assets/article/gmake/GM-10.png")
+          src: require("../assets/article/gmake/GM-09.png")
+        },
+        {
+          src: require("../assets/article/gmake/GM-10.jpg")
         },
         {
           src: require("../assets/article/gmake/GM-11.jpg")
         },
-        {
-          src: require("../assets/article/gmake/GM-12.jpg")
-        },
+
         {
           src: require("../assets/article/gmake/GM-13.jpg")
         },
+        {
+          src: require("../assets/article/gmake/GM-14.jpg")
+        }
       ]
     };
   }
@@ -93,5 +99,31 @@ export default {
   margin-top: 160px;
   width: calc(100% - 32px);
   padding: 24px 0 40px 0;
+}
+
+section {
+  .img {
+    &:nth-of-type(5) {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &::before {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 20%;
+        height: 23%;
+        background-image: url("../assets/article/gmake/GM-05-gif.gif");
+        background-repeat: no-repeat;
+        background-size: cover;
+        top: 51%;
+      }
+    }
+  }
+  img {
+    display: inherit;
+  }
 }
 </style>

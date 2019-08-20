@@ -31,7 +31,7 @@ export default {
     cardLogo: banana_logo,
     des: 'Life is so much banana, listen to the story of a small banana, the first cartoon image of this own design.',
     cardColor: ' #FC85A1',
-    tag: '主题/表情设计',
+    tag: 'Cartoon Design',
     buttonTextD: 'Bananaaa~',
     buttonTextG: 'Stickers',
     isTagWhite: true,

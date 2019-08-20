@@ -46,35 +46,38 @@ export default {
           src: require("../assets/article/gmake/GM-01.gif")
         },
         {
-          src: require("../assets/article/gmake/GM-02.png")
+          src: require("../assets/article/gmake/GM-02.jpg")
         },
         {
-          src: require("../assets/article/gmake/GM-03.png")
+          src: require("../assets/article/gmake/GM-03.jpg")
         },
         {
-          src: require("../assets/article/gmake/GM-04.png")
+          src: require("../assets/article/gmake/GM-04.jpg")
         },
         {
-          src: require("../assets/article/gmake/GM-05.png")
+          src: require("../assets/article/gmake/GM-05-bg.png")
         },
         {
-          src: require("../assets/article/gmake/GM-06.png")
+          src: require("../assets/article/gmake/GM-06.jpg")
         },
         {
-          src: require("../assets/article/gmake/GM-07.png")
+          src: require("../assets/article/gmake/GM-07.jpg")
         },
         {
-          src: require("../assets/article/gmake/GM-08.png")
-        },
-        {
-          src: require("../assets/article/gmake/GM-09.png")
+          src: require("../assets/article/gmake/GM-08.jpg")
         },
         {
           src: require("../assets/article/gmake/GM-10.png")
         },
         {
-          src: require("../assets/article/gmake/GM-11.png")
-        }
+          src: require("../assets/article/gmake/GM-11.jpg")
+        },
+        {
+          src: require("../assets/article/gmake/GM-12.jpg")
+        },
+        {
+          src: require("../assets/article/gmake/GM-13.jpg")
+        },
       ]
     };
   }

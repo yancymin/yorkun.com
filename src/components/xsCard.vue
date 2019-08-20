@@ -65,7 +65,7 @@ export default {
     position: absolute;
     top: 0;
     right: 0;
-    width: 195px;
+    width: 201px;
     height: 120px;
     transition: all 0.2s ease;
     border-radius: 10px;

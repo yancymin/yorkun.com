@@ -99,13 +99,19 @@ export default {
           src: require('../assets/article/1/CAP-19.png'),
         },
         {
-          src: require('../assets/article/1/CAP-20.jpg'),
+          src: require('../assets/article/1/CAP-20.png'),
         },
         {
           src: require('../assets/article/1/CAP-21.png'),
         },
         {
-          src: require('../assets/article/1/CAP-22.png'),
+          src: require('../assets/article/1/CAP-22.jpg'),
+        },
+        {
+          src: require('../assets/article/1/CAP-23.png'),
+        },
+        {
+          src: require('../assets/article/1/CAP-24.png'),
         },
       ],
     };

@@ -77,7 +77,7 @@ export default {
       position: relative;
       bottom: -170px;
       align-self: center;
-      @include font(14px, $font-color-white-2, 400);
+      @include font(14px, $font-color-white-3, 400);
     }
   }
 

@@ -880,7 +880,7 @@ export default {
         }
 
         .des {
-          max-width: 760px;
+          max-width: 720px;
           @include font(14px, $font-color-white-3, 400) {
             line-height: 20px;
           }
@@ -899,7 +899,7 @@ export default {
 
         .social {
           width: 100%;
-          max-width: 760px;
+          max-width: 720px;
 
           .links {
             a {

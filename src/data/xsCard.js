@@ -23,7 +23,7 @@ export default {
       bgImg: gMake,
       cardColor: '#E5E7EB',
       isCenterImg: false,
-      link: 'https://design.geetest.com/',
+      link: 'https://geetest.design',
     },
   ],
   en: [
@@ -46,7 +46,7 @@ export default {
       bgImg: gMake,
       cardColor: '#E5E7EB',
       isCenterImg: false,
-      link: 'https://design.geetest.com/',
+      link: 'https://geetest.design',
     },
   ],
 };

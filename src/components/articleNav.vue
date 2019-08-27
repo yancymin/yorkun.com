@@ -77,7 +77,7 @@ export default {
     a {
       &:first-child {
         &::after {
-          content: "建议使用桌面浏览器观看";
+          content: "建议使用桌面设备观看";
           color: #9fa5af;
           font-size: 12px;
           position: relative;

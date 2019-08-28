@@ -38,5 +38,10 @@ export default new Router({
       name: 'gmake',
       component: () => import('./views/gmake.vue'),
     },
+    {
+      path: '/banana',
+      name: 'banana',
+      component: () => import('./views/banana.vue'),
+    },
   ],
 });

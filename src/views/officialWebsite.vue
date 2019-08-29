@@ -46,7 +46,25 @@ export default {
         },
         {
           src: require('../assets/article/officialWebsite/web-02.gif'),
-        }
+        },
+        {
+          src: require('../assets/article/officialWebsite/web-03.png'),
+        },
+        {
+          src: require('../assets/article/officialWebsite/web-04.png'),
+        },
+        {
+          src: require('../assets/article/officialWebsite/web-05.gif'),
+        },
+        {
+          src: require('../assets/article/officialWebsite/web-06.png'),
+        },
+        {
+          src: require('../assets/article/officialWebsite/web-07.png'),
+        },
+        {
+          src: require('../assets/article/officialWebsite/web-08.png'),
+        },
       ],
     };
   },

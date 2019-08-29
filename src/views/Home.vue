@@ -581,6 +581,7 @@ export default {
       margin-top: 120px;
 
       .logo {
+        z-index: 111;
         position: absolute;
         opacity: 0;
         animation: showLogo2 2.5s linear forwards;
@@ -603,19 +604,22 @@ export default {
           z-index: 100;
           position: absolute;
           display: block;
-          width: 385px;
-          height: 500px;
-          border-radius: 0 0 8px 8px;
+          width: 380px;
+          height: 521px;
+          /* border-radius: 0 0 8px 8px; */
           top: 46px;
-          background-color: $black;
-          transform: scaleY(1);
+          /* background-color: $black; */
+          background: url('../assets/index/mask.svg') no-repeat;
+              background-size: 380px 521px;
+          transform: translateY(0);
           transform-origin: top;
           will-change: transform;
-          animation: showLogo1 1.4s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+          animation: showLogo1 1.8s cubic-bezier(0.77, 0, 0.175, 1) forwards;
 
           @keyframes showLogo1 {
             to {
-              transform: scaleY(0);
+              /* transform: scaleY(0); */
+              transform: translateY(-100%);
             }
           }
         }

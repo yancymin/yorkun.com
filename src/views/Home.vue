@@ -600,6 +600,8 @@ export default {
       .motion {
         position: relative;
         bottom: -158px;
+        overflow: hidden;
+        
         .motion_mask {
     
           z-index: 100;

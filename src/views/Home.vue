@@ -586,7 +586,7 @@ export default {
         position: absolute;
         opacity: 0;
         animation: showLogo2 2.5s linear forwards;
-        animation-delay: 1s;
+        animation-delay: 0.6s;
         width: 160px;
         top: 148px;
 
@@ -613,14 +613,14 @@ export default {
           background-size: cover;
           transform-origin: top;
           will-change: transform;
-          animation: showLogo1 2s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+          animation: showLogo1 1.2s cubic-bezier(0.77, 0, 0.175, 1) forwards;
 
           @keyframes showLogo1 {
             0% {
-              transform: translateY(0) scaleY(1);
+              transform: translateY(0);
             }
             100% {
-              transform: translateY(-500px) scaleY(0);
+              transform: translateY(-500px);
             }
           }
         }

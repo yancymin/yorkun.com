@@ -48,6 +48,7 @@
       <div class="head_container">
         <img src="../assets/index/logo_banner.png" alt class="logo" />
         <div class="motion">
+          <img src="../assets/index/mask.svg" alt class="motion_mask" />
           <img src="../assets/index/name_logo.svg" alt class="motion_logo" />
         </div>
       </div>
@@ -599,18 +600,16 @@ export default {
       .motion {
         position: relative;
         bottom: -158px;
-        &::before {
-          content: "";
+        .motion_mask {
+    
           z-index: 100;
           position: absolute;
           display: block;
-          width: 380px;
-          height: 521px;
-          /* border-radius: 0 0 8px 8px; */
+          width: 100%;
+          height: auto;
           top: 46px;
-          /* background-color: $black; */
           background: url('../assets/index/mask.svg') no-repeat;
-              background-size: 380px 521px;
+              background-size: cover;
           transform: translateY(0);
           transform-origin: top;
           will-change: transform;

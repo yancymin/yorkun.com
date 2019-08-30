@@ -601,26 +601,26 @@ export default {
         position: relative;
         bottom: -158px;
         overflow: hidden;
-        
+
         .motion_mask {
-    
           z-index: 100;
           position: absolute;
           display: block;
           width: 100%;
           height: auto;
           top: 46px;
-          background: url('../assets/index/mask.svg') no-repeat;
-              background-size: cover;
-          transform: translateY(0);
+          background: url("../assets/index/mask.svg") no-repeat;
+          background-size: cover;
           transform-origin: top;
           will-change: transform;
-          animation: showLogo1 1.8s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+          animation: showLogo1 2s cubic-bezier(0.77, 0, 0.175, 1) forwards;
 
           @keyframes showLogo1 {
-            to {
-              /* transform: scaleY(0); */
-              transform: translateY(-100%);
+            0% {
+              transform: translateY(0) scaleY(1);
+            }
+            100% {
+              transform: translateY(-500px) scaleY(0);
             }
           }
         }
@@ -855,11 +855,11 @@ export default {
           margin-right: 0;
 
           &::before {
-            content: '';
+            content: "";
             display: block;
             width: 116px;
             height: 44px;
-            background-image: url('../assets/index/gdesign_logo2.svg');
+            background-image: url("../assets/index/gdesign_logo2.svg");
             background-repeat: no-repeat;
             background-size: cover;
           }

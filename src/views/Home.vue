@@ -620,7 +620,7 @@ export default {
               transform: translateY(0);
             }
             100% {
-              transform: translateY(-500px);
+              transform: translateY(-510px);
             }
           }
         }

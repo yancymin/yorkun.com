@@ -6,7 +6,7 @@
 import { setTimeout } from 'timers';
 export default {
   name: "loading",
-  props: ["isMotion"],
+  // props: ["isMotion"],
   data() {
     return {
       isMotion: false

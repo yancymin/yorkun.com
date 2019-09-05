@@ -3,10 +3,12 @@
     <div class="globalFooter_links">
       <span>Links:</span>
       <a href="https://yancymin.design" target="_blank">Yancy Min</a>
-      <a href="http://yorkunpic.lofter.com" target="_blank">
+      <a href="https://www.liuchangyi.com/" target="_blank">Charlie Liu</a>
+      <a href="https://www.dribbbbble.com" target="_blank">Dark Mode for Dribbble</a>
+      <!-- <a href="http://yorkunpic.lofter.com" target="_blank">
         {{footerLinkText}}
         <slot></slot>
-      </a>
+      </a>-->
     </div>
     <div
       class="globalFooter_copyright"
@@ -37,6 +39,7 @@ export default {
 
   span {
     margin-right: 8px;
+    @include font(14px, $font-color-white-3, 400);
   }
 
   &_links {
@@ -70,11 +73,11 @@ export default {
     align-items: flex-start;
 
     .globalFooter_links {
-      /* display: flex;
-      flex-direction: column; */
+      display: flex;
+      flex-direction: column;
 
       a {
-        margin: 8px 0 0 0;
+        margin: 14px 0 0 0;
 
         &:last-child {
           border: none;

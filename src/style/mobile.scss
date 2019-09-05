@@ -5,10 +5,13 @@
 }
 
 @media screen and (max-width: 600px) {
-    #project, #works {
+
+    #project,
+    #works {
         position: relative !important;
         bottom: 0 !important;
     }
+
     #nav-1 {
         display: none;
     }
@@ -26,9 +29,24 @@
                 .logo {
                     top: 118px;
                 }
+
                 .motion {
                     position: absolute;
                     bottom: 0;
+
+                    .motion_mask {
+                        animation: showLogo3 1.2s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+
+                        @keyframes showLogo3 {
+                            0% {
+                                transform: translateY(0);
+                            }
+
+                            100% {
+                                transform: translateY(-390px);
+                            }
+                        }
+                    }
 
                     .motion_logo {
                         width: 71vw;
@@ -55,7 +73,7 @@
             }
         }
 
-     
+
 
 
 
@@ -319,8 +337,8 @@
 
                     span {
                         font-size: 12px;
-                            align-self: center;
-    bottom: -125px;
+                        align-self: center;
+                        bottom: -125px;
 
                     }
 

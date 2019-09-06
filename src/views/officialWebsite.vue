@@ -76,6 +76,33 @@ export default {
         {
           src: require('../assets/article/officialWebsite/web-13.png'),
         },
+        {
+          src: require('../assets/article/officialWebsite/web-14.png'),
+        },
+        {
+          src: require('../assets/article/officialWebsite/web-15.gif'),
+        },
+        {
+          src: require('../assets/article/officialWebsite/web-16.gif'),
+        },
+        {
+          src: require('../assets/article/officialWebsite/web-17.gif'),
+        },
+        {
+          src: require('../assets/article/officialWebsite/web-18.gif'),
+        },
+        {
+          src: require('../assets/article/officialWebsite/web-19.png'),
+        },
+        {
+          src: require('../assets/article/officialWebsite/web-20.png'),
+        },
+        {
+          src: require('../assets/article/officialWebsite/web-21.png'),
+        },
+        {
+          src: require('../assets/article/officialWebsite/web-22.png'),
+        },
       ],
     };
   },

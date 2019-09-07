@@ -854,14 +854,8 @@ export default {
         &:last-child {
           margin-right: 0;
 
-          &::before {
-            content: "";
-            display: block;
-            width: 116px;
-            height: 44px;
-            background-image: url("../assets/index/gdesign_logo2.svg");
-            background-repeat: no-repeat;
-            background-size: cover;
+          ::v-deep h2 {
+            color: #403825;
           }
         }
       }

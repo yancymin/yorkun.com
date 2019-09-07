@@ -1,6 +1,6 @@
 import myDribbble from '../assets/index/mydribbble.png';
 import teamDribbble from '../assets/index/teamdribbble.png';
-import gMake from '../assets/index/gdmap.png';
+import photoAlbum from '../assets/index/photoAlbum.png';
 
 export default {
   cn: [
@@ -19,9 +19,9 @@ export default {
       link: 'https://dribbble.com/geetest',
     },
     {
-      title: ' ',
-      bgImg: gMake,
-      cardColor: '#E5E7EB',
+      title: '我的\n影像集',
+      bgImg: photoAlbum,
+      cardColor: '#f5e6ca',
       isCenterImg: false,
       link: 'https://geetest.design',
     },
@@ -42,9 +42,9 @@ export default {
       link: 'https://dribbble.com/geetest',
     },
     {
-      title: '',
-      bgImg: gMake,
-      cardColor: '#E5E7EB',
+      title: 'My Photo\nAlbum',
+      bgImg: photoAlbum,
+      cardColor: '#f5e6ca',
       isCenterImg: false,
       link: 'https://geetest.design',
     },

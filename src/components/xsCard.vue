@@ -10,8 +10,8 @@
 
 <script>
 export default {
-  name: 'xsCard',
-  props: ['title', 'bgImg', 'cardColor', 'isCenterImg', 'link'],
+  name: "xsCard",
+  props: ["title", "bgImg", "cardColor", "isCenterImg", "link"]
 };
 </script>
 
@@ -20,7 +20,6 @@ export default {
 
 .xsCard {
   position: relative;
-  // width: calc(386px - 30px);
   width: 100%;
   max-width: 387px;
   height: 120px;
@@ -50,7 +49,9 @@ export default {
     position: absolute;
     top: 25px;
     z-index: 1;
-    width: 30%;
+    width: 40%;
+    white-space: pre;
+    
     @include font(30px, $font-color-white-1, 700) {
       line-height: 34px;
     }

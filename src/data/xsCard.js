@@ -23,7 +23,7 @@ export default {
       bgImg: photoAlbum,
       cardColor: '#f5e6ca',
       isCenterImg: false,
-      link: 'https://geetest.design',
+      link: 'http://yorkunpic.lofter.com/',
     },
   ],
   en: [
@@ -46,7 +46,7 @@ export default {
       bgImg: photoAlbum,
       cardColor: '#f5e6ca',
       isCenterImg: false,
-      link: 'https://geetest.design',
+      link: 'http://yorkunpic.lofter.com/',
     },
   ],
 };

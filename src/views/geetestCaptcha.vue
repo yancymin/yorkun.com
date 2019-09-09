@@ -1,5 +1,5 @@
 <template>
-  <div class="article-1 article">
+  <div class="geetestCaptcha article">
     <articleNav />
     <div class="article-wrap">
       <section>
@@ -20,7 +20,7 @@ import top from '../components/top.vue';
 import articleInfo from '../components/articleInfo.vue';
 
 export default {
-  name: 'Article-1',
+  name: 'geetestCaptcha',
   components: {
     articleNav,
     globalFooter,
@@ -42,76 +42,76 @@ export default {
 
       imgSrc: [
         {
-          src: require('../assets/article/1/CAP-01.png'),
+          src: require('../assets/article/geetestCaptcha/CAP-01.png'),
         },
         {
-          src: require('../assets/article/1/CAP-02.png'),
+          src: require('../assets/article/geetestCaptcha/CAP-02.png'),
         },
         {
-          src: require('../assets/article/1/CAP-03.png'),
+          src: require('../assets/article/geetestCaptcha/CAP-03.png'),
         },
         {
-          src: require('../assets/article/1/CAP-04.png'),
+          src: require('../assets/article/geetestCaptcha/CAP-04.png'),
         },
         {
-          src: require('../assets/article/1/CAP-05.png'),
+          src: require('../assets/article/geetestCaptcha/CAP-05.png'),
         },
         {
-          src: require('../assets/article/1/CAP-06.png'),
+          src: require('../assets/article/geetestCaptcha/CAP-06.png'),
         },
         {
-          src: require('../assets/article/1/CAP-07.gif'),
+          src: require('../assets/article/geetestCaptcha/CAP-07.gif'),
         },
         {
-          src: require('../assets/article/1/CAP-08.png'),
+          src: require('../assets/article/geetestCaptcha/CAP-08.png'),
         },
         {
-          src: require('../assets/article/1/CAP-09.gif'),
+          src: require('../assets/article/geetestCaptcha/CAP-09.gif'),
         },
         {
-          src: require('../assets/article/1/CAP-10.png'),
+          src: require('../assets/article/geetestCaptcha/CAP-10.png'),
         },
         {
-          src: require('../assets/article/1/CAP-11.png'),
+          src: require('../assets/article/geetestCaptcha/CAP-11.png'),
         },
         {
-          src: require('../assets/article/1/CAP-12.gif'),
+          src: require('../assets/article/geetestCaptcha/CAP-12.gif'),
         },
         {
-          src: require('../assets/article/1/CAP-13.png'),
+          src: require('../assets/article/geetestCaptcha/CAP-13.png'),
         },
         {
-          src: require('../assets/article/1/CAP-14.gif'),
+          src: require('../assets/article/geetestCaptcha/CAP-14.gif'),
         },
         {
-          src: require('../assets/article/1/CAP-15.gif'),
+          src: require('../assets/article/geetestCaptcha/CAP-15.gif'),
         },
         {
-          src: require('../assets/article/1/CAP-16.png'),
+          src: require('../assets/article/geetestCaptcha/CAP-16.png'),
         },
         {
-          src: require('../assets/article/1/CAP-17.png'),
+          src: require('../assets/article/geetestCaptcha/CAP-17.png'),
         },
         {
-          src: require('../assets/article/1/CAP-18.png'),
+          src: require('../assets/article/geetestCaptcha/CAP-18.png'),
         },
         {
-          src: require('../assets/article/1/CAP-19.png'),
+          src: require('../assets/article/geetestCaptcha/CAP-19.png'),
         },
         {
-          src: require('../assets/article/1/CAP-20.png'),
+          src: require('../assets/article/geetestCaptcha/CAP-20.png'),
         },
         {
-          src: require('../assets/article/1/CAP-21.png'),
+          src: require('../assets/article/geetestCaptcha/CAP-21.png'),
         },
         {
-          src: require('../assets/article/1/CAP-22.jpg'),
+          src: require('../assets/article/geetestCaptcha/CAP-22.jpg'),
         },
         {
-          src: require('../assets/article/1/CAP-23.png'),
+          src: require('../assets/article/geetestCaptcha/CAP-23.png'),
         },
         {
-          src: require('../assets/article/1/CAP-24.png'),
+          src: require('../assets/article/geetestCaptcha/CAP-24.png'),
         },
       ],
     };

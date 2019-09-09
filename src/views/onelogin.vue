@@ -37,7 +37,7 @@ import top from "../components/top.vue";
 import articleInfo from "../components/articleInfo.vue";
 
 export default {
-  name: "Article-1",
+  name: "geetestCaptcha",
   components: {
     articleNav,
     globalFooter,

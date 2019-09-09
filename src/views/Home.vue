@@ -855,6 +855,7 @@ export default {
           margin-right: 0;
 
           ::v-deep h2 {
+            letter-spacing: -0.7px;
             color: #403825;
           }
         }

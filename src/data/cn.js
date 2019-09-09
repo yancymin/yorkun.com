@@ -45,7 +45,7 @@ export default [
     isTag: true,
     bgImg: geetestweb,
     hrefG: 'http://www.geetest.com',
-    hrefD: '/officialWebsite',
+    hrefD: '/geetestWebsite',
   },
   {
     title: '行为验证产品',
@@ -69,7 +69,7 @@ export default [
     isWhiteBotton: true,
     isTag: true,
     bgImg: ui_captcha,
-    hrefD: '/article-1',
+    hrefD: '/geetestCaptcha',
   },
   {
     title: 'APP 一键登录',

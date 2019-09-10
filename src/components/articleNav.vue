@@ -35,8 +35,9 @@ export default {
   left: 0;
   width: 100vw;
   height: 68px;
-  background-color: $black;
   border-bottom: 1px solid rgba(76, 79, 84, 0.6);
+  background-color: rgba(20, 21, 22, 0.85);
+  backdrop-filter: blur(20px);
   @include flex-all-center;
 
   .nav-wrap {

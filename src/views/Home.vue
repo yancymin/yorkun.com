@@ -529,6 +529,8 @@ export default {
       width: 100%;
       padding-top: 24px;
       transition: all 0.3s cubic-bezier(0.4, 0, 0, 1);
+      background-color: rgba(20, 21, 22, 0.85);
+      backdrop-filter: blur(20px);
       @include flex-all-center;
 
       .nav-wrap {

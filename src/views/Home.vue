@@ -505,7 +505,7 @@ export default {
       opacity: 0;
     }
     100% {
-      transform: translateX(-40px);
+      transform: translateX(-32px);
     }
   }
 }
@@ -688,6 +688,7 @@ export default {
 
     /*********** card btn hover  **************/
     ::v-deep .card {
+     
       &:nth-of-type(2) {
         .defaultButton {
           &:hover {
@@ -705,6 +706,10 @@ export default {
         }
       }
       &:nth-of-type(3) {
+          span {
+              color: rgba(255, 255, 255, 0.76) !important;
+          }
+
         .defaultButton {
           &:hover {
             color: $blue;
@@ -797,6 +802,9 @@ export default {
 
       ::v-deep .smallCard {
         &:first-child {
+          .tag {
+            color: white;
+          }
           &:hover {
             .bgImg {
               transform: scale(1.04);
@@ -824,6 +832,10 @@ export default {
         &:last-child {
           margin-right: 0;
           filter: brightness(1.2) hue-rotate(1deg) saturate(1.2);
+
+          &::v-deep span {
+            font-size: 12px;
+          }
 
           &::v-deep .tag {
             opacity: 0.8;

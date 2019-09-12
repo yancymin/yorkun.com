@@ -19,7 +19,7 @@
             <!-- <source src="https://assets.mixkit.co/videos/867/867-720.mp4" type="video/mp4" /> -->
             <source src="../assets/article/onelogin/OL-01_video.mp4" type="video/mp4" />
           </video>
-          <img src="../assets/article/onelogin/play_button.png" alt="playBtn" id="playBtn" />
+          <img src="../assets/article/onelogin/play_button.svg" alt="playBtn" id="playBtn" />
         </div>
         <img :src="item.src" alt v-for="(item, index) in imgSrc" :key="index" />
       </section>

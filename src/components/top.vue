@@ -24,8 +24,8 @@ export default {
 <style lang="scss" scoped>
 .top {
   position: fixed;
-  right: 50px;
-  bottom: 50px;
+  right: 20px;
+  bottom: 20px;
   width: 50px;
   height: 50px;
   border-radius: 10px;

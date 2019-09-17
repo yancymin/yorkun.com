@@ -29,7 +29,7 @@ export default {
   en: {
     title: '小蕉 BANANA',
     cardLogo: banana_logo,
-    des: 'Life is so much banana, listen to the story of a small banana, the first cartoon image of this own design.',
+    des: 'Life is "so much banana". Let\'s listen to the story of my first original cartoon image "Little Banana".',
     cardColor: ' #FC85A1',
     tag: 'Cartoon Design',
     buttonTextD: 'Bananaaa~',

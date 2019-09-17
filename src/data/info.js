@@ -2,9 +2,9 @@ export default {
   en: {
     about: [
       'About me',
-      `Hey peeps. My name is YorKun. A UI designer and an animation enthusiast. You probably find this name unusual which is coming from my original name, you could simply call me "york".<br/><br/>
+      `Hey peeps. My name is YorKun. A UI designer and an animation enthusiast. You could simply call me "york".<br/><br/>
        I started to get obsessed with drawing when I was 12, I remember spending a whole weekend in the drawing class at that time. Naturally, I ended up with studying art in high school. From there, I went to Hubei Academy of Fine Arts to continue pursuing my art career.<br/><br/>
-       Nowadays, I had a chance to work as a UI designer. I love solving problems with my design mindset and hopefully get exposed with more challenges in the future. Respect & Struggle.`,
+       I love solving problems with my design mindset and dare to face more challenges, with humility and hard work. Respect & Struggle.`,
     ],
     contact: {
       title: 'Contact me',

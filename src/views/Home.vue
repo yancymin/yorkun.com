@@ -1053,6 +1053,7 @@ export default {
           }
           &::before {
             opacity: 1;
+            visibility: visible;
           }
           &::after {
             opacity: 1;
@@ -1072,6 +1073,7 @@ export default {
         }
         &::before {
           content: "";
+          visibility: hidden;
           opacity: 0;
           position: absolute;
           top: -145px;
@@ -1083,7 +1085,6 @@ export default {
           background-image: url("../assets/index/reweima_hover.png");
           background-size: 100% 100%;
           transition: all 0.3s ease;
-          transition-delay: 0.15s;
         }
       }
     }

@@ -38,13 +38,13 @@ export default {
   }
 
   span {
-    margin-right: 8px;
+    margin-right: 16px;
     @include font(14px, $font-color-white-3, 400);
   }
 
   &_links {
     a {
-      margin-right: 10px;
+      margin-right: 16px;
       transition: all 0.3s ease;
 
       &:hover {

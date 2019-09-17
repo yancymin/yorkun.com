@@ -688,7 +688,6 @@ export default {
 
     /*********** card btn hover  **************/
     ::v-deep .card {
-     
       &:nth-of-type(2) {
         .defaultButton {
           &:hover {
@@ -706,9 +705,9 @@ export default {
         }
       }
       &:nth-of-type(3) {
-          span {
-              color: rgba(255, 255, 255, 0.76) !important;
-          }
+        span {
+          color: rgba(255, 255, 255, 0.76) !important;
+        }
 
         .defaultButton {
           &:hover {
@@ -1054,6 +1053,7 @@ export default {
           &::before {
             opacity: 1;
             visibility: visible;
+            transform: translateY(0);
           }
           &::after {
             opacity: 1;
@@ -1084,7 +1084,8 @@ export default {
           height: 141px;
           background-image: url("../assets/index/reweima_hover.png");
           background-size: 100% 100%;
-          transition: all 0.3s ease;
+          transition: all 0.3s ease-in-out;
+          transform: translateY(-6px);
         }
       }
     }

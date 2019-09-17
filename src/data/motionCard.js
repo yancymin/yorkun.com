@@ -20,7 +20,7 @@ export default {
   },
   en: {
     title: "YorKun's design blog",
-    des: 'I will update frequently and post my all kinds of works on this blog.',
+    des: 'I will update frequently and post my all kinds of works on it.',
     cardColor: '#141516 ',
     btnColor: '#40454B',
     buttonText: 'Go and see',

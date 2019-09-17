@@ -51,7 +51,7 @@ export default [
     title: '行为验证产品',
     cardLogo: captcha_logo,
     des:
-      '基于生物的行为特征，结合人工智能技术，帮助网站和 APP 区分人机，一个拥有全球 26 万家客户的革命性安全产品。 ',
+      '基于生物的行为特征，结合人工智能技术，帮助网站和 APP 区分人机，每日在用户察觉不到的地方抵挡上亿机器脚本攻击。',
     cardColor: '#3973FF ',
     tag: 'Web UI 设计',
     buttonTextD: '项目详情',

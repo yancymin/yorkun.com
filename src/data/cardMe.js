@@ -7,8 +7,8 @@ export default {
   ],
   en: [
     'Hey, this is YorKun.',
-    'A design manager is working at IT company, I like to try different: UI, graphics, animation, etc.',
+    'A designer is working at IT company, I like to try different: UI, graphics, animation, etc.',
     'Welcome to my website.',
-    'I’m glad you have found here and want to know something about me.😊',
+    'I\'m glad you want to know something about me. 😊',
   ],
 };

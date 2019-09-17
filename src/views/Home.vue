@@ -505,7 +505,7 @@ export default {
       opacity: 0;
     }
     100% {
-      transform: translateX(-32px);
+      transform: translateX(-51px);
     }
   }
 }

@@ -1,5 +1,6 @@
 import bananaGif from '../assets/index/banana_banner.gif';
 import banana_logo from '../assets/index/banana_logo.svg';
+import banana_logo_en from '../assets/index/banana_logo_en.svg';
 import reweima_icon from '../assets/index/reweima_icon.svg';
 
 
@@ -28,7 +29,7 @@ export default {
   },
   en: {
     title: '小蕉 BANANA',
-    cardLogo: banana_logo,
+    cardLogo: banana_logo_en,
     des: 'Life is "so much banana". Let\'s listen to the story of my first original cartoon image "Little Banana".',
     cardColor: ' #FC85A1',
     tag: 'Cartoon Design',

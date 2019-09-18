@@ -79,7 +79,7 @@ section {
         display: block;
         width: 68.8%;
         height: 58.67%;
-        background-image: url("../assets/article/banana/Banana-04.gif");
+        background-image: url("https://api.zeit.co/now/files/b9f9653621d9eb2b624b47e8c25faf051e27a8fe/Banana-04.gif");
         background-repeat: no-repeat;
         background-size: cover;
         transform: rotate(-1deg);

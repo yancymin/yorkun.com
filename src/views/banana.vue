@@ -67,6 +67,9 @@ section {
     display: inherit;
     &:nth-of-type(4) {
       position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
       &::before {
         position: absolute;
@@ -76,11 +79,12 @@ section {
         display: block;
         width: 68.8%;
         height: 58.67%;
-        background: url('../assets/article/banana/Banana-04.gif') no-repeat;
+        background: url("../assets/article/banana/Banana-04.gif") no-repeat;
         background-size: cover;
         transform: rotate(-1deg);
         border-radius: 4px;
-        box-shadow: 0 5px 13px -6px rgba(93,57,44,0.71), 0 8px 23px 0 rgba(96,58,46,0.24);
+        box-shadow: 0 5px 13px -6px rgba(93, 57, 44, 0.71),
+          0 8px 23px 0 rgba(96, 58, 46, 0.24);
       }
     }
   }

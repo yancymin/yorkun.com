@@ -64,7 +64,6 @@ export default {
 
 section {
   div {
-    display: inherit;
     &:nth-of-type(4) {
       position: relative;
       display: flex;

@@ -3,9 +3,9 @@
     <articleNav />
     <div class="article-wrap">
       <section>
-        <span v-for="(item, index) in imgSrc" :key="index">
+        <div v-for="(item, index) in imgSrc" :key="index">
           <img :src="item.src" alt />
-        </span>
+        </div>
       </section>
     </div>
     <articleInfo :links="links" date="更新于 2019.8.27" />
@@ -63,7 +63,7 @@ export default {
 @import "./src/style/mobile.scss";
 
 section {
-  span {
+  div {
     display: inherit;
     &:nth-of-type(4) {
       position: relative;
@@ -87,6 +87,10 @@ section {
         box-shadow: 0 5px 13px -6px rgba(93, 57, 44, 0.71),
           0 8px 23px 0 rgba(96, 58, 46, 0.24);
       }
+    }
+
+    img {
+      display: inherit;
     }
   }
 }

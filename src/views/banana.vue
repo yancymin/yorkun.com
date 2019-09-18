@@ -16,7 +16,7 @@
           <img :src="imgSrc[2].src" alt />
         </div>
         <div>
-          <video src="../assets/article/banana/Banana-04.mp4" autoplay loop type="video/mp4"></video>
+          <video @contextmenu.prevent="" src="../assets/article/banana/Banana-04.mp4" autoplay loop type="video/mp4"></video>
           <img :src="imgSrc[3].src" alt />
         </div>
       </section>
@@ -41,6 +41,17 @@ export default {
     globalFooter,
     top,
     articleInfo
+  },
+  mounted() {
+    var video = document.getElementsByTagName("video")[0];
+    video.play();
+
+    // video.addEventListener("mouseenter", function(e) {
+    //   console.log("aaaaaqqaaaaaa");
+    //   document.οncοntextmenu = function(ev) {
+    //     return false; //屏蔽右键菜单
+    //   };
+    // });
   },
   data() {
     return {

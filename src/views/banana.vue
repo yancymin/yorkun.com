@@ -76,7 +76,7 @@ section {
         display: block;
         width: 68.8%;
         height: 58.67%;
-        background: url(/img/Banana-04.7efa6728.gif) no-repeat;
+        background: url('../assets/article/banana/Banana-04.gif') no-repeat;
         background-size: cover;
         transform: rotate(-1deg);
         border-radius: 4px;

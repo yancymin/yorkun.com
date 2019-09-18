@@ -3,8 +3,21 @@
     <articleNav />
     <div class="article-wrap">
       <section>
-        <div v-for="(item, index) in imgSrc" :key="index">
+        <!-- <div v-for="(item, index) in imgSrc" :key="index">
           <img :src="item.src" alt />
+        </div>-->
+        <div>
+          <img :src="imgSrc[0].src" alt />
+        </div>
+        <div>
+          <img :src="imgSrc[1].src" alt />
+        </div>
+        <div>
+          <img :src="imgSrc[2].src" alt />
+        </div>
+        <div>
+          <video src="../assets/article/banana/Banana-04.mp4" autoplay loop type="video/mp4"></video>
+          <img :src="imgSrc[3].src" alt />
         </div>
       </section>
     </div>
@@ -69,8 +82,21 @@ section {
       display: flex;
       justify-content: center;
       align-items: center;
+      flex-direction: column;
 
-      &::before {
+      video {
+        width: 68.8%;
+        height: 57.3%;
+        position: absolute;
+        top: 6.45%;
+        transform: rotate(-1deg);
+        border-radius: 4px;
+        box-shadow: 0 5px 13px -6px rgba(93, 57, 44, 0.71),
+          0 8px 23px 0 rgba(96, 58, 46, 0.24);
+        object-position: 100% 100%;
+      }
+
+      /* &::before {
         position: absolute;
         left: 15.78%;
         top: 6.45%;
@@ -85,7 +111,7 @@ section {
         border-radius: 4px;
         box-shadow: 0 5px 13px -6px rgba(93, 57, 44, 0.71),
           0 8px 23px 0 rgba(96, 58, 46, 0.24);
-      }
+      } */
     }
 
     img {

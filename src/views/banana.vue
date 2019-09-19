@@ -53,6 +53,12 @@ export default {
         },
         {
           src: require("../assets/article/banana/Banana-05.png")
+        },
+        {
+          src: require("../assets/article/banana/Banana-06.png")
+        },
+        {
+          src: require("../assets/article/banana/Banana-07.png")
         }
       ]
     };

@@ -3,21 +3,8 @@
     <articleNav />
     <div class="article-wrap">
       <section>
-        <!-- <div v-for="(item, index) in imgSrc" :key="index">
+        <div v-for="(item, index) in imgSrc" :key="index">
           <img :src="item.src" alt />
-        </div>-->
-        <div>
-          <img :src="imgSrc[0].src" alt />
-        </div>
-        <div>
-          <img :src="imgSrc[1].src" alt />
-        </div>
-        <div>
-          <img :src="imgSrc[2].src" alt />
-        </div>
-        <div>
-          <video @contextmenu.prevent="" src="../assets/article/banana/Banana-04.mp4" autoplay loop type="video/mp4"></video>
-          <img :src="imgSrc[3].src" alt />
         </div>
       </section>
     </div>
@@ -42,17 +29,6 @@ export default {
     top,
     articleInfo
   },
-  mounted() {
-    var video = document.getElementsByTagName("video")[0];
-    video.play();
-
-    // video.addEventListener("mouseenter", function(e) {
-    //   console.log("aaaaaqqaaaaaa");
-    //   document.οncοntextmenu = function(ev) {
-    //     return false; //屏蔽右键菜单
-    //   };
-    // });
-  },
   data() {
     return {
       links: [
@@ -73,7 +49,10 @@ export default {
           src: require("../assets/article/banana/Banana-03.jpg")
         },
         {
-          src: require("../assets/article/banana/Banana-04.jpg")
+          src: require("../assets/article/banana/Banana-04.gif")
+        },
+        {
+          src: require("../assets/article/banana/Banana-05.png")
         }
       ]
     };

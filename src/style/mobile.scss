@@ -4,6 +4,67 @@
     }
 }
 
+@media screen and (max-width: 320px) {
+    #app {
+        .card {
+            ::v-deep .ghostButton {
+                display: none;
+            }
+
+            ::v-deep .defaultButton {
+                margin: 0 !important;
+            }
+
+            &:nth-of-type(3) {
+                ::v-deep  .img-area {
+                    img {
+                        left: 6px !important;
+                    }
+                }
+            }
+        }
+
+        .motionCard {
+            ::v-deep .motionCard_wrap .des h1 {
+                line-height: 32px;
+            }
+        }
+
+        .xsCard {
+            height: 110px;
+
+            ::v-deep h2 {
+                transform: scale(0.85) translateX(-25px) translateY(-6px);
+            }
+
+            ::v-deep .bg {
+                transform: scale(0.84) translateX(20px);
+                transform-origin: top center;
+
+            }
+        }
+
+
+
+        .nav-wrap {
+            ul {
+                animation: ulMove3 0.8s cubic-bezier(0.4, 0, 0, 1) forwards !important;
+                transform-origin: center;
+
+                @keyframes ulMove3 {
+                    0% {
+                        opacity: 0;
+                    }
+
+                    100% {
+                        transform: translateX(-6px) scale(0.8);
+                    }
+                }
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 600px) {
 
     #project,
@@ -57,7 +118,7 @@
             .nav-move {
                 .nav-wrap {
                     ul {
-                        animation: ulMove2 0.8s cubic-bezier(0.4, 0, 0, 1) forwards !important;
+                        animation: ulMove2 0.8s cubic-bezier(0.4, 0, 0, 1) forwards;
 
                         @keyframes ulMove2 {
                             0% {

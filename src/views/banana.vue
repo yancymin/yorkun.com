@@ -8,7 +8,7 @@
         </div>
       </section>
     </div>
-    <articleInfo :links="links" date="更新于 2019.8.27" />
+    <articleInfo :links="links" date="更新于 2019.9.20" />
     <globalFooter></globalFooter>
     <top />
   </div>
@@ -33,8 +33,8 @@ export default {
     return {
       links: [
         {
-          title: "行为验证 在线体验",
-          href: "https://www.geetest.com/show"
+          title: "更多设计作品",
+          href: "http://yorkun.lofter.com"
         }
       ],
 

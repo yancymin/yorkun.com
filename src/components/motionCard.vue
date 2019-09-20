@@ -9,7 +9,10 @@
       <div class="des">
         <h1 v-if="isTitle">{{title}}</h1>
         <span v-if="isDes">{{des}}</span>
-        <a class="defaultButton" href="http://yorkun.lofter.com" target="_blank">{{buttonText}} <img src="../assets/index/link_icon_w.svg" /> </a>
+        <a class="defaultButton" href="http://yorkun.lofter.com" target="_blank">
+          {{buttonText}}
+          <img src="../assets/index/link_icon_w.svg" />
+        </a>
         <slot></slot>
       </div>
       <div class="motion-group">
@@ -65,7 +68,7 @@ export default {
   height: 42px;
   border-radius: 6px;
   border: 1px solid transparent;
-  background-color: #40454B;
+  background-color: #40454b;
   transition: all 0.3s ease;
   @include font(14px, $font-color-white-1, 400);
   @include flex-all-center;
@@ -191,7 +194,7 @@ export default {
   }
 
   .right {
-    top: -105%;
+    top: -71%;
     animation: scroll 65s infinite linear;
   }
 

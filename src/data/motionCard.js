@@ -4,7 +4,7 @@ import linkIconW from '../assets/index/link_icon_w.svg';
 export default {
   cn: {
     title: 'YorKun 的设计博客',
-    des: '里面上传了我不同时期的作品，并且更新频繁。',
+    des: '里面上传了我不同类型的作品，并且更新频繁。',
     cardColor: '#141516 ',
     btnColor: '#40454B',
     buttonText: '去瞧瞧',
